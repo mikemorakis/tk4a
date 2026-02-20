@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Consultation — Astra Dental Studio</title>
+  <meta name="description" content="Book your free consultation at Astra Dental Studio in Athens. Fill out the form and we'll get back to you within 24 hours.">
+  <meta property="og:title" content="Book a Consultation — Astra Dental Studio">
+  <meta property="og:description" content="Book your free consultation at Astra Dental Studio in Athens.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="page-wrapper">
+<div class="grain"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav nav--dark" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Astra Dental Studio home">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C10 2 6 7 6 13c0 4 1.5 7 3.5 10.5C12 28 14.5 30 16 30c1.5 0 4-2 6.5-6.5C24.5 20 26 17 26 13c0-6-4-11-10-11z" fill="#00F0B5"/>
+        <path d="M12 14c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Astra Dental
+    </a>
+    <div class="nav__links">
+      <a href="services.html" class="nav__link">Services</a>
+      <a href="smile-makeover.html" class="nav__link">Smile Makeover</a>
+      <a href="pricing.html" class="nav__link">Pricing</a>
+      <a href="book.html" class="btn btn--primary btn--sm nav__cta" data-magnetic>Book Now</a>
+    </div>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="page-header">
+  <div class="page-header__orb" data-parallax="0.03"></div>
+  <div class="container">
+    <div class="page-header__content">
+      <span class="section-label reveal">Get Started</span>
+      <h1 class="page-header__title reveal">Book Your Free <span class="text-accent">Consultation</span></h1>
+      <p class="page-header__desc reveal">Fill in your details and we'll call you within 24 hours to schedule your visit. No commitment, no pressure — just a friendly conversation about your smile.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===== BOOKING FORM ===== -->
+<section class="section">
+  <div class="container" style="max-width:960px;">
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:4rem;align-items:start;">
+
+      <!-- Form -->
+      <div class="reveal">
+        <form id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Maria Papadopoulou" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+30 694 123 4567" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="maria@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="service" class="form-label">Interested In</label>
+            <select id="service" name="service" class="form-input" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="whitening">Teeth Whitening</option>
+              <option value="veneers">Porcelain Veneers</option>
+              <option value="implants">Dental Implants</option>
+              <option value="makeover">Smile Makeover</option>
+              <option value="invisalign">Invisalign</option>
+              <option value="crowns">Dental Crowns</option>
+              <option value="cleaning">Professional Cleaning</option>
+              <option value="general">General Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date" class="form-label">Preferred Date</label>
+            <input type="date" id="date" name="date" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Anything else we should know? <span style="color:var(--c-text-muted);font-weight:400;">(Optional)</span></label>
+            <textarea id="message" name="message" class="form-input" rows="3" placeholder="Tell us about your goals or concerns..."></textarea>
+          </div>
+          <div style="height:0.5rem"></div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>
+            Request Free Consultation <span class="arrow">&rarr;</span>
+          </button>
+          <p style="margin-top:1rem;font-size:var(--fs-xs);color:var(--c-text-muted);text-align:center;">
+            By submitting, you agree to be contacted by our team. No spam, ever.
+          </p>
+        </form>
+      </div>
+
+      <!-- Trust Sidebar -->
+      <div class="reveal--right">
+        <div style="padding:2rem;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-lg);">
+          <h3 style="font-size:var(--fs-h3);margin-bottom:0.5rem;">What to Expect</h3>
+          <p style="font-size:var(--fs-small);color:var(--c-text-muted);line-height:1.6;margin-bottom:1.5rem;">Your free consultation includes a complete oral examination, digital scans, and a personalized treatment plan — all at no cost.</p>
+
+          <div class="trust-list">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Free consultation</strong> — no hidden costs or fees</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Callback within 24h</strong> — we value your time</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>No pressure</strong> — explore your options freely</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Digital preview</strong> — see your potential results</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>0% financing</strong> available for all treatments</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:1.5rem"></div>
+
+        <!-- Quick contact -->
+        <div style="padding:1.5rem 2rem;background:var(--c-bg-dark);border-radius:var(--radius-lg);color:var(--c-text-light);">
+          <p style="font-size:var(--fs-small);color:rgba(255,255,255,0.5);margin-bottom:0.6rem;">Prefer to call?</p>
+          <a href="tel:+302101234567" style="font-family:var(--f-heading);font-size:var(--fs-h3);font-weight:700;color:#fff;display:flex;align-items:center;gap:0.5rem;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#00F0B5" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +30 210 1234 567
+          </a>
+          <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.4);margin-top:0.4rem;">Mon–Fri 9:00–19:00 &middot; Sat 10:00–14:00</p>
+        </div>
+
+        <div style="height:1.5rem"></div>
+
+        <div class="urgency">
+          <span class="dot"></span>
+          Limited slots — only 3 remaining this week
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="nav__logo" style="color:#fff;margin-bottom:0.5rem;">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;">
+            <path d="M16 2C10 2 6 7 6 13c0 4 1.5 7 3.5 10.5C12 28 14.5 30 16 30c1.5 0 4-2 6.5-6.5C24.5 20 26 17 26 13c0-6-4-11-10-11z" fill="#00F0B5"/>
+            <path d="M12 14c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Astra Dental
+        </div>
+        <p class="footer__brand-desc">Premium cosmetic dentistry in Athens. Where precision meets artistry.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Services</h4>
+        <a href="services.html" class="footer__link">Teeth Whitening</a>
+        <a href="services.html" class="footer__link">Porcelain Veneers</a>
+        <a href="services.html" class="footer__link">Dental Implants</a>
+        <a href="smile-makeover.html" class="footer__link">Smile Makeover</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Clinic</h4>
+        <a href="pricing.html" class="footer__link">Pricing</a>
+        <a href="book.html" class="footer__link">Book Appointment</a>
+        <a href="index.html#faq" class="footer__link">FAQ</a>
+        <a href="#" class="footer__link">Careers</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <a href="#" class="footer__link">Athens, Greece</a>
+        <a href="#" class="footer__link">+30 210 1234 567</a>
+        <a href="#" class="footer__link">hello@astradental.gr</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Astra Dental Studio. All rights reserved.</span>
+      <div class="footer__socials">
+        <a href="#" class="footer__social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="footer__social" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /page-wrapper -->
+<script src="assets/app.js"></script>
+</body>
+</html>
