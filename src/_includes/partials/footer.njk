@@ -1,0 +1,51 @@
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="nav__logo" style="color:#fff;margin-bottom:0.5rem;">
+          <img src="/tk.logo.white.png" alt="{{ site.name }}" style="height:70px;">
+        </div>
+        <p class="footer__brand-desc">Ορθοδοντικός {{ site.doctor }} — Πρότυπο ορθοδοντικό ιατρείο στο {{ site.address.city }}.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Υπηρεσίες</h4>
+        <a href="/keramika-siderakia.html" class="footer__link">Κεραμικά Σιδεράκια</a>
+        <a href="/metallika-siderakia.html" class="footer__link">Μεταλλικά Σιδεράκια</a>
+        <a href="/aoratoi-narthikes.html" class="footer__link">Αόρατοι Νάρθηκες</a>
+        <a href="/kinitoi-michanismoi.html" class="footer__link">Κινητοί Μηχανισμοί</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Ιατρείο</h4>
+        <a href="/index.html#services" class="footer__link">Υπηρεσίες</a>
+        <a href="/index.html#contact-form" class="footer__link">Δωρεάν Εκτίμηση</a>
+        <a href="/index.html#faq" class="footer__link">Συχνές Ερωτήσεις</a>
+        <a href="/index.html#blog" class="footer__link">Χρήσιμα</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Επικοινωνία</h4>
+        <a href="#" class="footer__link">{{ site.address.street }}</a>
+        <a href="#" class="footer__link">{{ site.address.city }} {{ site.address.zip }}</a>
+        <a href="tel:{{ site.phoneFull }}" class="footer__link">{{ site.phoneFormatted }}</a>
+        <a href="mailto:{{ site.email }}" class="footer__link">{{ site.email }}</a>
+      </div>
+    </div>
+    <div style="padding:1rem 0; font-size:var(--fs-xs); color:rgba(255,255,255,0.45);">
+      <strong style="color:rgba(255,255,255,0.6);">Ωράριο Λειτουργίας:</strong> {{ site.hours }}
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2018 All rights Reserved. Design by Symbols Branding Agency</span>
+      <div class="footer__socials">
+        <a href="{{ site.social.facebook }}" class="footer__social" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="{{ site.social.instagram }}" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="{{ site.social.googleMaps }}" class="footer__social" aria-label="Google Maps" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

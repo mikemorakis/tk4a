@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" shape-rendering="geometricPrecision">
+  <!-- Debug: dark background, shows 3×2 tiles -->
+  <rect width="100%" height="100%" fill="#0A0A0A"/>
+  <defs>
+    <pattern id="p" patternUnits="userSpaceOnUse" width="240" height="260">
+      <!-- Wire row 1 — nearly straight, 1px amplitude -->
+      <path d="M0 90Q120 89 240 90" fill="none" stroke="#34D399" stroke-width="1" stroke-linecap="round"/>
+      <!-- Nodes row 1: stroke-only circles, subtle -->
+      <circle cx="60"  cy="90" r="1.3" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+      <circle cx="140" cy="90" r="1.2" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+      <circle cx="215" cy="90" r="1.3" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+      <!-- Wire row 2 — inverted wave, staggered nodes -->
+      <path d="M0 195Q120 196 240 195" fill="none" stroke="#34D399" stroke-width="1" stroke-linecap="round"/>
+      <!-- Nodes row 2: offset positions from row 1 -->
+      <circle cx="25"  cy="195" r="1.2" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+      <circle cx="110" cy="195" r="1.3" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+      <circle cx="185" cy="195" r="1.2" fill="none" stroke="#34D399" stroke-width="0.6" opacity="0.65"/>
+    </pattern>
+  </defs>
+  <!-- Pattern at 30% for clear debug visibility -->
+  <rect width="100%" height="100%" fill="url(#p)" opacity="0.3"/>
+</svg>

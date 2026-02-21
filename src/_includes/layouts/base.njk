@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  {% if ogTitle %}
+  <meta property="og:title" content="{{ ogTitle }}">
+  <meta property="og:description" content="{{ ogDescription }}">
+  <meta property="og:type" content="website">
+  {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if isHome %}
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% else %}
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% endif %}
+  <link rel="stylesheet" href="/assets/styles.css">
+  {% if isHome %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "{{ site.name }}",
+    "image": "/tkorthodontics.webp",
+    "telephone": "{{ site.phoneFormatted }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.address.streetFull }}",
+      "addressLocality": "{{ site.address.city }}",
+      "postalCode": "{{ site.address.zip }}",
+      "addressCountry": "GR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{{ site.reviewScore }}",
+      "reviewCount": "{{ site.reviewCount }}",
+      "bestRating": "5"
+    },
+    "openingHours": "Mo-Fr 09:00-21:00",
+    "priceRange": "€€"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Πόσο κοστίζουν τα σιδεράκια;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Το κόστος εξαρτάται από τον τύπο θεραπείας και τη διάρκειά της. Μετά τη δωρεάν αρχική εκτίμηση, θα λάβετε αναλυτική κοστολόγηση χωρίς καμία δέσμευση. Προσφέρουμε δυνατότητα αποπληρωμής σε άτοκες δόσεις."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Μπορώ να πληρώσω σε δόσεις;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ναι. Προσφέρουμε ευέλικτα πλάνα αποπληρωμής σε άτοκες δόσεις, ώστε η θεραπεία να είναι προσιτή χωρίς συμβιβασμούς στην ποιότητα."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Καλύπτει κάποιο ταμείο τα σιδεράκια;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ορισμένα ταμεία καλύπτουν μέρος του κόστους ορθοδοντικής θεραπείας. Θα σας ενημερώσουμε αναλυτικά κατά τη δωρεάν εκτίμηση για τη δυνατότητα κάλυψης από το δικό σας ταμείο."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Πόσο διαρκεί η ορθοδοντική θεραπεία;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Η μέση διάρκεια είναι 12-24 μήνες, ανάλογα με την περίπτωση. Στην πρώτη επίσκεψη θα λάβετε ακριβή εκτίμηση χρόνου για τη δική σας θεραπεία."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Είναι επώδυνη η θεραπεία με σιδεράκια;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Η τοποθέτηση είναι ανώδυνη. Μπορεί να νιώσετε ελαφριά πίεση τις πρώτες 2-3 μέρες, η οποία αντιμετωπίζεται εύκολα."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Κάνετε ορθοδοντική μόνο σε παιδιά ή και σε ενήλικες;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Η ορθοδοντική δεν έχει ηλικιακό όριο. Πάνω από 40% των ασθενών μας είναι ενήλικες."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Από ποια ηλικία μπορεί ένα παιδί να βάλει σιδεράκια;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Η ιδανική ηλικία για πρώτη ορθοδοντική αξιολόγηση είναι στα 7 ετών. Τα σιδεράκια τοποθετούνται συνήθως μετά τα 11-12 έτη."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ποια η διαφορά Invisalign και σιδερακίων;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Τα σιδεράκια είναι μόνιμα κολλημένα και ιδανικά για σύνθετες περιπτώσεις. Το Invisalign χρησιμοποιεί αφαιρούμενους διαφανείς νάρθηκες — πιο αισθητικό αλλά κατάλληλο για ελαφρές-μεσαίες περιπτώσεις."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Τι γίνεται μετά την αφαίρεση των σιδερακίων;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Μετά τη θεραπεία, τοποθετούνται συρμάτινοι συγκρατητήρες (retainers) για να διατηρηθεί το αποτέλεσμα μόνιμα."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Μπορώ να δω αποτελέσματα πριν ξεκινήσω;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Στη δωρεάν αρχική εκτίμηση, ο Dr. Τσιότρας θα σας δείξει παρόμοιες περιπτώσεις και θα σας εξηγήσει τι ακριβώς μπορείτε να περιμένετε — πριν δεσμευτείτε σε οτιδήποτε."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Γιατί να επιλέξω αποκλειστικά ορθοδοντικό αντί για γενικό οδοντίατρο;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ο αποκλειστικά ορθοδοντικός εξειδικεύεται σε ένα μόνο αντικείμενο — τη μετακίνηση δοντιών και τη διόρθωση σύγκλεισης. Αυτό σημαίνει μεγαλύτερη εμπειρία, σύγχρονες τεχνικές και καλύτερο αποτέλεσμα."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Πώς κλείνω ραντεβού;",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Συμπληρώστε τη φόρμα στη σελίδα μας ή καλέστε στο {{ site.phone }}. Θα σας καλέσουμε εντός 24 ωρών."
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+</head>
+<body>
+{% include "partials/nav.njk" %}
+
+<div class="page-wrapper">
+<div class="grain"></div>
+
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}
+
+</div>
+
+<!-- Sticky bar OUTSIDE page-wrapper so position:fixed works -->
+<div class="sticky-bar">
+  <div class="sticky-bar__inner">
+    <a href="/index.html#contact-form" class="sticky-bar__btn sticky-bar__btn--primary">Δωρεάν Εκτίμηση</a>
+    <a href="tel:{{ site.phoneFull }}" class="sticky-bar__btn sticky-bar__btn--secondary">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      {{ site.phone }}
+    </a>
+  </div>
+</div>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>

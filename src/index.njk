@@ -1,0 +1,600 @@
+---
+layout: layouts/base.njk
+title: "TK Orthodontics ® — Ορθοδοντικός Dr. Τσιότρας | Παλαιό Φάληρο"
+description: "Πρότυπο Ορθοδοντικό Ιατρείο στο Παλαιό Φάληρο. Σιδεράκια για ενήλικες, εφήβους & παιδιά. Invisalign, μεταλλικά & κεραμικά σιδεράκια. Καλέστε 210 9408725."
+isHome: true
+ogTitle: "TK Orthodontics ® — Ορθοδοντικός Dr. Τσιότρας Κωνσταντίνος"
+ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Παλαιό Φάληρο. Καλέστε 210 9408725."
+---
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__orb"></div>
+
+  <div class="hero__inner">
+    <div class="hero__content">
+      <div class="hero__label reveal">
+        <span class="dot"></span>
+        Πρότυπο Ορθοδοντικό Ιατρείο — {{ site.address.city }}
+      </div>
+      <h1 class="hero__title reveal">
+        Το χαμόγελο που πάντα θέλατε — με <span class="accent">3.000+ επιτυχημένες θεραπείες</span> πίσω μας
+      </h1>
+      <p class="hero__subtitle reveal">
+        Σιδεράκια, κεραμικά ή Invisalign — εξατομικευμένο πλάνο, διαφανής κοστολόγηση και η πρώτη εκτίμηση είναι δωρεάν.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#contact-form" class="btn btn--primary btn--lg">
+          Δωρεάν Εκτίμηση — Μάθετε την Τιμή σας <span class="arrow">&rarr;</span>
+        </a>
+        <a href="tel:{{ site.phoneFull }}" class="hero__cta-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {{ site.phone }}
+        </a>
+      </div>
+      <p class="hero__reassurance reveal">Δωρεάν πρώτη εκτίμηση &nbsp;&middot;&nbsp; Δόσεις από €89/μήνα &nbsp;&middot;&nbsp; Απάντηση σε 24 ώρες</p>
+
+      <div class="hero__trust-divider reveal"></div>
+      <div class="hero__trust reveal">
+        <div class="hero__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e2b340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>{{ site.reviewScore }} ({{ site.reviewCount }} κριτικές Google)</span>
+        </div>
+        <div class="hero__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>15+ χρόνια &middot; 3.000+ θεραπείες</span>
+        </div>
+        <div class="hero__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Αποκλειστικά Ορθοδοντικός</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__photo">
+      <img src="/tkorthodontics.webp" alt="{{ site.name }} — Ιατρείο {{ site.doctor }}" class="hero__photo-img" loading="eager" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section class="section section--alt" id="contact-form">
+  <div class="container" style="max-width:640px;">
+    <div class="text-center reveal">
+      <span class="section-label">Δωρεάν Εκτίμηση</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Μάθετε το κόστος της δικής σας θεραπείας σε 24 ώρες</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε 3 στοιχεία και θα σας καλέσουμε για δωρεάν ενημέρωση σχετικά με τη θεραπεία, το κόστος και τις δόσεις.</p>
+    </div>
+    <div style="height:2rem"></div>
+    <form class="booking-form reveal" id="lead-form">
+      <p class="form-urgency">3 πεδία &nbsp;&middot;&nbsp; 30 δευτερόλεπτα &nbsp;&middot;&nbsp; Χωρίς δέσμευση</p>
+      <div class="form-group">
+        <label class="form-label" for="name">Ονοματεπώνυμο</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="service">Τι σας ενδιαφέρει;</label>
+        <select id="service" name="service" class="form-input" required>
+          <option value="unsure" selected>Δεν γνωρίζω ακόμα — θέλω ενημέρωση</option>
+          <option value="invisalign">Αόρατοι Νάρθηκες (Invisalign)</option>
+          <option value="metallic">Μεταλλικά Σιδεράκια</option>
+          <option value="ceramic">Κεραμικά Σιδεράκια</option>
+          <option value="removable">Κινητοί Μηχανισμοί</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="tel">Τηλέφωνο επικοινωνίας</label>
+        <input type="tel" id="tel" name="tel" class="form-input" placeholder="π.χ. 69X XXX XXXX" required autocomplete="tel" inputmode="tel" enterkeyhint="send">
+      </div>
+      <div style="height:0.5rem"></div>
+      <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>Καλέστε με — Είναι Δωρεάν <span class="arrow">&rarr;</span></button>
+      <div class="form-trust">
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <span>{{ site.reviewScore }} · {{ site.reviewCount }} ασθενείς μας εμπιστεύτηκαν στο Google</span>
+      </div>
+      <p class="form-privacy">Τα στοιχεία σας δεν κοινοποιούνται. Θα επικοινωνήσουμε μόνο για τη θεραπεία σας.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section section--dark" id="process">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Πώς λειτουργεί</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;color:#fff;">3 απλά βήματα μέχρι το χαμόγελο που θέλετε</h2>
+    </div>
+    <div style="height:3rem"></div>
+    <div class="steps stagger">
+      <div class="step reveal" style="--i:0">
+        <h3 class="step__title">Δωρεάν Αρχική Εκτίμηση</h3>
+        <p class="step__desc">Γνωρίζετε τον Dr. Τσιότρα, αξιολογούμε τη δική σας περίπτωση και σας δίνουμε ακριβές πλάνο θεραπείας και κόστους — χωρίς καμία δέσμευση.</p>
+      </div>
+      <div class="step reveal" style="--i:1">
+        <h3 class="step__title">Εξατομικευμένη Θεραπεία</h3>
+        <p class="step__desc">Ξεκινάτε τη θεραπεία που ταιριάζει στις ανάγκες και τον τρόπο ζωής σας, με τακτική παρακολούθηση σε κάθε ραντεβού.</p>
+      </div>
+      <div class="step reveal" style="--i:2">
+        <h3 class="step__title">Το Χαμόγελο που Αξίζετε</h3>
+        <p class="step__desc">Αφαίρεση σιδερακίων, τοποθέτηση retainer και ένα αποτέλεσμα που θα σας συνοδεύει για πάντα.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section section--alt" id="reviews">
+  <div class="container">
+    <!-- Aggregate Rating Badge -->
+    <div class="review-aggregate reveal">
+      <svg class="review-aggregate__google" viewBox="0 0 24 24" width="32" height="32"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      <div class="review-aggregate__score">{{ site.reviewScore }}</div>
+      <div class="review-aggregate__stars">
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+      </div>
+      <div class="review-aggregate__label">{{ site.reviewCount }} κριτικές Google</div>
+    </div>
+    <div style="height:2rem"></div>
+    <!-- Carousel -->
+    <div class="reviews-carousel reveal">
+      <button class="reviews-carousel__arrow reviews-carousel__arrow--prev" aria-label="Προηγούμενη κριτική">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="reviews-carousel__track">
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <p class="review-card__text">Ο κος Τσιοτρας είναι ένα εξαίρετος Οδοντίατρος από τον οποίο δεν μπορείτε να περιμένετε παρά μόνο <strong>τα αποτελέσματα που επιθυμείτε</strong>. Πεντακάθαρος χώρος, επαγγελματική εξυπηρέτηση. <strong>Τον συνιστώ ανεπιφύλακτα.</strong></p>
+          <div class="review-card__author">
+            <div class="review-card__avatar" style="background:#E8F5E9;color:#2E7D32;">AT</div>
+            <div>
+              <div class="review-card__name">Alex Tourou</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <p class="review-card__text"><strong>Τον συστήνω με κλειστά μάτια.</strong> Μετά από έρευνα απόψεων και από άλλους δύο ορθοδοντικούς ήταν η τελική επιλογής μας. Πολύ στοχευμένη προσέγγιση στην ορθοδοντική θεραπεία, άψογη συνεργασία και <strong>πολύ ικανοποιητικό αποτέλεσμα</strong>.</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar" style="background:#E3F2FD;color:#1565C0;">ZZ</div>
+            <div>
+              <div class="review-card__name">ZforLife Z</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <p class="review-card__text">Ένας <strong>άριστος επαγγελματίας</strong>, προσεγμένος χώρος, είμαι <strong>απόλυτα ευχαριστημένος</strong> με το αποτέλεσμα μου!!!</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar" style="background:#FFF3E0;color:#E65100;">ΓΝ</div>
+            <div>
+              <div class="review-card__name">Γιάννης Ντ.</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <p class="review-card__text"><strong>Εξαιρετικος επιστημονας</strong> και γιατρος του ειδους του με πολλες γνωσεις που οδηγουν σε ενα <strong>εκπληκτικο αποτελεσμα</strong>.</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar" style="background:#FCE4EC;color:#C62828;">GG</div>
+            <div>
+              <div class="review-card__name">Georgia Gkoltsiou</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="reviews-carousel__arrow reviews-carousel__arrow--next" aria-label="Επόμενη κριτική">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="text-center reveal">
+      <a href="{{ site.social.googleMaps }}" class="btn btn--dark" data-magnetic target="_blank" rel="noopener">Δείτε όλες τις κριτικές στο Google <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEFORE / AFTER ===== -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Αποτελέσματα Θεραπειών</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Πραγματικά αποτελέσματα από ασθενείς μας</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Σύρετε για να δείτε τη διαφορά πριν και μετά τη θεραπεία.</p>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="ba-grid stagger">
+      <!-- Case 1 -->
+      <div class="ba-case reveal" style="--i:0">
+        <div class="ba-slider">
+          <div class="ba-slider__before">
+            <!-- [BEFORE_AFTER_CASE_01_BEFORE] — 16:10, max 60KB WebP, lazy -->
+            <div class="ba-placeholder">Πριν</div>
+          </div>
+          <div class="ba-slider__after">
+            <!-- [BEFORE_AFTER_CASE_01_AFTER] — 16:10, max 60KB WebP, lazy -->
+            <div class="ba-placeholder ba-placeholder--after">Μετά</div>
+          </div>
+          <div class="ba-slider__line"></div>
+          <div class="ba-slider__handle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+          </div>
+          <span class="ba-slider__label ba-slider__label--before">Πριν</span>
+          <span class="ba-slider__label ba-slider__label--after">Μετά</span>
+        </div>
+        <p class="ba-case__caption">Ορθοδοντική θεραπεία με κεραμικά σιδεράκια — 18 μήνες</p>
+      </div>
+      <!-- Case 2 -->
+      <div class="ba-case reveal" style="--i:1">
+        <div class="ba-slider">
+          <div class="ba-slider__before">
+            <!-- [BEFORE_AFTER_CASE_02_BEFORE] — 16:10, max 60KB WebP, lazy -->
+            <div class="ba-placeholder">Πριν</div>
+          </div>
+          <div class="ba-slider__after">
+            <!-- [BEFORE_AFTER_CASE_02_AFTER] — 16:10, max 60KB WebP, lazy -->
+            <div class="ba-placeholder ba-placeholder--after">Μετά</div>
+          </div>
+          <div class="ba-slider__line"></div>
+          <div class="ba-slider__handle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+          </div>
+          <span class="ba-slider__label ba-slider__label--before">Πριν</span>
+          <span class="ba-slider__label ba-slider__label--after">Μετά</span>
+        </div>
+        <p class="ba-case__caption">Invisalign — ενήλικας ασθενής, 14 μήνες</p>
+      </div>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="text-center reveal">
+      <a href="#contact-form" class="btn btn--dark" data-magnetic>Δείτε τι μπορούμε να κάνουμε για εσάς <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section--alt" id="services">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Ποια θεραπεία σας ταιριάζει;</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ορθοδοντικές θεραπείες για κάθε ανάγκη</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Κάθε χαμόγελο είναι μοναδικό. Ο Dr. Τσιότρας θα σας προτείνει τη θεραπεία που ταιριάζει στις δικές σας ανάγκες.</p>
+    </div>
+    <div style="height:3rem"></div>
+    <div class="grid grid-2 stagger">
+      <!-- Μεταλλικά Σιδεράκια -->
+      <div class="service-card reveal" data-tilt style="--i:0">
+        <div class="service-card__img">
+          <img src="/metalika.siderakia.jpg" alt="Μεταλλικά Σιδεράκια" loading="lazy">
+        </div>
+        <span class="service-card__badge service-card__badge--value">Οικονομική Επιλογή</span>
+        <h3 class="service-card__title">Μεταλλικά Σιδεράκια</h3>
+        <p class="service-card__desc">Η πιο αποτελεσματική λύση για σύνθετες περιπτώσεις — και η πιο οικονομική. Μέγιστο αποτέλεσμα στην καλύτερη τιμή.</p>
+        <p class="service-card__for">Ιδανικά για: Εφήβους &middot; Σύνθετες περιπτώσεις &middot; Καλύτερη τιμή</p>
+        <a href="/metallika-siderakia.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <!-- Κεραμικά Σιδεράκια -->
+      <div class="service-card reveal" data-tilt style="--i:1">
+        <div class="service-card__img">
+          <img src="/keramika.siderakia.jpg" alt="Κεραμικά Σιδεράκια" loading="lazy">
+        </div>
+        <h3 class="service-card__title">Κεραμικά Σιδεράκια</h3>
+        <p class="service-card__desc">Η αποτελεσματικότητα των μεταλλικών — σε χρώμα που ταιριάζει με τα δόντια σας. Σχεδόν αόρατα, χωρίς κιτρίνισμα.</p>
+        <p class="service-card__for">Ιδανικά για: Ενήλικες &middot; Επαγγελματίες &middot; Διακριτικότητα</p>
+        <a href="/keramika-siderakia.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <!-- Αόρατοι Νάρθηκες -->
+      <div class="service-card reveal" data-tilt style="--i:2">
+        <div class="service-card__img">
+          <img src="/aoratoi.narthikes.jpg" alt="Αόρατοι Νάρθηκες" loading="lazy">
+        </div>
+        <span class="service-card__badge">Δημοφιλές</span>
+        <h3 class="service-card__title">Αόρατοι Νάρθηκες (Invisalign)</h3>
+        <p class="service-card__desc">Κανένα σιδεράκι, κανένας περιορισμός. Αφαιρούμενοι διαφανείς νάρθηκες που κανείς δεν καταλαβαίνει. Θεραπεία χωρίς αλλαγή στην καθημερινότητά σας.</p>
+        <p class="service-card__for">Ιδανικά για: Ενήλικες &middot; Επαγγελματίες &middot; Ελαφρές-μεσαίες περιπτώσεις</p>
+        <a href="/aoratoi-narthikes.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <!-- Κινητοί Μηχανισμοί -->
+      <div class="service-card reveal" data-tilt style="--i:3">
+        <div class="service-card__img">
+          <img src="/kinitoi.michanismoi.jpg" alt="Κινητοί Μηχανισμοί" loading="lazy">
+        </div>
+        <h3 class="service-card__title">Κινητοί Μηχανισμοί</h3>
+        <p class="service-card__desc">Αφαιρούμενοι μηχανισμοί που καθοδηγούν τη σωστή ανάπτυξη γνάθου και δοντιών. Η πρώιμη παρέμβαση μπορεί να αποτρέψει πιο σύνθετη θεραπεία αργότερα.</p>
+        <p class="service-card__for">Ιδανικά για: Παιδιά 7-12 ετών &middot; Πρώιμη παρέμβαση</p>
+        <a href="/kinitoi-michanismoi.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="text-center reveal">
+      <a href="#contact-form" class="btn btn--outline" data-magnetic>Δεν ξέρω ποιο μου ταιριάζει — Ρωτήστε μας <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section--dark" id="about">
+  <div class="about__orb"></div>
+  <div class="container">
+    <div class="about-header reveal">
+      <div class="doctor-photo">
+        <img src="/dr.tsiotras.jpg" alt="Dr. {{ site.doctor }}" loading="lazy">
+      </div>
+      <div>
+        <span class="section-label">Γνωρίστε τον Γιατρό σας</span>
+        <h2 class="section-title" style="color:#fff;">{{ site.doctor }} — Αποκλειστικά Ορθοδοντικός</h2>
+      </div>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="grid grid-2 why-grid stagger">
+      <div class="why-card reveal" style="--i:0">
+        <h3 class="why-card__title">Εξειδίκευση &amp; Διαπιστευτήρια</h3>
+        <ul class="credential-list">
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>3.000+ ολοκληρωμένες θεραπείες</span>
+          </li>
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>15+ χρόνια κλινικής εμπειρίας</span>
+          </li>
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>MSc Ορθοδοντική — μεταπτυχιακή εξειδίκευση</span>
+          </li>
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Αποκλειστικά ορθοδοντικός — δεν ασκεί γενική οδοντιατρική</span>
+          </li>
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Πιστοποιημένος πάροχος Invisalign</span>
+          </li>
+          <li class="credential-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Μέλος Ελληνικής Ορθοδοντικής Εταιρείας</span>
+          </li>
+        </ul>
+      </div>
+      <div class="why-card reveal" style="--i:1">
+        <h3 class="why-card__title">Γιατί αποκλειστικά ορθοδοντική</h3>
+        <p class="why-card__desc">Ξεκίνησα να ασχολούμαι αποκλειστικά με την ορθοδοντική γιατί πίστευα ότι κάθε ασθενής αξίζει ένα χαμόγελο που τον κάνει να νιώθει σίγουρος. 15 χρόνια μετά, αυτή η πεποίθηση είναι πιο δυνατή από ποτέ.</p>
+        <p class="why-card__desc" style="margin-top:1.2rem;">Δεν λειτουργώ πολυιατρείο. Κάθε θεραπεία τη σχεδιάζω και την εκτελώ προσωπικά. Πάνω από 40% των ασθενών μας είναι ενήλικες που ξεκίνησαν θεραπεία για πρώτη φορά — αν αναρωτιέστε αν είναι αργά, δεν είναι.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MID-PAGE CTA ===== -->
+<section class="section mid-cta" style="padding:3rem 0;">
+  <div class="container">
+    <div class="mid-cta__inner reveal">
+      <p class="mid-cta__text">Έτοιμοι να μάθετε το κόστος της δικής σας θεραπείας;</p>
+      <div class="mid-cta__actions">
+        <a href="#contact-form" class="btn btn--primary" data-magnetic>Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+        <a href="tel:{{ site.phoneFull }}" class="mid-cta__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {{ site.phone }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--dark" id="faq">
+  <div class="faq__orb"></div>
+  <div class="container" style="max-width:760px;">
+    <div class="text-center reveal">
+      <span class="section-label">Συχνές Ερωτήσεις</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;color:#fff;">Όσα θέλετε να ξέρετε πριν ξεκινήσετε</h2>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πόσο κοστίζουν τα σιδεράκια;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Το κόστος εξαρτάται από τον τύπο θεραπείας και τη διάρκειά της. Με τα ευέλικτα πλάνα δόσεων, η μηνιαία δόση ξεκινά από €89. Μετά τη δωρεάν αρχική εκτίμηση, θα λάβετε αναλυτική κοστολόγηση χωρίς καμία δέσμευση.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Μπορώ να πληρώσω σε δόσεις;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ναι. Προσφέρουμε ευέλικτα πλάνα αποπληρωμής σε άτοκες δόσεις, ώστε η θεραπεία να είναι προσιτή χωρίς συμβιβασμούς στην ποιότητα.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Καλύπτει κάποιο ταμείο τα σιδεράκια;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ορισμένα ταμεία καλύπτουν μέρος του κόστους ορθοδοντικής θεραπείας. Θα σας ενημερώσουμε αναλυτικά κατά τη δωρεάν εκτίμηση για τη δυνατότητα κάλυψης από το δικό σας ταμείο.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πόσο διαρκεί η ορθοδοντική θεραπεία;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η μέση διάρκεια είναι 12-24 μήνες, ανάλογα με την περίπτωση. Στην πρώτη επίσκεψη, ο Dr. Τσιότρας θα σας δώσει ακριβή εκτίμηση χρόνου για τη δική σας θεραπεία.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Είναι επώδυνη η θεραπεία με σιδεράκια;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η τοποθέτηση είναι ανώδυνη. Μπορεί να νιώσετε ελαφριά πίεση τις πρώτες 2-3 μέρες, η οποία αντιμετωπίζεται εύκολα. Οι σύγχρονοι μηχανισμοί είναι σημαντικά πιο άνετοι από το παρελθόν.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Κάνετε ορθοδοντική μόνο σε παιδιά ή και σε ενήλικες;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η ορθοδοντική δεν έχει ηλικιακό όριο. Πάνω από 40% των ασθενών μας είναι ενήλικες. Με μεθόδους όπως Invisalign και κεραμικά σιδεράκια, η θεραπεία είναι πλέον εντελώς διακριτική.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Από ποια ηλικία μπορεί ένα παιδί να βάλει σιδεράκια;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η ιδανική ηλικία για πρώτη ορθοδοντική αξιολόγηση είναι στα 7 ετών. Κινητοί μηχανισμοί μπορούν να ξεκινήσουν νωρίς, ενώ τα σιδεράκια τοποθετούνται συνήθως μετά τα 11-12 έτη, όταν έχουν βγει τα μόνιμα δόντια.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Ποια η διαφορά Invisalign και σιδερακίων;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Τα σιδεράκια είναι μόνιμα κολλημένα και ιδανικά για σύνθετες περιπτώσεις. Το Invisalign χρησιμοποιεί αφαιρούμενους διαφανείς νάρθηκες — πιο αισθητικό αλλά κατάλληλο για ελαφρές-μεσαίες περιπτώσεις. Η επιλογή γίνεται μετά από διάγνωση.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Τι γίνεται μετά την αφαίρεση των σιδερακίων;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Μετά τη θεραπεία, τοποθετούνται συρμάτινοι συγκρατητήρες (retainers) για να διατηρηθεί το αποτέλεσμα μόνιμα. Η φάση συγκράτησης είναι εξίσου σημαντική με τη θεραπεία.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Μπορώ να δω αποτελέσματα πριν ξεκινήσω;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Στη δωρεάν αρχική εκτίμηση, ο Dr. Τσιότρας θα σας δείξει παρόμοιες περιπτώσεις και θα σας εξηγήσει τι ακριβώς μπορείτε να περιμένετε — πριν δεσμευτείτε σε οτιδήποτε.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Γιατί να επιλέξω αποκλειστικά ορθοδοντικό αντί για γενικό οδοντίατρο;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ο αποκλειστικά ορθοδοντικός εξειδικεύεται σε ένα μόνο αντικείμενο — τη μετακίνηση δοντιών και τη διόρθωση σύγκλεισης. Αυτό σημαίνει μεγαλύτερη εμπειρία, σύγχρονες τεχνικές και καλύτερο αποτέλεσμα, ειδικά σε σύνθετες περιπτώσεις.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πώς κλείνω ραντεβού;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Συμπληρώστε τη φόρμα στη σελίδα μας ή καλέστε στο {{ site.phone }}. Θα σας καλέσουμε εντός 24 ωρών για να κλείσουμε τη δωρεάν αρχική εκτίμηση.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:3rem;">
+      <p style="color:rgba(255,255,255,0.5);margin-bottom:1rem;font-size:var(--fs-small);">Έχετε περισσότερες ερωτήσεις;</p>
+      <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Ρωτήστε μας — Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-banner reveal--scale">
+      <div class="cta-banner__bg"></div>
+      <div class="cta-banner__orb"></div>
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__title">Μάθετε ακριβώς πόσο θα κοστίσει — χωρίς δέσμευση</h2>
+        <p class="cta-banner__subtitle">Η δωρεάν αρχική εκτίμηση περιλαμβάνει εξέταση, πλάνο θεραπείας και αναλυτική κοστολόγηση. Αν δεν σας ικανοποιεί, δεν μας χρωστάτε τίποτα.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+          <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Κλείστε Δωρεάν Ραντεβού <span class="arrow">&rarr;</span></a>
+          <a href="tel:{{ site.phoneFull }}" class="btn btn--outline btn--lg" data-magnetic>{{ site.phone }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG / TIPS ===== -->
+<section class="section section--alt" id="blog">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Χρήσιμα</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Όσα πρέπει να γνωρίζετε για τα σιδεράκια</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Για ερωτήσεις καλέστε στο <a href="tel:{{ site.phoneFull }}" style="color:var(--c-accent);">{{ site.phone }}</a></p>
+    </div>
+    <div style="height:3rem"></div>
+    <div class="grid grid-2 stagger">
+      <div class="service-card reveal" data-tilt style="--i:0">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 class="service-card__title">Συμβουλές μετά την τοποθέτηση</h3>
+        <p class="service-card__desc">Η διαδικασία της διατήρησης του ορθοδοντικού αποτελέσματος είναι εξίσου σημαντική με αυτή της ίδιας της θεραπείας.</p>
+        <a href="/advice-after-surgery.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:1">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 15 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <h3 class="service-card__title">Χρήσιμες συμβουλές για υγιή δόντια</h3>
+        <p class="service-card__desc">Η τακτική επίσκεψη στο ιατρείο και η σωστή στοματική υγιεινή είναι εξαιρετικά σημαντική κατά τη διάρκεια της θεραπείας.</p>
+        <a href="/advice-for-optimal-teeth-hygiene.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:2">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 class="service-card__title">Προβλήματα στην ορθοδοντική θεραπεία</h3>
+        <p class="service-card__desc">Τι πρέπει να κάνετε αν νιώσετε ενόχληση ή πόνο κατά τη διάρκεια της θεραπείας σας.</p>
+        <a href="/provlimata-stin-orthodontiki-therapia.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:3">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18"/><path d="m6 9 6 11 6-11"/></svg>
+        </div>
+        <h3 class="service-card__title">Tips για νέους ασθενείς</h3>
+        <p class="service-card__desc">Η επιτυχής έκβαση βασίζεται στη σωστή συνεργασία γιατρού, ασθενή και γονέων.</p>
+        <a href="/tips-for-new-patients.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>

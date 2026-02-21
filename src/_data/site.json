@@ -1,0 +1,23 @@
+{
+  "name": "TK Orthodontics",
+  "nameRegistered": "TK Orthodontics ®",
+  "doctor": "Dr. Τσιότρας Κωνσταντίνος",
+  "phone": "210 9408725",
+  "phoneFull": "+302109408725",
+  "phoneFormatted": "+30 (210) 9408725",
+  "email": "tsiotras.orthodontics@gmail.com",
+  "address": {
+    "street": "Λ. Αμφιθέας 48",
+    "streetFull": "Λεωφόρος Αμφιθέας 48",
+    "city": "Παλαιό Φάληρο",
+    "zip": "175 64"
+  },
+  "hours": "Καθημερινά — Κατόπιν Ραντεβού",
+  "reviewScore": "5.0",
+  "reviewCount": "87",
+  "social": {
+    "facebook": "https://www.facebook.com/tkorthodontics",
+    "instagram": "https://www.instagram.com/dr_tsiotras_orthodontist",
+    "googleMaps": "https://goo.gl/maps/YssdjeS3PbZWt8YX8"
+  }
+}
