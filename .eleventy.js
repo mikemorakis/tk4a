@@ -7,6 +7,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/keramika.siderakia.jpg");
   eleventyConfig.addPassthroughCopy("src/aoratoi.narthikes.jpg");
   eleventyConfig.addPassthroughCopy("src/kinitoi.michanismoi.jpg");
+  eleventyConfig.addPassthroughCopy("src/ba-case1.jpg");
+  eleventyConfig.addPassthroughCopy("src/ba-case2.jpg");
+  eleventyConfig.addPassthroughCopy("src/ba-case3.jpg");
 
   return {
     dir: {
