@@ -204,6 +204,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 160px;
   background: #F4F3EF;
 }
+.hero + .section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(62,205,165,0.06) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
 
 .grid { display: grid; gap: var(--s-gap); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -926,29 +937,22 @@ h1, h2, h3, h4, h5, h6 {
 .reviews-carousel__track {
   display: flex;
   gap: 1.25rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
   scrollbar-width: none;
   padding: 0.5rem 0;
+  animation: scroll-reviews 25s linear infinite;
+}
+.reviews-carousel__track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-reviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .reviews-carousel__track::-webkit-scrollbar { display: none; }
 
 .reviews-carousel__arrow {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--t-fast) var(--ease);
-  box-shadow: var(--shadow-sm);
-  z-index: 2;
+  display: none;
 }
 .reviews-carousel__arrow:hover {
   border-color: var(--c-accent);
@@ -1400,6 +1404,24 @@ textarea.form-input {
 }
 @media (max-width: 768px) {
   .page-header__socials { display: none; }
+}
+
+/* Teal gradient fade from header into next section */
+.page-header-socials-wrap + .section,
+.page-header-socials-wrap + .section--alt {
+  position: relative;
+}
+.page-header-socials-wrap + .section::before,
+.page-header-socials-wrap + .section--alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(62,205,165,0.06) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* --- Services Grid (Services Page) --- */

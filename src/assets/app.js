@@ -380,28 +380,15 @@
   function initReviewsCarousel() {
     document.querySelectorAll('.reviews-carousel').forEach(carousel => {
       const track = carousel.querySelector('.reviews-carousel__track');
-      const prev = carousel.querySelector('.reviews-carousel__arrow--prev');
-      const next = carousel.querySelector('.reviews-carousel__arrow--next');
       if (!track) return;
 
-      function updateArrows() {
-        if (!prev || !next) return;
-        prev.disabled = track.scrollLeft <= 4;
-        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-      }
-
-      function scrollBy(dir) {
-        const card = track.querySelector('.review-card');
-        if (!card) return;
-        const gap = parseFloat(getComputedStyle(track).gap) || 20;
-        const amount = (card.offsetWidth + gap) * dir;
-        track.scrollBy({ left: amount, behavior: 'smooth' });
-      }
-
-      if (prev) prev.addEventListener('click', () => scrollBy(-1));
-      if (next) next.addEventListener('click', () => scrollBy(1));
-      track.addEventListener('scroll', updateArrows, { passive: true });
-      updateArrows();
+      // Clone cards for seamless infinite loop
+      const cards = track.querySelectorAll('.review-card');
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
     });
   }
 
