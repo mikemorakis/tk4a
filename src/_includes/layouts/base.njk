@@ -176,7 +176,7 @@
   </script>
   {% endif %}
 </head>
-<body>
+<body{% if not isHome %} class="has-sticky-bar"{% endif %}>
 {% include "partials/nav.njk" %}
 
 <div class="page-wrapper">
@@ -188,16 +188,18 @@
 
 </div>
 
-<!-- Sticky bar OUTSIDE page-wrapper so position:fixed works -->
+<!-- Sticky bar — subpages only (not homepage) -->
+{% if not isHome %}
 <div class="sticky-bar">
   <div class="sticky-bar__inner">
-    <a href="/index.html#contact-form" class="sticky-bar__btn sticky-bar__btn--primary">Δωρεάν Εκτίμηση</a>
+    <a href="/contact.html#contact-form" class="sticky-bar__btn sticky-bar__btn--primary">Δωρεάν Εκτίμηση</a>
     <a href="tel:{{ site.phoneFull }}" class="sticky-bar__btn sticky-bar__btn--secondary">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       {{ site.phone }}
     </a>
   </div>
 </div>
+{% endif %}
 
 <script src="/assets/app.js"></script>
 </body>
