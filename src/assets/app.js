@@ -92,9 +92,13 @@
       }
     });
 
-    /* Mobile toggle */
+    /* Mobile toggle — ignore taps that are really scroll gestures */
     if (toggle && links) {
-      toggle.addEventListener('click', () => {
+      let touchMoved = false;
+      toggle.addEventListener('touchstart', () => { touchMoved = false; }, { passive: true });
+      toggle.addEventListener('touchmove', () => { touchMoved = true; }, { passive: true });
+      toggle.addEventListener('click', (e) => {
+        if (touchMoved) { touchMoved = false; return; }
         toggle.classList.toggle('is-open');
         links.classList.toggle('is-open');
         document.body.style.overflow = links.classList.contains('is-open') ? 'hidden' : '';
