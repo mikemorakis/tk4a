@@ -26,6 +26,8 @@
     initInternalLinks();
     initSmoothScroll();
     initReviewsCarousel();
+    initReviewDots();
+    initReviewCount();
     initStickyBarTrigger();
   }
 
@@ -354,35 +356,46 @@
      BOOKING FORM VALIDATION
      ============================== */
   function initBookingForm() {
-    const form = document.querySelector('#lead-form');
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let valid = true;
-      form.querySelectorAll('[required]').forEach(input => {
-        if (!input.value.trim()) {
-          valid = false;
-          input.style.borderColor = '#EF4444';
-          input.addEventListener('input', () => {
-            input.style.borderColor = '';
-          }, { once: true });
-        }
+    document.querySelectorAll('.booking-form').forEach(form => {
+      // Live validation checkmarks
+      form.querySelectorAll('.form-input').forEach(input => {
+        var ev = input.tagName === 'SELECT' ? 'change' : 'input';
+        input.addEventListener(ev, function() {
+          var group = input.closest('.form-group');
+          if (!group) return;
+          var filled = input.tagName === 'SELECT' ? input.value !== '' : input.value.trim().length >= 2;
+          group.classList.toggle('form-group--valid', filled);
+        });
       });
 
-      if (valid) {
-        const btn = form.querySelector('.btn');
-        const originalHTML = btn.innerHTML;
-        btn.textContent = '\u0395\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5! \u0398\u03B1 \u03C3\u03B1\u03C2 \u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03C5\u03BC\u03B5 \u03C3\u03CD\u03BD\u03C4\u03BF\u03BC\u03B1.';
-        btn.style.background = '#10B981';
-        btn.disabled = true;
-        setTimeout(() => {
-          btn.innerHTML = originalHTML;
-          btn.style.background = '';
-          btn.disabled = false;
-          form.reset();
-        }, 3000);
-      }
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(input => {
+          if (!input.value.trim()) {
+            valid = false;
+            input.style.borderColor = '#EF4444';
+            input.addEventListener('input', () => {
+              input.style.borderColor = '';
+            }, { once: true });
+          }
+        });
+
+        if (valid) {
+          const btn = form.querySelector('.btn');
+          const originalHTML = btn.innerHTML;
+          btn.textContent = '\u0395\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5! \u0398\u03B1 \u03C3\u03B1\u03C2 \u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03C5\u03BC\u03B5 \u03C3\u03CD\u03BD\u03C4\u03BF\u03BC\u03B1.';
+          btn.style.background = '#10B981';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+            form.querySelectorAll('.form-group--valid').forEach(g => g.classList.remove('form-group--valid'));
+          }, 3000);
+        }
+      });
     });
   }
 
@@ -404,28 +417,132 @@
   }
 
   /* ==============================
-     REVIEWS CAROUSEL
+     REVIEWS CAROUSEL — scroll-based with drag + dots
      ============================== */
   function initReviewsCarousel() {
     document.querySelectorAll('.reviews-carousel').forEach(carousel => {
       const track = carousel.querySelector('.reviews-carousel__track');
       if (!track) return;
-
-      // Measure original content width before cloning
       const cards = Array.from(track.querySelectorAll('.review-card'));
-      const gap = parseFloat(getComputedStyle(track).gap) || 20;
-      const originalWidth = cards.reduce((sum, c) => sum + c.offsetWidth, 0) + gap * cards.length;
+      if (!cards.length) return;
 
-      // Clone cards for seamless infinite loop
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        track.appendChild(clone);
+      // --- Mouse drag to scroll ---
+      let isDown = false, startX, scrollStart;
+      track.addEventListener('mousedown', e => {
+        isDown = true;
+        track.classList.add('is-dragging');
+        startX = e.pageX - track.offsetLeft;
+        scrollStart = track.scrollLeft;
+        pauseAuto();
+      });
+      track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('is-dragging'); });
+      track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('is-dragging'); });
+      track.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - track.offsetLeft;
+        track.scrollLeft = scrollStart - (x - startX);
       });
 
-      // Set exact scroll distance and speed (40px/s)
-      track.style.setProperty('--scroll-distance', `-${originalWidth}px`);
-      track.style.setProperty('--scroll-duration', `${originalWidth / 40}s`);
+      // --- Touch: pause auto-scroll ---
+      track.addEventListener('touchstart', () => { pauseAuto(); }, { passive: true });
+
+      // --- Auto-scroll ---
+      let autoInterval = null;
+      function startAuto() {
+        if (autoInterval) return;
+        autoInterval = setInterval(() => {
+          const gap = parseFloat(getComputedStyle(track).gap) || 20;
+          const cardWidth = cards[0].offsetWidth + gap;
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          if (track.scrollLeft >= maxScroll - 5) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+          }
+        }, 4000);
+      }
+      function pauseAuto() {
+        clearInterval(autoInterval);
+        autoInterval = null;
+        // Resume after 8s of inactivity
+        clearTimeout(track._resumeTimer);
+        track._resumeTimer = setTimeout(startAuto, 8000);
+      }
+      startAuto();
+    });
+  }
+
+  function initReviewDots() {
+    const dotsContainer = document.querySelector('.reviews-dots');
+    const carousel = document.querySelector('.reviews-carousel');
+    if (!dotsContainer || !carousel) return;
+
+    const track = carousel.querySelector('.reviews-carousel__track');
+    if (!track) return;
+    const cards = Array.from(track.querySelectorAll('.review-card'));
+    if (!cards.length) return;
+
+    // Create dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'reviews-dots__dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Κριτική ' + (i + 1));
+      dot.addEventListener('click', () => {
+        const gap = parseFloat(getComputedStyle(track).gap) || 20;
+        const cardWidth = cards[0].offsetWidth + gap;
+        track.scrollTo({ left: cardWidth * i, behavior: 'smooth' });
+        updateDots(i);
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateDots(active) {
+      dotsContainer.querySelectorAll('.reviews-dots__dot').forEach((d, j) => {
+        d.classList.toggle('is-active', j === active);
+      });
+    }
+
+    // Sync dots on scroll
+    let scrollTimer;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const gap = parseFloat(getComputedStyle(track).gap) || 20;
+        const cardWidth = cards[0].offsetWidth + gap;
+        const index = Math.round(track.scrollLeft / cardWidth);
+        updateDots(Math.min(index, cards.length - 1));
+      }, 50);
+    });
+  }
+
+  /* ==============================
+     REVIEW COUNT — Rotating number animation
+     ============================== */
+  function initReviewCount() {
+    document.querySelectorAll('.review-count-rotate').forEach(el => {
+      const section = document.querySelector('[data-review-count]');
+      const target = parseInt(section ? section.dataset.reviewCount : '87', 10);
+
+      // Build a column of numbers 0 → target for slot-machine roll
+      var html = '<span class="review-count-rotate__reel">';
+      for (var i = 0; i <= target; i++) {
+        html += '<span class="review-count-rotate__num">' + i + '</span>';
+      }
+      html += '</span>';
+      el.innerHTML = html;
+
+      var reel = el.querySelector('.review-count-rotate__reel');
+      // Trigger on scroll into view
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            reel.style.transform = 'translateY(-' + (target * 1.2) + 'em)';
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(el);
     });
   }
 
