@@ -30,18 +30,25 @@
         <a href="/orthodontiki-sugratisi.html" class="footer__link">Ορθοδοντική συγκράτηση</a>
       </div>
       <div>
+        <h4 class="footer__heading">Περιοχές Εξυπηρέτησης</h4>
+        <span class="footer__link">Αθήνα Κέντρο</span>
+        <span class="footer__link">Παλαιό Φάληρο</span>
+        <span class="footer__link">Νέα Σμύρνη</span>
+        <span class="footer__link">Καλλιθέα</span>
+        <span class="footer__link">Άλιμος</span>
+        <span class="footer__link">Άγιος Δημήτριος</span>
+      </div>
+      <div>
         <h4 class="footer__heading">Επικοινωνία</h4>
         <a href="#" class="footer__link">{{ site.address.street }}</a>
         <a href="#" class="footer__link">{{ site.address.city }} {{ site.address.zip }}</a>
         <a href="tel:{{ site.phoneFull }}" class="footer__link">{{ site.phoneFormatted }}</a>
         <a href="mailto:{{ site.email }}" class="footer__link">{{ site.email }}</a>
+        <span class="footer__link" style="margin-top:0.8rem;font-size:var(--fs-xs);color:rgba(255,255,255,0.45);"><strong style="color:rgba(255,255,255,0.6);">Ωράριο:</strong> {{ site.hours }}</span>
       </div>
     </div>
-    <div style="padding:1rem 0; font-size:var(--fs-xs); color:rgba(255,255,255,0.45);">
-      <strong style="color:rgba(255,255,255,0.6);">Ωράριο Λειτουργίας:</strong> {{ site.hours }}
-    </div>
     <div class="footer__bottom">
-      <span>&copy; 2018 All rights Reserved. Design by Symbols Branding Agency</span>
+      <span>&copy; 2018 All rights Reserved. Design by <a href="https://symbols.gr/sxediasmos-istoselidas" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Symbols House of Brands</a> on <a href="https://tapa.gr/istoselides/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.5);text-decoration:underline;">TAPA Network</a></span>
       <div class="footer__socials">
         <a href="{{ site.social.facebook }}" class="footer__social" aria-label="Facebook" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

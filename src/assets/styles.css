@@ -1260,6 +1260,34 @@ textarea.form-input {
 }
 .trust-item svg { width: 20px; height: 20px; color: var(--c-accent); flex-shrink: 0; margin-top: 2px; }
 
+/* --- Pillar Page Content --- */
+.pillar-content { max-width: 100%; }
+.pillar-content p {
+  color: var(--c-text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+  font-size: var(--fs-body);
+}
+.pillar-content h3 {
+  font-family: var(--f-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 2rem 0 0.8rem;
+}
+.pillar-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pillar-content li {
+  color: var(--c-text-muted);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+.pillar-content li strong {
+  color: var(--c-text);
+}
+
 /* --- Footer --- */
 .footer {
   background:
@@ -1285,7 +1313,7 @@ textarea.form-input {
 .footer > .container { position: relative; z-index: 2; width: 100%; max-width: 100%; padding: 0 2rem; }
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }

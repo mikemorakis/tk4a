@@ -23,25 +23,50 @@
   {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "{{ site.name }}",
-    "image": "/tkorthodontics.webp",
-    "telephone": "{{ site.phoneFormatted }}",
-    "email": "{{ site.email }}",
+    "name": "TK Orthodontics - Κωνσταντίνος Τσιότρας",
+    "image": "https://www.tkorthodontics.gr/images/logo.png",
+    "@id": "https://www.tkorthodontics.gr",
+    "url": "https://www.tkorthodontics.gr",
+    "telephone": "+302109811116",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "{{ site.address.streetFull }}",
-      "addressLocality": "{{ site.address.city }}",
-      "postalCode": "{{ site.address.zip }}",
+      "streetAddress": "Λεωφόρος Αμφιθέας 101",
+      "addressLocality": "Παλαιό Φάληρο",
+      "addressRegion": "Αθήνα",
+      "postalCode": "17564",
       "addressCountry": "GR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.925442,
+      "longitude": 23.701235
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/tkorthodontics",
+      "https://www.instagram.com/dr_tsiotras_orthodontist"
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Athens", "sameAs": "https://www.wikidata.org/wiki/Q1524"},
+      {"@type": "City", "name": "Palaio Faliro", "sameAs": "https://www.wikidata.org/wiki/Q599507"},
+      {"@type": "City", "name": "Kallithea", "sameAs": "https://www.wikidata.org/wiki/Q427389"},
+      {"@type": "City", "name": "Nea Smyrni", "sameAs": "https://www.wikidata.org/wiki/Q617196"}
+    ],
+    "description": "Ορθοδοντικό Ιατρείο TK Orthodontics στην Αθήνα. Ο Κωνσταντίνος Τσιότρας προσφέρει εξειδικευμένες υπηρεσίες Invisalign, αόρατης ορθοδοντικής και σιδεράκια για παιδιά και ενήλικες.",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "{{ site.reviewScore }}",
       "reviewCount": "{{ site.reviewCount }}",
       "bestRating": "5"
-    },
-    "openingHours": "Mo-Fr 09:00-21:00",
-    "priceRange": "€€"
+    }
   }
   </script>
   <script type="application/ld+json">

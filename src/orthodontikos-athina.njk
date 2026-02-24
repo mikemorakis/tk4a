@@ -1,0 +1,465 @@
+---
+layout: layouts/base.njk
+title: "Ορθοδοντικός Αθήνα — Κωνσταντίνος Τσιότρας | TK Orthodontics"
+description: "Ψάχνετε ορθοδοντικό στην Αθήνα; Ο Dr. Τσιότρας προσφέρει ψηφιακή ορθοδοντική, Invisalign & σιδεράκια στο Παλαιό Φάληρο. 250+ 5★ κριτικές. Δωρεάν εκτίμηση!"
+isHome: false
+---
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="page-header__orb"></div>
+  <div class="container">
+    <div class="page-header__content">
+      <span class="section-label">{{ site.nameRegistered }}</span>
+      <h1 class="page-header__title">Ορθοδοντικός στην Αθήνα — Ψηφιακή Ορθοδοντική Νέας Γενιάς</h1>
+      <p class="page-header__desc">Εξειδικευμένη ορθοδοντική φροντίδα για παιδιά και ενήλικες. Invisalign, αόρατη ορθοδοντική και σύγχρονα σιδεράκια στο Παλαιό Φάληρο — με εύκολη πρόσβαση από όλη την Αττική.</p>
+    </div>
+  </div>
+</section>
+{% include "partials/page-header-socials.njk" %}
+
+<!-- ===== CTA FORM ===== -->
+<section class="section section--alt" id="contact-form">
+  <div class="container" style="max-width:640px;">
+    <div class="text-center reveal">
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Κλείστε Δωρεάν Εκτίμηση</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε 3 στοιχεία και θα σας καλέσουμε εντός 24 ωρών για δωρεάν ενημέρωση σχετικά με τη θεραπεία, το κόστος και τις δόσεις.</p>
+    </div>
+    <div style="height:2rem"></div>
+    <form class="booking-form reveal" id="lead-form">
+      <p class="form-urgency">3 πεδία &nbsp;&middot;&nbsp; 30 δευτερόλεπτα &nbsp;&middot;&nbsp; Χωρίς δέσμευση</p>
+      <div class="form-group">
+        <label class="form-label" for="name">Ονοματεπώνυμο</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="service">Τι σας ενδιαφέρει;</label>
+        <select id="service" name="service" class="form-input" required>
+          <option value="unsure" selected>Δεν γνωρίζω ακόμα — θέλω ενημέρωση</option>
+          <option value="invisalign">Αόρατοι Νάρθηκες (Invisalign)</option>
+          <option value="metallic">Μεταλλικά Σιδεράκια</option>
+          <option value="ceramic">Κεραμικά Σιδεράκια</option>
+          <option value="removable">Κινητοί Μηχανισμοί</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="tel">Τηλέφωνο επικοινωνίας</label>
+        <input type="tel" id="tel" name="tel" class="form-input" placeholder="π.χ. 69X XXX XXXX" required autocomplete="tel" inputmode="tel" enterkeyhint="send">
+      </div>
+      <div style="height:0.5rem"></div>
+      <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>Καλέστε με — Είναι Δωρεάν <span class="arrow">&rarr;</span></button>
+      <div class="form-trust">
+        <svg viewBox="0 0 24 24" fill="#e2b340" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <span>{{ site.reviewScore }} · {{ site.reviewCount }} ασθενείς μας εμπιστεύτηκαν στο Google</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== INTRO: ΓΙΑΤΙ TK ORTHODONTICS ===== -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <div class="pillar-content reveal">
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Γιατί να επιλέξετε εξειδικευμένο ορθοδοντικό στην Αθήνα;</h2>
+      <p>Η ορθοδοντική θεραπεία δεν είναι απλά μια αισθητική παρέμβαση — είναι μια ιατρική πράξη που επηρεάζει τη <strong>σύγκλειση δοντιών</strong>, τη λειτουργία της γνάθου και, τελικά, την ποιότητα ζωής σας. Γι' αυτό η επιλογή ενός αποκλειστικά ορθοδοντικού, και όχι γενικού οδοντιάτρου, είναι κρίσιμη.</p>
+      <p>Ο <strong>Dr. Κωνσταντίνος Τσιότρας</strong> ασχολείται αποκλειστικά με την ορθοδοντική εδώ και 15+ χρόνια. Δεν κάνει σφραγίσματα, δεν κάνει εξαγωγές — ασχολείται μόνο με τη μετακίνηση δοντιών, τη διόρθωση σύγκλεισης και την αισθητική του χαμόγελου. Αυτή η εξειδίκευση σημαίνει <strong>3.000+ ολοκληρωμένες θεραπείες</strong> και βαθιά γνώση κάθε τύπου ορθοδοντικού προβλήματος.</p>
+
+      <!-- [ΕΙΚΟΝΑ: Φωτογραφία ιατρείου / Dr. Τσιότρα κατά τη διάρκεια θεραπείας — alt: "Ορθοδοντικός Αθήνα Dr. Τσιότρας TK Orthodontics"] -->
+
+      <h3>Τι σημαίνει «ψηφιακή ορθοδοντική»;</h3>
+      <p>Στο TK Orthodontics, χρησιμοποιούμε <strong>ψηφιακό αποτύπωμα</strong> αντί για τα παραδοσιακά καλούπια, 3D σχεδιασμό θεραπείας και προηγμένο λογισμικό πρόβλεψης αποτελεσμάτων. Αυτό σημαίνει:</p>
+      <ul>
+        <li><strong>Μεγαλύτερη ακρίβεια</strong> στη διάγνωση και τον σχεδιασμό</li>
+        <li><strong>Λιγότερη ταλαιπωρία</strong> — χωρίς δυσάρεστα αποτυπώματα</li>
+        <li><strong>Ταχύτερη θεραπεία</strong> χάρη στον ψηφιακό προγραμματισμό</li>
+        <li><strong>Προεπισκόπηση αποτελέσματος</strong> πριν καν ξεκινήσετε</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ΘΕΡΑΠΕΙΕΣ ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Ορθοδοντικές Θεραπείες</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ποια ορθοδοντική θεραπεία σας ταιριάζει;</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Κάθε περίπτωση είναι μοναδική. Ο Dr. Τσιότρας θα σας προτείνει τη θεραπεία που ταιριάζει στη δική σας κατάσταση, τον τρόπο ζωής και τον προϋπολογισμό σας.</p>
+    </div>
+    <div style="height:3rem"></div>
+    <div class="grid grid-2 stagger">
+      <div class="service-card reveal" data-tilt style="--i:0">
+        <div class="service-card__img">
+          <img src="/aoratoi.narthikes.jpg" alt="Invisalign αόρατοι νάρθηκες - ορθοδοντικός Αθήνα TK Orthodontics" loading="lazy">
+        </div>
+        <span class="service-card__badge">Δημοφιλές</span>
+        <h3 class="service-card__title">Invisalign — Διαφανείς Νάρθηκες</h3>
+        <p class="service-card__desc">Η πιο σύγχρονη μέθοδος αόρατης ορθοδοντικής. Αφαιρούμενοι, διαφανείς νάρθηκες που ισιώνουν τα δόντια χωρίς κανείς να καταλαβαίνει. Ιδανικοί για ενήλικες και επαγγελματίες.</p>
+        <a href="/aoratoi-narthikes.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:1">
+        <div class="service-card__img">
+          <img src="/keramika.siderakia.jpg" alt="Κεραμικά σιδεράκια - ορθοδοντικός Αθήνα iatreio tkorthodontics" loading="lazy">
+        </div>
+        <h3 class="service-card__title">Κεραμικά Σιδεράκια</h3>
+        <p class="service-card__desc">Η αποτελεσματικότητα των κλασικών σιδερακίων σε χρώμα που ταιριάζει με τα δόντια σας. Σχεδόν αόρατα, χωρίς κιτρίνισμα, ιδανικά για σύνθετες περιπτώσεις.</p>
+        <a href="/keramika-siderakia.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:2">
+        <div class="service-card__img">
+          <img src="/metalika.siderakia.jpg" alt="Μεταλλικά σιδεράκια - ορθοδοντικός Αθήνα iatreio tkorthodontics" loading="lazy">
+        </div>
+        <span class="service-card__badge service-card__badge--value">Οικονομική Επιλογή</span>
+        <h3 class="service-card__title">Μεταλλικά Σιδεράκια</h3>
+        <p class="service-card__desc">Η δοκιμασμένη κλασική μέθοδος με τα καλύτερα αποτελέσματα σε σύνθετα ορθοδοντικά προβλήματα. Μέγιστη αποτελεσματικότητα στην καλύτερη τιμή.</p>
+        <a href="/metallika-siderakia.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:3">
+        <div class="service-card__img">
+          <img src="/kinitoi.michanismoi.jpg" alt="Κινητοί μηχανισμοί παιδικής ορθοδοντικής - ορθοδοντικός Αθήνα" loading="lazy">
+        </div>
+        <h3 class="service-card__title">Κινητοί Μηχανισμοί (Παιδιά)</h3>
+        <p class="service-card__desc">Πρώιμη ορθοδοντική παρέμβαση για παιδιά 7-12 ετών. Αφαιρούμενοι μηχανισμοί που καθοδηγούν τη σωστή ανάπτυξη γνάθου και αποτρέπουν σύνθετη θεραπεία αργότερα.</p>
+        <a href="/kinitoi-michanismoi.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ΠΟΙΟΣ ΧΡΕΙΑΖΕΤΑΙ ΟΡΘΟΔΟΝΤΙΚΗ ===== -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <div class="pillar-content reveal">
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ποιος χρειάζεται ορθοδοντική θεραπεία;</h2>
+      <p>Η ορθοδοντική δεν αφορά μόνο «στραβά δόντια». Πολλοί ασθενείς μας ξεκινούν θεραπεία για λόγους που δεν είχαν φανταστεί — από χρόνιους πονοκεφάλους μέχρι δυσκολία στη μάσηση. Οι πιο συχνές ενδείξεις περιλαμβάνουν:</p>
+
+      <h3>Σε ενήλικες</h3>
+      <ul>
+        <li><strong>Συνωστισμός δοντιών</strong> — δόντια που αλληλοεπικαλύπτονται ή στρέφονται</li>
+        <li><strong>Κενά μεταξύ δοντιών</strong> (διαστήματα) που επηρεάζουν την αισθητική</li>
+        <li><strong>Προβλήματα σύγκλεισης</strong> — πρόγναθος, οπισθογναθισμός, σταυρωτή σύγκλειση</li>
+        <li><strong>Πόνοι στη γνάθο</strong> (TMJ) που σχετίζονται με κακή σύγκλειση</li>
+        <li><strong>Αισθητική προσώπου</strong> — η σωστή σύγκλειση βελτιώνει τη συμμετρία και το προφίλ</li>
+        <li><strong>Προετοιμασία για προσθετική αποκατάσταση</strong> (εμφυτεύματα, γέφυρες, όψεις)</li>
+      </ul>
+      <p>Πάνω από <strong>40% των ασθενών μας είναι ενήλικες</strong> που ξεκινούν ορθοδοντική θεραπεία για πρώτη φορά. Με σύγχρονες μεθόδους όπως Invisalign και κεραμικά σιδεράκια, η θεραπεία είναι πλέον πλήρως διακριτική.</p>
+
+      <!-- [ΕΙΚΟΝΑ: Before/After ενήλικα ασθενή — alt: "Ορθοδοντική θεραπεία ενηλίκων πριν και μετά Αθήνα"] -->
+
+      <h3>Σε παιδιά και εφήβους</h3>
+      <ul>
+        <li><strong>Πρώιμη αξιολόγηση από 7 ετών</strong> — η Αμερικανική Ορθοδοντική Εταιρεία το συνιστά</li>
+        <li><strong>Σταυρωτή σύγκλειση</strong> ή πρόωρη απώλεια νεογιλών δοντιών</li>
+        <li><strong>Κακές συνήθειες</strong> (δαχτυλοπιπίλισμα, στοματική αναπνοή) που επηρεάζουν την ανάπτυξη</li>
+        <li><strong>Δόντια που δεν φυτρώνουν</strong> στη σωστή θέση ή στον σωστό χρόνο</li>
+      </ul>
+      <p>Η πρώιμη ορθοδοντική παρέμβαση μπορεί να αξιοποιήσει την ανάπτυξη του παιδιού και να αποτρέψει πιο σοβαρά προβλήματα — και πιο σύνθετη θεραπεία — στο μέλλον.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== E-E-A-T: ΓΙΑΤΡΟΣ ===== -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="cta-banner reveal--scale" style="text-align:left;">
+      <div class="cta-banner__bg"></div>
+      <div class="cta-banner__orb"></div>
+      <div class="cta-banner__content" style="max-width:100%;">
+        <span class="section-label" style="color:var(--c-accent);">Γνωρίστε τον Γιατρό σας</span>
+        <h2 style="font-family:var(--f-heading);font-size:var(--fs-h3);color:#fff;margin-bottom:1.5rem;">Dr. Κωνσταντίνος Τσιότρας — Αποκλειστικά Ορθοδοντικός</h2>
+        <div class="grid grid-2" style="gap:2rem;align-items:start;">
+          <div>
+            <p style="color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:1rem;">«Ξεκίνησα να ασχολούμαι αποκλειστικά με την ορθοδοντική γιατί πίστευα ότι κάθε ασθενής αξίζει ένα χαμόγελο που τον κάνει να νιώθει σίγουρος. 15 χρόνια μετά, αυτή η πεποίθηση είναι πιο δυνατή από ποτέ.»</p>
+            <p style="color:rgba(255,255,255,0.7);line-height:1.8;">Κάθε θεραπεία τη σχεδιάζω και την εκτελώ <strong style="color:#fff;">προσωπικά</strong>. Δεν λειτουργώ πολυιατρείο — πιστεύω στη σχέση εμπιστοσύνης μεταξύ γιατρού και ασθενή.</p>
+          </div>
+          <div>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.8rem;">
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                MSc Ορθοδοντική — μεταπτυχιακή εξειδίκευση
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                3.000+ ολοκληρωμένες θεραπείες
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                15+ χρόνια κλινικής εμπειρίας
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Πιστοποιημένος πάροχος Invisalign
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Μέλος Ελληνικής Ορθοδοντικής Εταιρείας
+              </li>
+              <li style="display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.8);font-size:var(--fs-small);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Αποκλειστικά ορθοδοντικός — δεν ασκεί γενική οδοντιατρική
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ΔΙΑΔΙΚΑΣΙΑ ΘΕΡΑΠΕΙΑΣ ===== -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <div class="pillar-content reveal">
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Πώς γίνεται η ορθοδοντική θεραπεία βήμα-βήμα</h2>
+      <p>Η διαδικασία στο TK Orthodontics είναι σχεδιασμένη ώστε να μη νιώσετε ποτέ χαμένοι ή αβέβαιοι. Κάθε βήμα είναι προκαθορισμένο και σας εξηγείται αναλυτικά.</p>
+
+      <h3>1. Δωρεάν αρχική εκτίμηση</h3>
+      <p>Στο πρώτο ραντεβού, ο Dr. Τσιότρας εξετάζει τη σύγκλεισή σας, αξιολογεί τη θέση των δοντιών και της γνάθου, και σας εξηγεί ποιες είναι οι επιλογές σας. Λαμβάνεται <strong>ψηφιακό αποτύπωμα</strong> (χωρίς τα παλιομοδίτικα καλούπια) για ακριβή εικόνα.</p>
+      <p><strong>Δεν υπάρχει καμία δέσμευση.</strong> Λαμβάνετε αναλυτική κοστολόγηση, πλάνο θεραπείας και εκτίμηση χρόνου — και αποφασίζετε στον δικό σας χρόνο.</p>
+
+      <!-- [ΕΙΚΟΝΑ: Ψηφιακό αποτύπωμα / Intraoral scanner σε χρήση — alt: "Ψηφιακό αποτύπωμα δοντιών ορθοδοντική Αθήνα"] -->
+
+      <h3>2. Σχεδιασμός θεραπείας</h3>
+      <p>Χρησιμοποιώντας 3D απεικόνιση και ψηφιακά εργαλεία, ο Dr. Τσιότρας σχεδιάζει το εξατομικευμένο πλάνο θεραπείας σας. Στην περίπτωση του Invisalign, βλέπετε <strong>ψηφιακή προεπισκόπηση του τελικού αποτελέσματος</strong> πριν ξεκινήσετε — ξέρετε ακριβώς τι περιμένετε.</p>
+
+      <h3>3. Ενεργή θεραπεία</h3>
+      <p>Ξεκινά η τοποθέτηση σιδερακίων ή η παράδοση των πρώτων νάρθηκων Invisalign. Τα ραντεβού είναι τακτικά (κάθε 4-6 εβδομάδες) και σύντομα. Ο Dr. Τσιότρας παρακολουθεί <strong>προσωπικά</strong> κάθε στάδιο.</p>
+      <p>Η μέση διάρκεια θεραπείας κυμαίνεται μεταξύ <strong>12-24 μηνών</strong>, ανάλογα με τη σοβαρότητα της περίπτωσης.</p>
+
+      <h3>4. Φάση συγκράτησης</h3>
+      <p>Μετά την αφαίρεση των σιδερακίων, τοποθετούνται μόνιμοι συρμάτινοι <strong>συγκρατητήρες (retainers)</strong> πίσω από τα δόντια. Αυτό εξασφαλίζει ότι το αποτέλεσμα θα διατηρηθεί μόνιμα. Η φάση συγκράτησης είναι εξίσου σημαντική με την ίδια τη θεραπεία.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCAL SEO: ΓΙΑΤΙ ΠΑΛΑΙΟ ΦΑΛΗΡΟ ===== -->
+<section class="section section--alt">
+  <div class="container" style="max-width:820px;">
+    <div class="pillar-content reveal">
+      <span class="section-label">Τοποθεσία & Πρόσβαση</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Γιατί να έρθετε στο Παλαιό Φάληρο από οπουδήποτε στην Αθήνα</h2>
+      <p>Το ιατρείο μας βρίσκεται επί της <strong>Λεωφόρου Αμφιθέας</strong>, σε ένα από τα πιο εύκολα προσβάσιμα σημεία των Νοτίων Προαστίων. Η τοποθεσία δεν ήταν τυχαία — επιλέχθηκε ώστε ασθενείς από ολόκληρη την Αττική να φτάνουν εύκολα.</p>
+
+      <h3>Εύκολη πρόσβαση</h3>
+      <ul>
+        <li><strong>Από Αθήνα Κέντρο:</strong> 15 λεπτά μέσω Λεωφόρου Συγγρού</li>
+        <li><strong>Από Νέα Σμύρνη / Καλλιθέα:</strong> 5-10 λεπτά</li>
+        <li><strong>Από Άλιμο / Ελληνικό / Γλυφάδα:</strong> 10 λεπτά μέσω Ποσειδώνος</li>
+        <li><strong>Από Πειραιά:</strong> 15 λεπτά</li>
+        <li><strong>Τραμ:</strong> Στάση «Φλοίσβος» σε απόσταση 5 λεπτών</li>
+        <li><strong>Εύκολο Parking:</strong> Ελεύθερος χώρος στάθμευσης στους γύρω δρόμους</li>
+      </ul>
+
+      <!-- [ΧΑΡΤΗΣ: Google Maps embed — alt: "Τοποθεσία TK Orthodontics Παλαιό Φάληρο"] -->
+
+      <h3>Γιατί αξίζει η μετακίνηση;</h3>
+      <p>Η ορθοδοντική θεραπεία δεν απαιτεί καθημερινές επισκέψεις — τα ραντεβού γίνονται μία φορά κάθε 4-6 εβδομάδες. Η επιλογή γιατρού δεν πρέπει να βασίζεται μόνο στην απόσταση, αλλά στην <strong>εξειδίκευση, τον εξοπλισμό και τα αποτελέσματα</strong>. Πολλοί ασθενείς μας έρχονται από Βόρεια Προάστια, Πειραιά, ακόμα και εκτός Αθήνας, γιατί αξιολογούν την ποιότητα πάνω από τη γειτνίαση.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ΚΟΣΤΟΣ ===== -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <div class="pillar-content reveal">
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Πόσο κοστίζει η ορθοδοντική θεραπεία στην Αθήνα;</h2>
+      <p>Ένα από τα πιο συχνά ερωτήματα — και δικαιολογημένα. Το κόστος εξαρτάται από τον τύπο θεραπείας, τη σοβαρότητα του προβλήματος και τη διάρκεια.</p>
+
+      <h3>Τι επηρεάζει την τιμή;</h3>
+      <ul>
+        <li><strong>Τύπος θεραπείας:</strong> Μεταλλικά σιδεράκια &lt; Κεραμικά &lt; Invisalign</li>
+        <li><strong>Σοβαρότητα:</strong> Μια απλή περίπτωση κοστίζει λιγότερο από μια σύνθετη</li>
+        <li><strong>Διάρκεια:</strong> Θεραπεία 12 μηνών vs. 24 μηνών</li>
+        <li><strong>Ηλικία:</strong> Η θεραπεία σε εφήβους μπορεί να είναι ταχύτερη λόγω ανάπτυξης</li>
+      </ul>
+
+      <p>Στο TK Orthodontics προσφέρουμε:</p>
+      <ul>
+        <li><strong>Διαφανή κοστολόγηση</strong> — μαθαίνετε ακριβώς το συνολικό ποσό πριν ξεκινήσετε</li>
+        <li><strong>Άτοκες δόσεις</strong> — ευέλικτα πλάνα αποπληρωμής από €89/μήνα</li>
+        <li><strong>Δωρεάν αρχική εκτίμηση</strong> — χωρίς δέσμευση και χωρίς κόστος</li>
+      </ul>
+      <p style="padding:1.5rem;background:var(--c-surface);border-left:3px solid var(--c-accent);border-radius:var(--radius);margin-top:1.5rem;">
+        <strong>Σημαντικό:</strong> Ορισμένα ταμεία καλύπτουν μέρος του κόστους ορθοδοντικής θεραπείας. Θα σας ενημερώσουμε αναλυτικά στη δωρεάν εκτίμηση.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MID-PAGE CTA ===== -->
+<section class="section mid-cta" style="padding:3rem 0;">
+  <div class="container">
+    <div class="mid-cta__inner reveal">
+      <p class="mid-cta__text">Μάθετε ακριβώς πόσο θα κοστίσει η δική σας θεραπεία — χωρίς δέσμευση</p>
+      <div class="mid-cta__actions">
+        <a href="#contact-form" class="btn btn--primary" data-magnetic>Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+        <a href="tel:{{ site.phoneFull }}" class="mid-cta__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          {{ site.phone }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ — ZERO CLICK OPTIMIZED ===== -->
+<section class="section section--dark" id="faq">
+  <div class="faq__orb"></div>
+  <div class="container" style="max-width:760px;">
+    <div class="text-center reveal">
+      <span class="section-label">Συχνές Ερωτήσεις</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;color:#fff;">Απαντήσεις στις ερωτήσεις που ψάχνετε</h2>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πώς βρίσκω τον καλύτερο ορθοδοντικό στην Αθήνα;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ελέγξτε αν ο γιατρός είναι αποκλειστικά ορθοδοντικός (και όχι γενικός οδοντίατρος), αν έχει μεταπτυχιακή εξειδίκευση (MSc Ορθοδοντική), τις κριτικές στο Google, και αν χρησιμοποιεί σύγχρονη ψηφιακή τεχνολογία (intraoral scanner, 3D σχεδιασμός). Η δωρεάν αρχική εκτίμηση σας επιτρέπει να γνωρίσετε τον γιατρό πριν δεσμευτείτε.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Ποια η διαφορά ορθοδοντικού και οδοντιάτρου;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ο ορθοδοντικός είναι οδοντίατρος με 3+ χρόνια επιπλέον μεταπτυχιακή εξειδίκευση στη μετακίνηση δοντιών και τη διόρθωση σύγκλεισης. Ο αποκλειστικά ορθοδοντικός δεν ασκεί γενική οδοντιατρική — ασχολείται μόνο με ορθοδοντική, πράγμα που σημαίνει πολύ μεγαλύτερη εμπειρία στο αντικείμενο.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Είναι αργά να βάλω σιδεράκια ως ενήλικας;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Όχι. Η ορθοδοντική δεν έχει ηλικιακό όριο. Πάνω από 40% των ασθενών στο TK Orthodontics είναι ενήλικες (25-65 ετών). Με σύγχρονες μεθόδους όπως Invisalign και κεραμικά σιδεράκια, η θεραπεία είναι εντελώς διακριτική.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πονάνε τα σιδεράκια;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η τοποθέτηση είναι εντελώς ανώδυνη. Τις πρώτες 2-3 ημέρες μετά την τοποθέτηση ή κάθε ρύθμιση, μπορεί να νιώσετε ελαφριά πίεση — σημάδι ότι τα δόντια αρχίζουν να μετακινούνται. Αυτό αντιμετωπίζεται εύκολα και εξαφανίζεται σύντομα.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Invisalign ή σιδεράκια — τι να επιλέξω;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Εξαρτάται από τη σοβαρότητα του προβλήματός σας και τις προτεραιότητές σας. Το Invisalign είναι αόρατο και αφαιρούμενο — ιδανικό για ελαφρές-μεσαίες περιπτώσεις. Τα σιδεράκια (μεταλλικά ή κεραμικά) είναι καλύτερα για σύνθετα προβλήματα σύγκλεισης. Η σωστή επιλογή γίνεται μετά από κλινική εξέταση.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Πόσο διαρκεί η ορθοδοντική θεραπεία;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η μέση διάρκεια κυμαίνεται μεταξύ 12-24 μηνών. Απλές περιπτώσεις (π.χ. ελαφρύς συνωστισμός) μπορεί να ολοκληρωθούν σε 8-12 μήνες, ενώ σύνθετα προβλήματα σύγκλεισης μπορεί να χρειαστούν 18-30 μήνες. Ο ακριβής χρόνος καθορίζεται στη δωρεάν αρχική εκτίμηση.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Μπορώ να πληρώσω σε δόσεις;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Ναι. Προσφέρουμε ευέλικτα πλάνα αποπληρωμής σε άτοκες δόσεις, ώστε η θεραπεία να είναι προσιτή χωρίς συμβιβασμούς στην ποιότητα. Το πλάνο δόσεων συμφωνείται πριν ξεκινήσει η θεραπεία.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Από ποια ηλικία πρέπει ένα παιδί να επισκεφτεί ορθοδοντικό;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Η ιδανική ηλικία για πρώτη ορθοδοντική αξιολόγηση είναι στα 7 ετών. Αυτό δεν σημαίνει ότι θα ξεκινήσει θεραπεία — σημαίνει ότι ο ορθοδοντικός μπορεί να εντοπίσει πιθανά προβλήματα πριν γίνουν σοβαρότερα. Η πρώιμη παρέμβαση μπορεί να εξοικονομήσει χρόνο, χρήμα και ταλαιπωρία αργότερα.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__trigger" aria-expanded="false">
+          Τι είναι τα retainers και γιατί είναι σημαντικά;
+          <span class="faq-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-item__content">
+          <p class="faq-item__answer">Τα retainers (συγκρατητήρες) είναι λεπτά σύρματα που τοποθετούνται πίσω από τα δόντια μετά την αφαίρεση των σιδερακίων. Εξασφαλίζουν ότι τα δόντια θα παραμείνουν στη νέα τους θέση μόνιμα. Χωρίς retainers, υπάρχει κίνδυνος υποτροπής — γι' αυτό η φάση ορθοδοντικής συγκράτησης είναι εξίσου κρίσιμη με τη θεραπεία.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:3rem;">
+      <p style="color:rgba(255,255,255,0.5);margin-bottom:1rem;font-size:var(--fs-small);">Έχετε περισσότερες ερωτήσεις;</p>
+      <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Ρωτήστε μας — Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG LINKS ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Χρήσιμα Άρθρα</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Μάθετε περισσότερα για τα σιδεράκια</h2>
+    </div>
+    <div style="height:2rem"></div>
+    <div class="grid grid-2 stagger">
+      <div class="service-card reveal" data-tilt style="--i:0">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 class="service-card__title">Συμβουλές μετά την τοποθέτηση</h3>
+        <p class="service-card__desc">Τι να περιμένετε μετά την τοποθέτηση σιδερακίων και πώς να διαχειριστείτε τις πρώτες μέρες.</p>
+        <a href="/advice-after-surgery.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:1">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 15 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <h3 class="service-card__title">Υγιεινή δοντιών κατά τη θεραπεία</h3>
+        <p class="service-card__desc">Πώς να διατηρήσετε τέλεια στοματική υγιεινή ενώ φοράτε σιδεράκια.</p>
+        <a href="/advice-for-optimal-teeth-hygiene.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:2">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18"/><path d="m6 9 6 11 6-11"/></svg>
+        </div>
+        <h3 class="service-card__title">Tips για νέους ασθενείς</h3>
+        <p class="service-card__desc">Οδηγός για όσους ξεκινούν ορθοδοντική θεραπεία — τι να ξέρετε εκ των προτέρων.</p>
+        <a href="/tips-for-new-patients.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" data-tilt style="--i:3">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3 class="service-card__title">Ορθοδοντική συγκράτηση</h3>
+        <p class="service-card__desc">Γιατί τα retainers είναι κρίσιμα και πώς εξασφαλίζουν μόνιμο αποτέλεσμα.</p>
+        <a href="/orthodontiki-sugratisi.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal--scale">
+      <div class="cta-banner__bg"></div>
+      <div class="cta-banner__orb"></div>
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__title">Έτοιμοι να ξεκινήσετε;</h2>
+        <p class="cta-banner__subtitle">Η δωρεάν αρχική εκτίμηση περιλαμβάνει εξέταση, πλάνο θεραπείας, αναλυτική κοστολόγηση και πλάνο δόσεων. Αν δεν σας ικανοποιεί, δεν μας χρωστάτε τίποτα.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+          <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Κλείστε Δωρεάν Ραντεβού <span class="arrow">&rarr;</span></a>
+          <a href="tel:{{ site.phoneFull }}" class="btn btn--outline btn--lg" data-magnetic>{{ site.phone }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
