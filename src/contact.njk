@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: "Επικοινωνία — TK Orthodontics ® | Ορθοδοντικός Dr. Τσιότρας"
+description: "Επικοινωνήστε μαζί μας για δωρεάν εκτίμηση ή ραντεβού. TK Orthodontics — Dr. Τσιότρας Κωνσταντίνος, Παλαιό Φάληρο."
+isHome: false
+---
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="page-header__orb"></div>
+  <div class="container">
+    <div class="page-header__content">
+      <span class="section-label">{{ site.nameRegistered }}</span>
+      <h1 class="page-header__title">Επικοινωνία</h1>
+      <p class="page-header__desc">Είμαστε εδώ για να φροντίσουμε τη στοματική σας υγιεινή με τον καλύτερο δυνατό τρόπο. Αν έχετε οποιαδήποτε απορία ή αν επιθυμείτε να μάθετε περισσότερα για τις υπηρεσίες μας, μην διστάσετε να επικοινωνήσετε μαζί μας.</p>
+    </div>
+  </div>
+</section>
+{% include "partials/page-header-socials.njk" %}
+
+<!-- ===== CONTACT INFO CARDS ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="grid grid-3 stagger">
+      <div class="service-card reveal" style="--i:0">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="service-card__title">Που θα μας βρείτε</h3>
+        <p class="service-card__desc">{{ site.address.streetFull }}<br>{{ site.address.city }} {{ site.address.zip }}</p>
+        <a href="{{ site.social.googleMaps }}" class="service-card__link" target="_blank" rel="noopener">Οδηγίες στο Google Maps <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="service-card reveal" style="--i:1">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="service-card__title">Ωράριο Λειτουργίας</h3>
+        <p class="service-card__desc">{{ site.hoursDays }}<br><strong>{{ site.hoursTime }}</strong></p>
+        <p class="service-card__desc" style="font-size:var(--fs-xs);color:var(--c-text-muted);">Κατόπιν ραντεβού</p>
+      </div>
+      <div class="service-card reveal" style="--i:2">
+        <div class="service-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 class="service-card__title">Καλέστε μας</h3>
+        <p class="service-card__desc" style="font-size:1.25rem;font-weight:600;">{{ site.phoneFormatted }}</p>
+        <a href="tel:{{ site.phoneFull }}" class="service-card__link">Κλήση τώρα <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM + MAP ===== -->
+<section class="section" id="contact-form">
+  <div class="container">
+    <div class="grid grid-2" style="gap:3rem;align-items:start;">
+      <div>
+        <div class="reveal">
+          <span class="section-label">Φόρμα Επικοινωνίας</span>
+          <h2 class="section-title">Στείλτε μας μήνυμα</h2>
+          <p class="section-subtitle">Συμπλήρωσε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σου με περισσότερες πληροφορίες σχετικά με την τιμή, την διαδικασία και όλες τις πληροφορίες που χρειάζεσαι για να αποκτήσεις ένα τέλειο χαμόγελο.</p>
+        </div>
+        <div style="height:1.5rem"></div>
+        <form class="booking-form reveal" id="lead-form">
+          <div class="form-group">
+            <label class="form-label" for="name">Ονοματεπώνυμο</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Τι σας ενδιαφέρει;</label>
+            <select id="service" name="service" class="form-input" required>
+              <option value="unsure" selected>Δεν γνωρίζω ακόμα — θέλω ενημέρωση</option>
+              <option value="invisalign">Αόρατοι Νάρθηκες (Invisalign)</option>
+              <option value="metallic">Μεταλλικά Σιδεράκια</option>
+              <option value="ceramic">Κεραμικά Σιδεράκια</option>
+              <option value="removable">Κινητοί Μηχανισμοί</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tel">Τηλέφωνο επικοινωνίας</label>
+            <input type="tel" id="tel" name="tel" class="form-input" placeholder="π.χ. 69X XXX XXXX" required autocomplete="tel" inputmode="tel" enterkeyhint="send">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Μήνυμα (προαιρετικά)</label>
+            <textarea id="message" name="message" class="form-input" rows="4" placeholder="Πείτε μας λίγα λόγια για ό,τι σας ενδιαφέρει..."></textarea>
+          </div>
+          <div style="height:0.5rem"></div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>Αποστολή <span class="arrow">&rarr;</span></button>
+          <div class="form-trust">
+            <svg viewBox="0 0 24 24" fill="#e2b340" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <span>{{ site.reviewScore }} · {{ site.reviewCount }} ασθενείς μας εμπιστεύτηκαν στο Google</span>
+          </div>
+          <p class="form-privacy">Τα στοιχεία σας δεν κοινοποιούνται. Θα επικοινωνήσουμε μόνο για τη θεραπεία σας.</p>
+        </form>
+      </div>
+      <div class="reveal">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.8!2d23.6946!3d37.9285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bdc567df4a5b%3A0x4b8395d0fbc0db3e!2sTK%20Orthodontics!5e0!3m2!1sel!2sgr!4v1" width="100%" height="480" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

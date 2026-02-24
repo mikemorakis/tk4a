@@ -108,13 +108,42 @@
     }
 
     /* Active link highlight */
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
     nav.querySelectorAll('.nav__link').forEach(link => {
       const href = link.getAttribute('href');
-      if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      if (href === '/' + currentPage || href === currentPage || href === currentPath || (currentPage === '' && (href === '/index.html' || href === 'index.html'))) {
         link.classList.add('is-active');
       }
     });
+
+    /* Responsive: switch to hamburger when links would wrap */
+    function checkNavOverflow() {
+      nav.classList.remove('nav--mobile');
+      const inner = nav.querySelector('.nav__inner');
+      const linksEl = nav.querySelector('.nav__links');
+      if (!inner || !linksEl) return;
+
+      // Force single-line measurement
+      linksEl.style.flexWrap = 'nowrap';
+      linksEl.style.overflow = 'hidden';
+      linksEl.style.whiteSpace = 'nowrap';
+
+      const logoWidth = nav.querySelector('.nav__logo').offsetWidth;
+      const linksWidth = linksEl.scrollWidth;
+      const available = inner.offsetWidth - logoWidth - 40;
+
+      // Reset temp styles
+      linksEl.style.flexWrap = '';
+      linksEl.style.overflow = '';
+      linksEl.style.whiteSpace = '';
+
+      if (linksWidth > available) {
+        nav.classList.add('nav--mobile');
+      }
+    }
+    checkNavOverflow();
+    window.addEventListener('resize', checkNavOverflow);
   }
 
   /* ==============================
@@ -382,13 +411,21 @@
       const track = carousel.querySelector('.reviews-carousel__track');
       if (!track) return;
 
+      // Measure original content width before cloning
+      const cards = Array.from(track.querySelectorAll('.review-card'));
+      const gap = parseFloat(getComputedStyle(track).gap) || 20;
+      const originalWidth = cards.reduce((sum, c) => sum + c.offsetWidth, 0) + gap * cards.length;
+
       // Clone cards for seamless infinite loop
-      const cards = track.querySelectorAll('.review-card');
       cards.forEach(card => {
         const clone = card.cloneNode(true);
         clone.setAttribute('aria-hidden', 'true');
         track.appendChild(clone);
       });
+
+      // Set exact scroll distance and speed (40px/s)
+      track.style.setProperty('--scroll-distance', `-${originalWidth}px`);
+      track.style.setProperty('--scroll-duration', `${originalWidth / 40}s`);
     });
   }
 
