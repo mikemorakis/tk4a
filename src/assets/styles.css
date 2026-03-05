@@ -2131,6 +2131,24 @@ textarea.form-input {
   margin-top: 0.6rem;
   line-height: 1.5;
 }
+.form-trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding: 1rem 0;
+}
+.form-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+  justify-content: center;
+}
+.form-trust-item svg {
+  flex-shrink: 0;
+}
 
 /* --- Service Card Extras --- */
 .service-card__for {

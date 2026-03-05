@@ -25,34 +25,50 @@ isHome: false
 {% include "partials/page-header-socials.njk" %}
 
 <!-- ===== CTA FORM ===== -->
-<section class="section section--alt">
-  <div class="container" style="max-width:640px;">
+<section class="section section--alt" id="contact-form">
+  <div class="container" style="max-width:540px;">
     <div class="text-center reveal">
-      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ζητήστε να σας Καλέσουμε</h2>
-      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε την φόρμα με τα στοιχεία και τις ανάγκες σας. Είναι ο πιο σύντομος τρόπος να εξυπηρετηθείτε. Θα σας καλέσουμε πίσω άμεσα.</p>
+      <span class="section-label">Δωρεάν εκτίμηση</span>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Μιλήστε με τον Ιατρό μέσα στην ημέρα</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Αφήστε το τηλέφωνό σας και θα σας καλέσουμε άμεσα για δωρεάν ενημέρωση σχετικά με τη θεραπεία Invisalign.</p>
     </div>
     <div style="height:2rem"></div>
     <form class="booking-form reveal" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
-          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="Invisalign — Αίτημα κλήσης · TK Orthodontics">
+      <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="page" value="Invisalign">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <p class="form-urgency">2 πεδία &nbsp;&middot;&nbsp; 10 δευτερόλεπτα &nbsp;&middot;&nbsp; Χωρίς δέσμευση</p>
       <div class="form-group">
-        <label class="form-label" for="name">Ονοματεπώνυμο</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="Ονοματεπώνυμο" required>
+        <label class="form-label" for="invis-name">Το όνομά σας <span style="font-weight:400;color:var(--c-text-muted);">(προαιρετικό)</span></label>
+        <input type="text" id="invis-name" name="name" class="form-input" placeholder="π.χ. Μαρία" autocomplete="given-name">
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
+      <div class="form-group">
+        <label class="form-label" for="invis-tel">Τηλέφωνο</label>
+        <input type="tel" id="invis-tel" name="tel" class="form-input" placeholder="π.χ. 69X XXX XXXX" required autocomplete="tel" inputmode="tel" enterkeyhint="send">
+      </div>
+      <div style="height:0.3rem"></div>
+      <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Θέλω να με καλέσετε <span class="arrow">&rarr;</span>
+      </button>
+      <div class="form-trust-list">
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2.5" stroke-linecap="round" width="15" height="15"><path d="m9 15 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <span>Θα σας καλέσουμε μέσα σε μια εργάσιμη</span>
         </div>
-        <div class="form-group">
-          <label class="form-label" for="tel">Τηλ. Επικοινωνίας</label>
-          <input type="tel" id="tel" name="tel" class="form-input" placeholder="Τηλ. Επικοινωνίας" required>
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2.5" stroke-linecap="round" width="15" height="15"><path d="m9 15 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <span>Δεν στέλνουμε spam</span>
+        </div>
+        <div class="form-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-accent)" stroke-width="2.5" stroke-linecap="round" width="15" height="15"><path d="m9 15 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          <span>Τα στοιχεία σας είναι ασφαλή</span>
         </div>
       </div>
-      <button type="submit" class="btn btn--primary btn--lg" style="width:100%;" data-magnetic>Αποστολή <span class="arrow">&rarr;</span></button>
+      <p class="form-privacy">Διαθέσιμοι Δευ–Παρ 09:00–18:00 · Με την υποβολή αποδέχεστε την πολιτική απορρήτου.</p>
     </form>
   </div>
 </section>
