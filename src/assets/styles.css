@@ -221,21 +221,21 @@ h1, h2, h3, h4, h5, h6 {
 .section--glow .why-card__number { color: var(--c-accent); }
 .section--alt { background: var(--c-bg-warm); }
 
-/* Section after hero — sits below overlapping photo */
-.hero + .section {
+/* Section after Invisalign banner */
+.invisalign-banner + .section {
   position: relative;
   z-index: 1;
   padding-top: 160px;
   background: #F4F3EF;
 }
-.hero + .section::before {
+.invisalign-banner + .section::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 150px;
-  background: linear-gradient(180deg, rgba(62,205,165,0.09) 0%, transparent 100%);
+  background: linear-gradient(180deg, rgba(53,184,148,0.12) 0%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1891,7 +1891,7 @@ textarea.form-input {
     box-shadow: 0 12px 40px rgba(0,0,0,0.3);
   }
   .hero__photo::after { display: none; }
-  .hero + .section { padding-top: var(--s-section); }
+  .invisalign-banner + .section { padding-top: var(--s-section); }
 }
 
 /* Nav hamburger mode — triggered by JS when links would wrap */
