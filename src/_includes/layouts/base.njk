@@ -18,7 +18,8 @@
   {% if ogTitle %}
   <meta property="og:title" content="{{ ogTitle }}">
   <meta property="og:description" content="{{ ogDescription }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:url" content="{{ canonical or (site.url + page.url) }}">
   {% endif %}
   <link rel="preload" href="/assets/fonts/ibm-plex-sans-greek.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>

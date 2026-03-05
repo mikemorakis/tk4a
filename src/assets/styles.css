@@ -1894,6 +1894,24 @@ textarea.form-input {
   .invisalign-banner + .section { padding-top: var(--s-section); }
 }
 
+/* Hide nav links on mobile BEFORE JS adds nav--mobile (prevents flash) */
+@media (max-width: 1024px) {
+  .nav__links {
+    position: fixed;
+    top: 0; right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  .nav__links.is-open {
+    visibility: visible;
+  }
+  .nav__toggle { display: flex; }
+}
+
 /* Nav hamburger mode — triggered by JS when links would wrap */
 .nav--mobile .nav__links {
   position: fixed;
@@ -1908,6 +1926,7 @@ textarea.form-input {
   box-shadow: -10px 0 40px rgba(0,0,0,0.1);
   transform: translateX(100%);
   transition: transform var(--t-base) var(--ease);
+  visibility: visible;
 }
 .nav--mobile.nav--dark .nav__links { background: var(--c-bg-dark-alt); }
 .nav--mobile .nav__links.is-open { transform: translateX(0); }

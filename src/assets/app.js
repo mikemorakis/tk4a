@@ -46,6 +46,14 @@
   }
 
   function pageTransitionOut(href) {
+    /* Close mobile menu before transitioning */
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    if (toggle && links) {
+      toggle.classList.remove('is-open');
+      links.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
     const wrapper = document.querySelector('.page-wrapper');
     if (!wrapper) { window.location.href = href; return; }
     wrapper.classList.add('is-exiting');
