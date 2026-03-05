@@ -81,7 +81,12 @@ isHome: false
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Δωρεάν εκτίμηση χωρίς δέσμευση. Αναλυτική κοστολόγηση και πλάνο δόσεων.</p>
     </div>
     <div style="height:2rem"></div>
-    <form class="booking-form reveal" id="lead-form">
+    <form class="booking-form reveal" id="lead-form" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-group">
         <label class="form-label" for="name">Ονοματεπώνυμο</label>
         <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">

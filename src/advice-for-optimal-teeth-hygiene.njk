@@ -26,7 +26,12 @@ isHome: false
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε την φόρμα με τα στοιχεία και τις ανάγκες σας. Είναι ο πιο σύντομος τρόπος να εξυπηρετηθείτε. Θα σας καλέσουμε πίσω άμεσα.</p>
     </div>
     <div style="height:2rem"></div>
-    <form class="booking-form reveal">
+    <form class="booking-form reveal" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-group">
         <label class="form-label" for="name">Ονοματεπώνυμο</label>
         <input type="text" id="name" name="name" class="form-input" placeholder="Ονοματεπώνυμο" required>
@@ -94,7 +99,7 @@ isHome: false
   <div class="container" style="max-width:760px;">
     <div class="reveal" style="padding:2.5rem;border-left:3px solid var(--c-accent);background:var(--c-surface);border-radius:var(--radius-lg);">
       <p style="font-size:var(--fs-body);color:var(--c-text-muted);line-height:1.8;margin-bottom:1rem;">Τέλος η τακτική επίσκεψη στο ιατρείο την ημέρα και την ώρα που ορίζει το ραντεβού σας είναι εξαιρετικά σημαντική. Σε περίπτωση κολλήματος παρακαλείστε να ενημερώνεται το ιατρείο τουλάχιστο 2 ημέρες νωρίτερα ώστε η αλλαγή να γίνεται εγκαίρως και για το κοντινότερο δυνατό διαθέσιμο χρόνο.</p>
-      <div style="display:flex;align-items:center;gap:0.75rem;"><img src="/tkorthodontics.webp" alt="Dr. Τσιότρας" style="width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:60% top;flex-shrink:0;"><p style="color:var(--c-accent-dark);font-family:var(--f-heading);font-weight:600;margin:0;">Dr. Κωνσταντίνος Τσιότρας</p></div>
+      <div style="display:flex;align-items:center;gap:0.75rem;"><picture><source type="image/avif" srcset="/tkorthodontics-avatar.avif"><source type="image/webp" srcset="/tkorthodontics-avatar.webp"><img src="/tkorthodontics-avatar.jpg" alt="Dr. Τσιότρας" width="88" height="88" style="width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:60% top;flex-shrink:0;"></picture><p style="color:var(--c-accent-dark);font-family:var(--f-heading);font-weight:600;margin:0;">Dr. Κωνσταντίνος Τσιότρας</p></div>
     </div>
   </div>
 </section>

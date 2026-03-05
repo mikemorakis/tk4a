@@ -85,11 +85,16 @@ isHome: false
 <section class="section section--alt" id="contact-form">
   <div class="container" style="max-width:640px;">
     <div class="text-center reveal">
-      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ρωτήστε τα πάντα — Δωρεάν Εκτίμηση</h2>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ρωτήστε τα πάντα — Πάρε προσφορά</h2>
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Χωρίς δέσμευση. Θα απαντήσουμε σε κάθε σας ερώτηση.</p>
     </div>
     <div style="height:2rem"></div>
-    <form class="booking-form reveal" id="lead-form">
+    <form class="booking-form reveal" id="lead-form" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-group">
         <label class="form-label" for="name">Ονοματεπώνυμο</label>
         <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">

@@ -26,7 +26,12 @@ isHome: false
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε την φόρμα με τα στοιχεία και τις ανάγκες σας. Είναι ο πιο σύντομος τρόπος να εξυπηρετηθείτε. Θα σας καλέσουμε πίσω άμεσα.</p>
     </div>
     <div style="height:2rem"></div>
-    <form class="booking-form reveal">
+    <form class="booking-form reveal" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-group">
         <label class="form-label" for="name">Ονοματεπώνυμο</label>
         <input type="text" id="name" name="name" class="form-input" placeholder="Ονοματεπώνυμο" required>
@@ -96,7 +101,7 @@ isHome: false
       <div class="cta-banner__orb"></div>
       <div class="cta-banner__content" style="max-width:100%;">
         <p style="font-size:var(--fs-body);color:rgba(255,255,255,0.9);line-height:1.8;font-weight:600;margin-bottom:1rem;">Σε περίπτωση διακοπής της διαδικασίας αυτής τα δόντια θα χάσουν τη τέλεια θέση τους.</p>
-        <div style="display:flex;align-items:center;gap:0.75rem;"><img src="/tkorthodontics.webp" alt="Dr. Τσιότρας" style="width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:60% top;flex-shrink:0;"><p style="color:var(--c-accent);font-family:var(--f-heading);font-weight:600;margin:0;">Dr. Κωνσταντίνος Τσιότρας</p></div>
+        <div style="display:flex;align-items:center;gap:0.75rem;"><picture><source type="image/avif" srcset="/tkorthodontics-avatar.avif"><source type="image/webp" srcset="/tkorthodontics-avatar.webp"><img src="/tkorthodontics-avatar.jpg" alt="Dr. Τσιότρας" width="88" height="88" style="width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:60% top;flex-shrink:0;"></picture><p style="color:var(--c-accent);font-family:var(--f-heading);font-weight:600;margin:0;">Dr. Κωνσταντίνος Τσιότρας</p></div>
       </div>
     </div>
   </div>

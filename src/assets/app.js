@@ -28,7 +28,7 @@
     initReviewsCarousel();
     initReviewDots();
     initReviewCount();
-    initStickyBarTrigger();
+    // initStickyBarTrigger(); // replaced with phone bubble
   }
 
   /* ==============================
@@ -111,6 +111,14 @@
           document.body.style.overflow = '';
         });
       });
+      // Close when tapping outside the menu
+      document.addEventListener('click', (e) => {
+        if (links.classList.contains('is-open') && !links.contains(e.target) && !toggle.contains(e.target)) {
+          toggle.classList.remove('is-open');
+          links.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
     }
 
     /* Active link highlight */
@@ -125,6 +133,13 @@
 
     /* Responsive: switch to hamburger when links would wrap */
     function checkNavOverflow() {
+      /* On narrow viewports, always use mobile mode — skip measurement
+         to avoid flashing the desktop links visible during the class toggle */
+      if (window.innerWidth <= 1024) {
+        nav.classList.add('nav--mobile');
+        return;
+      }
+
       nav.classList.remove('nav--mobile');
       const inner = nav.querySelector('.nav__inner');
       const linksEl = nav.querySelector('.nav__links');
@@ -373,7 +388,7 @@
       });
 
       form.addEventListener('submit', (e) => {
-        e.preventDefault();
+        /* Validate required fields before allowing submission */
         let valid = true;
         form.querySelectorAll('[required]').forEach(input => {
           if (!input.value.trim()) {
@@ -385,20 +400,11 @@
           }
         });
 
-        if (valid) {
-          const btn = form.querySelector('.btn');
-          const originalHTML = btn.innerHTML;
-          btn.textContent = '\u0395\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5! \u0398\u03B1 \u03C3\u03B1\u03C2 \u03BA\u03B1\u03BB\u03AD\u03C3\u03BF\u03C5\u03BC\u03B5 \u03C3\u03CD\u03BD\u03C4\u03BF\u03BC\u03B1.';
-          btn.style.background = '#10B981';
-          btn.disabled = true;
-          setTimeout(() => {
-            btn.innerHTML = originalHTML;
-            btn.style.background = '';
-            btn.disabled = false;
-            form.reset();
-            form.querySelectorAll('.form-group--valid').forEach(g => g.classList.remove('form-group--valid'));
-          }, 3000);
+        if (!valid) {
+          /* Block submission only if validation fails */
+          e.preventDefault();
         }
+        /* If valid, the form submits normally to FormSubmit.co */
       });
     });
   }

@@ -26,7 +26,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       </p>
       <div class="hero__actions reveal">
         <a href="#contact-form" class="btn btn--primary btn--lg">
-          Δωρεάν Εκτίμηση, Υπολογισμός Τιμής <span class="arrow">&rarr;</span>
+          Πάρε προσφορά, Υπολογισμός Τιμής <span class="arrow">&rarr;</span>
         </a>
         <a href="tel:{{ site.phoneFull }}" class="hero__cta-secondary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -50,7 +50,15 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
     </div>
 
     <div class="hero__photo">
-      <img src="/tkorthodontics.webp" alt="Ορθοδοντικός Αθήνα - Ιατρείο TK Orthodontics Παλαιό Φάληρο" class="hero__photo-img" loading="eager" fetchpriority="high">
+      <picture>
+        <source type="image/avif"
+          srcset="/tkorthodontics-sm.avif 560w, /tkorthodontics-lg.avif 1080w"
+          sizes="(max-width: 1024px) 280px, 540px">
+        <source type="image/webp"
+          srcset="/tkorthodontics-sm.webp 560w, /tkorthodontics-lg.webp 1080w"
+          sizes="(max-width: 1024px) 280px, 540px">
+        <img src="/tkorthodontics-sm.jpg" alt="Ορθοδοντικός Αθήνα - Ιατρείο TK Orthodontics Παλαιό Φάληρο" class="hero__photo-img" width="560" height="700" loading="eager" fetchpriority="high">
+      </picture>
     </div>
   </div>
 </section>
@@ -59,12 +67,17 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
 <section class="section section--alt" id="contact-form">
   <div class="container" style="max-width:640px;">
     <div class="text-center reveal">
-      <span class="section-label">Δωρεάν Εκτίμηση</span>
+      <span class="section-label">Πάρε προσφορά</span>
       <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Μάθετε το κόστος της δικής σας θεραπείας σε 24 ώρες</h2>
       <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Συμπληρώστε 3 στοιχεία και θα σας καλέσουμε για δωρεάν ενημέρωση σχετικά με τη θεραπεία, το κόστος και τις δόσεις. Εξυπηρετούμε ασθενείς από όλη την Αθήνα και τα Νότια Προάστια.</p>
     </div>
     <div style="height:2rem"></div>
-    <form class="booking-form reveal" id="lead-form">
+    <form class="booking-form reveal" id="lead-form" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <p class="form-urgency">3 πεδία &nbsp;&middot;&nbsp; 30 δευτερόλεπτα &nbsp;&middot;&nbsp; Χωρίς δέσμευση</p>
       <div class="form-group">
         <label class="form-label" for="name">Ονοματεπώνυμο</label>
@@ -288,10 +301,18 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       <div class="ba-case reveal" style="--i:0">
         <div class="ba-slider">
           <div class="ba-slider__before">
-            <img src="/ba-case1-before.jpg" alt="Ορθοδοντική θεραπεία πριν - orthodontikos athina TK Orthodontics" loading="lazy">
+            <picture>
+              <source type="image/avif" srcset="/ba-case1-before-opt.avif">
+              <source type="image/webp" srcset="/ba-case1-before-opt.webp">
+              <img src="/ba-case1-before-opt.jpg" alt="Ορθοδοντική θεραπεία πριν - orthodontikos athina TK Orthodontics" width="800" height="545" loading="lazy">
+            </picture>
           </div>
           <div class="ba-slider__after">
-            <img src="/ba-case1-after.jpg" alt="Ορθοδοντική θεραπεία μετά - orthodontikos athina TK Orthodontics" loading="lazy">
+            <picture>
+              <source type="image/avif" srcset="/ba-case1-after-opt.avif">
+              <source type="image/webp" srcset="/ba-case1-after-opt.webp">
+              <img src="/ba-case1-after-opt.jpg" alt="Ορθοδοντική θεραπεία μετά - orthodontikos athina TK Orthodontics" width="800" height="545" loading="lazy">
+            </picture>
           </div>
           <div class="ba-slider__line"></div>
           <div class="ba-slider__handle">
@@ -306,10 +327,18 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       <div class="ba-case reveal" style="--i:1">
         <div class="ba-slider">
           <div class="ba-slider__before">
-            <img src="/ba-case2-before.jpg" alt="Invisalign πριν - orthodontikos athina iatreio TK Orthodontics" loading="lazy">
+            <picture>
+              <source type="image/avif" srcset="/ba-case2-before-opt.avif">
+              <source type="image/webp" srcset="/ba-case2-before-opt.webp">
+              <img src="/ba-case2-before-opt.jpg" alt="Invisalign πριν - orthodontikos athina iatreio TK Orthodontics" width="800" height="545" loading="lazy">
+            </picture>
           </div>
           <div class="ba-slider__after">
-            <img src="/ba-case2-after.jpg" alt="Invisalign μετά - orthodontikos athina iatreio TK Orthodontics" loading="lazy">
+            <picture>
+              <source type="image/avif" srcset="/ba-case2-after-opt.avif">
+              <source type="image/webp" srcset="/ba-case2-after-opt.webp">
+              <img src="/ba-case2-after-opt.jpg" alt="Invisalign μετά - orthodontikos athina iatreio TK Orthodontics" width="800" height="545" loading="lazy">
+            </picture>
           </div>
           <div class="ba-slider__line"></div>
           <div class="ba-slider__handle">
@@ -341,7 +370,11 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       <!-- Μεταλλικά Σιδεράκια -->
       <div class="service-card reveal" data-tilt style="--i:0">
         <div class="service-card__img">
-          <img src="/metalika.siderakia.jpg" alt="Μεταλλικά σιδεράκια - orthodontikos athina iatreio tkorthodontics" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/metalika.siderakia-opt.avif">
+            <source type="image/webp" srcset="/metalika.siderakia-opt.webp">
+            <img src="/metalika.siderakia-opt.jpg" alt="Μεταλλικά σιδεράκια - orthodontikos athina iatreio tkorthodontics" width="800" height="533" loading="lazy">
+          </picture>
         </div>
         <span class="service-card__badge service-card__badge--value">Οικονομική Επιλογή</span>
         <h3 class="service-card__title">Μεταλλικά Σιδεράκια</h3>
@@ -352,7 +385,11 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       <!-- Κεραμικά Σιδεράκια -->
       <div class="service-card reveal" data-tilt style="--i:1">
         <div class="service-card__img">
-          <img src="/keramika.siderakia.jpg" alt="Κεραμικά σιδεράκια - orthodontikos athina iatreio tkorthodontics" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/keramika.siderakia-opt.avif">
+            <source type="image/webp" srcset="/keramika.siderakia-opt.webp">
+            <img src="/keramika.siderakia-opt.jpg" alt="Κεραμικά σιδεράκια - orthodontikos athina iatreio tkorthodontics" width="800" height="449" loading="lazy">
+          </picture>
         </div>
         <h3 class="service-card__title">Κεραμικά Σιδεράκια</h3>
         <p class="service-card__desc">Η αποτελεσματικότητα των μεταλλικών — σε χρώμα που ταιριάζει με τα δόντια σας. Σχεδόν αόρατα, χωρίς κιτρίνισμα.</p>
@@ -362,18 +399,26 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
       <!-- Αόρατοι Νάρθηκες -->
       <div class="service-card reveal" data-tilt style="--i:2">
         <div class="service-card__img">
-          <img src="/aoratoi.narthikes.jpg" alt="Αόρατοι νάρθηκες Invisalign - orthodontikos athina iatreio tkorthodontics" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/aoratoi.narthikes-opt.avif">
+            <source type="image/webp" srcset="/aoratoi.narthikes-opt.webp">
+            <img src="/aoratoi.narthikes-opt.jpg" alt="Αόρατοι νάρθηκες Invisalign - orthodontikos athina iatreio tkorthodontics" width="800" height="533" loading="lazy">
+          </picture>
         </div>
         <span class="service-card__badge">Δημοφιλές</span>
         <h3 class="service-card__title">Αόρατοι Νάρθηκες (Invisalign)</h3>
         <p class="service-card__desc">Κανένα σιδεράκι, κανένας περιορισμός. Αφαιρούμενοι διαφανείς νάρθηκες που κανείς δεν καταλαβαίνει. Θεραπεία χωρίς αλλαγή στην καθημερινότητά σας.</p>
         <p class="service-card__for">Ιδανικά για: Ενήλικες &middot; Επαγγελματίες &middot; Ελαφρές-μεσαίες περιπτώσεις</p>
-        <a href="/aoratoi-narthikes.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
+        <a href="/aoratoi-narthikes-invisalign-clear-aligners.html" class="service-card__link">Μάθε Περισσότερα <span class="arrow">&rarr;</span></a>
       </div>
       <!-- Κινητοί Μηχανισμοί -->
       <div class="service-card reveal" data-tilt style="--i:3">
         <div class="service-card__img">
-          <img src="/kinitoi.michanismoi.jpg" alt="Κινητοί μηχανισμοί - orthodontikos athina iatreio tkorthodontics" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/kinitoi.michanismoi-opt.avif">
+            <source type="image/webp" srcset="/kinitoi.michanismoi-opt.webp">
+            <img src="/kinitoi.michanismoi-opt.jpg" alt="Κινητοί μηχανισμοί - orthodontikos athina iatreio tkorthodontics" width="600" height="400" loading="lazy">
+          </picture>
         </div>
         <h3 class="service-card__title">Κινητοί Μηχανισμοί</h3>
         <p class="service-card__desc">Αφαιρούμενοι μηχανισμοί που καθοδηγούν τη σωστή ανάπτυξη γνάθου και δοντιών. Η πρώιμη παρέμβαση μπορεί να αποτρέψει πιο σύνθετη θεραπεία αργότερα.</p>
@@ -399,19 +444,19 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
     <div style="height:2.5rem"></div>
     <div class="iatreio-grid stagger">
       <div class="iatreio-grid__item iatreio-grid__item--wide reveal" style="--i:0">
-        <img src="/iatrio-5.jpg" alt="Αίθουσα αναμονής TK Orthodontics - Ορθοδοντικό ιατρείο Παλαιό Φάληρο" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-5-opt.avif"><source type="image/webp" srcset="/iatrio-5-opt.webp"><img src="/iatrio-5-opt.jpg" alt="Αίθουσα αναμονής TK Orthodontics - Ορθοδοντικό ιατρείο Παλαιό Φάληρο" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-grid__item reveal" style="--i:1">
-        <img src="/iatrio-2.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-2-opt.avif"><source type="image/webp" srcset="/iatrio-2-opt.webp"><img src="/iatrio-2-opt.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-grid__item reveal" style="--i:2">
-        <img src="/iatrio-1.jpg" alt="Ορθοδοντική καρέκλα TK Orthodontics" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-1-opt.avif"><source type="image/webp" srcset="/iatrio-1-opt.webp"><img src="/iatrio-1-opt.jpg" alt="Ορθοδοντική καρέκλα TK Orthodontics" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-grid__item reveal" style="--i:3">
-        <img src="/iatrio-6.jpg" alt="Χώρος υποδοχής TK Orthodontics - Chesterfield καναπές" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-6-opt.avif"><source type="image/webp" srcset="/iatrio-6-opt.webp"><img src="/iatrio-6-opt.jpg" alt="Χώρος υποδοχής TK Orthodontics - Chesterfield καναπές" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-grid__item iatreio-grid__item--wide reveal" style="--i:4">
-        <img src="/iatrio-7.jpg" alt="Αίθουσα αναμονής TK Orthodontics - φυσικό φως" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-7-opt.avif"><source type="image/webp" srcset="/iatrio-7-opt.webp"><img src="/iatrio-7-opt.jpg" alt="Αίθουσα αναμονής TK Orthodontics - φυσικό φως" width="800" height="533" loading="lazy"></picture>
       </div>
     </div>
   </div>
@@ -423,7 +468,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
   <div class="container">
     <div class="about-header reveal">
       <div class="doctor-photo">
-        <img src="/dr.tsiotras.jpg" alt="Dr. Τσιότρας Κωνσταντίνος - orthodontikos athina iatreio tkorthodontics" loading="lazy">
+        <picture><source type="image/avif" srcset="/dr.tsiotras-opt.avif"><source type="image/webp" srcset="/dr.tsiotras-opt.webp"><img src="/dr.tsiotras-opt.jpg" alt="Dr. Τσιότρας Κωνσταντίνος - orthodontikos athina iatreio tkorthodontics" width="400" height="400" loading="lazy"></picture>
       </div>
       <div>
         <span class="section-label">Γνωρίστε τον Γιατρό σας</span>
@@ -469,7 +514,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
     </div>
     <div style="height:2rem"></div>
     <div class="about-office reveal">
-      <img src="/iatrio-4.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός ιατρείου" loading="lazy">
+      <picture><source type="image/avif" srcset="/iatrio-4-opt.avif"><source type="image/webp" srcset="/iatrio-4-opt.webp"><img src="/iatrio-4-opt.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός ιατρείου" width="1000" height="667" loading="lazy"></picture>
     </div>
   </div>
 </section>
@@ -480,7 +525,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
     <div class="mid-cta__inner reveal">
       <p class="mid-cta__text">Έτοιμοι να μάθετε το κόστος της δικής σας θεραπείας;</p>
       <div class="mid-cta__actions">
-        <a href="#contact-form" class="btn btn--primary" data-magnetic>Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+        <a href="#contact-form" class="btn btn--primary" data-magnetic>Πάρε προσφορά <span class="arrow">&rarr;</span></a>
         <a href="tel:{{ site.phoneFull }}" class="mid-cta__phone">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           {{ site.phone }}
@@ -611,7 +656,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
     </div>
     <div class="text-center reveal" style="margin-top:3rem;">
       <p style="color:rgba(255,255,255,0.5);margin-bottom:1rem;font-size:var(--fs-small);">Έχετε περισσότερες ερωτήσεις;</p>
-      <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Ρωτήστε μας — Δωρεάν Εκτίμηση <span class="arrow">&rarr;</span></a>
+      <a href="#contact-form" class="btn btn--primary btn--lg" data-magnetic>Ρωτήστε μας — Πάρε προσφορά <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -684,7 +729,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
 <section class="section">
   <div class="container" style="max-width:760px;">
     <div class="reveal" style="text-align:center;">
-      <img src="/tk.logo.white.png" alt="{{ site.name }}" style="height:50px;margin:0 auto 1rem;display:block;filter:brightness(0);opacity:0.8;">
+      <picture><source type="image/avif" srcset="/tk.logo.white-opt.avif"><source type="image/webp" srcset="/tk.logo.white-opt.webp"><img src="/tk.logo.white-opt.jpg" alt="{{ site.name }}" width="462" height="144" style="height:50px;width:auto;margin:0 auto 1rem;display:block;filter:brightness(0);opacity:0.8;"></picture>
       <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Ορθοδοντικός στην Αθήνα</h2>
       <p style="color:var(--c-text-muted);line-height:1.8;font-size:var(--fs-small);">Αν αναζητάτε ορθοδοντικό στην Αθήνα που συνδυάζει την επιστημονική αρτιότητα με την ψηφιακή τεχνολογία, το ιατρείο του Dr. Τσιότρα Κωνσταντίνου (TK Orthodontics) είναι ο προορισμός σας. Με έδρα το Παλαιό Φάληρο, εξυπηρετούμε καθημερινά ασθενείς από όλη την Αττική, προσφέροντας εξατομικευμένες λύσεις όπως διαφανείς νάρθηκες (Invisalign), γλωσσικά σιδεράκια και προληπτική ορθοδοντική. Η πρόσβαση από το κέντρο της Αθήνας είναι άμεση μέσω της Λεωφόρου Συγγρού, καθιστώντας μας μια από τις κορυφαίες επιλογές για όσους αναζητούν έναν έμπειρο ορθοδοντικό στα Νότια Προάστια.</p>
       <div class="review-bubbles" style="margin-top:1.5rem;">
@@ -694,7 +739,7 @@ ogDescription: "Πρότυπο Ορθοδοντικό Ιατρείο στο Πα
         </a>
         <a href="#contact-form" class="review-bubble review-bubble--accent">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-          Δωρεάν Εκτίμηση
+          Πάρε προσφορά
         </a>
         <a href="{{ site.social.googleMaps }}" class="review-bubble" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

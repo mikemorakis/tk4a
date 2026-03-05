@@ -55,13 +55,13 @@ isHome: false
   <div class="container">
     <div class="iatreio-strip stagger">
       <div class="iatreio-strip__item reveal" style="--i:0">
-        <img src="/iatrio-5.jpg" alt="Αίθουσα αναμονής TK Orthodontics - Ορθοδοντικό ιατρείο Παλαιό Φάληρο" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-5-opt.avif"><source type="image/webp" srcset="/iatrio-5-opt.webp"><img src="/iatrio-5-opt.jpg" alt="Αίθουσα αναμονής TK Orthodontics - Ορθοδοντικό ιατρείο Παλαιό Φάληρο" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-strip__item reveal" style="--i:1">
-        <img src="/iatrio-2.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-2-opt.avif"><source type="image/webp" srcset="/iatrio-2-opt.webp"><img src="/iatrio-2-opt.jpg" alt="Θεραπευτήριο TK Orthodontics - σύγχρονος εξοπλισμός" width="800" height="533" loading="lazy"></picture>
       </div>
       <div class="iatreio-strip__item reveal" style="--i:2">
-        <img src="/iatrio-6.jpg" alt="Χώρος υποδοχής TK Orthodontics - Chesterfield καναπές" loading="lazy">
+        <picture><source type="image/avif" srcset="/iatrio-6-opt.avif"><source type="image/webp" srcset="/iatrio-6-opt.webp"><img src="/iatrio-6-opt.jpg" alt="Χώρος υποδοχής TK Orthodontics - Chesterfield καναπές" width="800" height="533" loading="lazy"></picture>
       </div>
     </div>
   </div>
@@ -78,7 +78,12 @@ isHome: false
           <p class="section-subtitle">Συμπλήρωσε τη φόρμα και θα επικοινωνήσουμε άμεσα μαζί σου με περισσότερες πληροφορίες σχετικά με την τιμή, την διαδικασία και όλες τις πληροφορίες που χρειάζεσαι για να αποκτήσεις ένα τέλειο χαμόγελο.</p>
         </div>
         <div style="height:1.5rem"></div>
-        <form class="booking-form reveal" id="lead-form">
+        <form class="booking-form reveal" id="lead-form" action="https://formsubmit.co/tsiotras.orthodontics@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Νέο αίτημα επικοινωνίας — TK Orthodontics">
+          <input type="hidden" name="_next" value="https://www.tkorthodontics.gr/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label class="form-label" for="name">Ονοματεπώνυμο</label>
             <input type="text" id="name" name="name" class="form-input" placeholder="π.χ. Μαρία Παπαδοπούλου" required autocomplete="name">
