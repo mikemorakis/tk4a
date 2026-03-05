@@ -523,12 +523,11 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Hero: "Calm Authority" — pixel-precise --- */
 .hero {
   position: relative;
-  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-bottom: 0;
+  padding: clamp(7rem, 14vh, 10rem) 0 clamp(4rem, 8vh, 6rem);
   background:
     radial-gradient(900px 500px at 20% 40%, rgba(62,205,165,0.035), transparent 60%),
     radial-gradient(1200px 600px at 80% -10%, rgba(62,205,165,0.04), transparent 60%),
@@ -1879,8 +1878,8 @@ textarea.form-input {
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
-  .hero { padding-bottom: 60px; }
-  .hero__inner { grid-template-columns: 1fr; padding: 100px 0 0; gap: 0; }
+  .hero { padding: 100px 0 60px; }
+  .hero__inner { grid-template-columns: 1fr; padding: 0; gap: 0; }
   .hero__photo {
     margin-right: 0;
     transform: none;
@@ -1944,8 +1943,8 @@ textarea.form-input {
   .proof-bar__inner { flex-direction: column; gap: 1.5rem; }
   .proof-item { justify-content: flex-start; min-width: 0; }
 
-  .hero { padding-bottom: 80px; }
-  .hero__inner { padding: 100px 0 0; }
+  .hero { padding: 100px 0 80px; }
+  .hero__inner { padding: 0; }
   .hero__photo { transform: translateY(40px); }
   .hero__actions { flex-direction: column; align-items: stretch; gap: 12px; }
   .hero__actions .btn { width: 100%; justify-content: center; min-height: 48px; }
@@ -1969,7 +1968,7 @@ textarea.form-input {
 }
 
 @media (max-width: 480px) {
-  .hero { padding-bottom: 60px; }
+  .hero { padding: 100px 0 60px; }
   .hero__title { font-size: clamp(1.9rem, 6vw, 2.4rem); max-width: 100%; }
   .pricing-card { padding: 2rem 1.5rem; }
   h1, h2, h3, .hero__title, .cta-banner__title { overflow-wrap: break-word; word-break: break-word; }
@@ -2540,9 +2539,10 @@ textarea.form-input {
 .invisalign-banner {
   background: linear-gradient(135deg, #0d9b7a 0%, #0a7d63 50%, #07654f 100%);
   color: #fff;
-  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
   position: relative;
   overflow: hidden;
+  margin-top: -1px;
 }
 .invisalign-banner::before {
   content: '';
@@ -2565,20 +2565,31 @@ textarea.form-input {
 .invisalign-banner__inner:hover { opacity: 0.92; }
 .invisalign-banner__inner:hover .btn--light { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
 .invisalign-banner__label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-family: var(--f-heading);
   font-size: var(--fs-xs);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  opacity: 0.7;
-  margin-bottom: 0.6rem;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  margin-bottom: 0.8rem;
+}
+.invisalign-banner__label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: rgba(255,255,255,0.5);
+  flex-shrink: 0;
 }
 .invisalign-banner__heading {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   line-height: var(--lh-snug);
+  letter-spacing: -0.02em;
 }
 .invisalign-banner__desc {
   font-size: var(--fs-small);
