@@ -2537,18 +2537,12 @@ textarea.form-input {
    INVISALIGN BANNER
    ============================== */
 .invisalign-banner {
-  background:
-    radial-gradient(600px 400px at 20% 50%, rgba(62,205,165,0.06), transparent 60%),
-    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    var(--c-bg-dark);
-  background-size: auto, 24px 24px, auto;
-  color: var(--c-text-light);
+  background: linear-gradient(135deg, #35B894 0%, #2DA382 50%, #258E71 100%);
+  color: #fff;
   padding: clamp(3.5rem, 7vw, 5rem) 0;
   position: relative;
   overflow: hidden;
   margin-top: -1px;
-  border-top: 1px solid var(--c-border-light);
-  border-bottom: 1px solid var(--c-border-light);
 }
 .invisalign-banner__inner {
   display: flex;
@@ -2558,11 +2552,11 @@ textarea.form-input {
   position: relative;
   z-index: 1;
   text-decoration: none;
-  color: var(--c-text-light);
+  color: #fff;
   transition: opacity var(--t-fast) var(--ease);
 }
 .invisalign-banner__inner:hover { opacity: 0.92; }
-.invisalign-banner__inner:hover .btn--primary { transform: translateY(-2px); box-shadow: var(--shadow-accent); }
+.invisalign-banner__inner:hover .btn--light { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
 .invisalign-banner__label {
   display: inline-flex;
   align-items: center;
@@ -2572,7 +2566,7 @@ textarea.form-input {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--c-accent);
+  opacity: 0.85;
   margin-bottom: 0.8rem;
 }
 .invisalign-banner__label::before {
@@ -2580,7 +2574,7 @@ textarea.form-input {
   display: inline-block;
   width: 24px;
   height: 2px;
-  background: var(--c-accent);
+  background: rgba(255,255,255,0.5);
   flex-shrink: 0;
 }
 .invisalign-banner__heading {
