@@ -2540,7 +2540,7 @@ textarea.form-input {
 .invisalign-banner {
   background: linear-gradient(135deg, #0d9b7a 0%, #0a7d63 50%, #07654f 100%);
   color: #fff;
-  padding: clamp(3rem, 6vw, 4.5rem) 0;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
   position: relative;
   overflow: hidden;
 }
@@ -2548,48 +2548,68 @@ textarea.form-input {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 85% 40%, rgba(255,255,255,0.1) 0%, transparent 55%);
   pointer-events: none;
 }
 .invisalign-banner__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
   position: relative;
   z-index: 1;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity var(--t-fast) var(--ease);
+}
+.invisalign-banner__inner:hover { opacity: 0.92; }
+.invisalign-banner__inner:hover .btn--light { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+.invisalign-banner__label {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.7;
+  margin-bottom: 0.6rem;
 }
 .invisalign-banner__heading {
-  font-size: var(--fs-h2);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   line-height: var(--lh-snug);
 }
 .invisalign-banner__desc {
-  font-size: var(--fs-body);
+  font-size: var(--fs-small);
   line-height: var(--lh-body);
-  opacity: 0.88;
+  opacity: 0.82;
   max-width: 540px;
 }
-.invisalign-banner__action {
+.invisalign-banner__cta {
   flex-shrink: 0;
 }
 .btn--light {
+  display: inline-flex;
+  align-items: center;
   background: #fff;
   color: #0a7d63;
   font-weight: 700;
-  padding: 1rem 2.2rem;
+  font-size: var(--fs-small);
+  padding: 0.85rem 1.8rem;
   border-radius: var(--radius-pill);
-  transition: background var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  transition: background var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  white-space: nowrap;
 }
 .btn--light:hover {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   transform: translateY(-2px);
 }
 @media (max-width: 768px) {
   .invisalign-banner__inner {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
   }
   .invisalign-banner__desc {
     max-width: 100%;
