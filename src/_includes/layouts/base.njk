@@ -14,6 +14,9 @@
   <link rel="icon" type="image/png" href="/tkorthodontics.fav.png">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  {% if canonical %}
+  <link rel="canonical" href="{{ canonical }}">
+  {% endif %}
   {% if ogTitle %}
   <meta property="og:title" content="{{ ogTitle }}">
   <meta property="og:description" content="{{ ogDescription }}">
