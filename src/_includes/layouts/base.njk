@@ -73,13 +73,19 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Dentist",
+    "@type": "Orthodontist",
     "name": "TK Orthodontics - Κωνσταντίνος Τσιότρας",
     "image": "https://www.tkorthodontics.gr/images/logo.png",
     "@id": "https://www.tkorthodontics.gr",
     "url": "https://www.tkorthodontics.gr",
-    "telephone": "+302109811116",
-    "priceRange": "$$",
+    "telephone": "+302109408725",
+    "priceRange": "$",
+    "medicalSpecialty": "Orthodontics",
+    "hasMap": "https://www.google.com/maps/place/TK+Orthodontics",
+    "founder": {
+      "@type": "Person",
+      "name": "Κωνσταντίνος Τσιότρας"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Λεωφόρος Αμφιθέας 101",
@@ -109,7 +115,8 @@
       {"@type": "City", "name": "Athens", "sameAs": "https://www.wikidata.org/wiki/Q1524"},
       {"@type": "City", "name": "Palaio Faliro", "sameAs": "https://www.wikidata.org/wiki/Q599507"},
       {"@type": "City", "name": "Kallithea", "sameAs": "https://www.wikidata.org/wiki/Q427389"},
-      {"@type": "City", "name": "Nea Smyrni", "sameAs": "https://www.wikidata.org/wiki/Q617196"}
+      {"@type": "City", "name": "Nea Smyrni", "sameAs": "https://www.wikidata.org/wiki/Q617196"},
+      {"@type": "AdministrativeArea", "name": "Attica"}
     ],
     "description": "Ορθοδοντικό Ιατρείο TK Orthodontics στην Αθήνα. Ο Κωνσταντίνος Τσιότρας προσφέρει εξειδικευμένες υπηρεσίες Invisalign, αόρατης ορθοδοντικής και σιδεράκια για παιδιά και ενήλικες.",
     "aggregateRating": {
@@ -222,6 +229,19 @@
         }
       }
     ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Κωνσταντίνος Τσιότρας",
+    "jobTitle": "Orthodontist",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "TK Orthodontics"
+    }
   }
   </script>
   {% endif %}
