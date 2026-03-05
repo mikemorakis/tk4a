@@ -2595,3 +2595,15 @@ textarea.form-input {
     max-width: 100%;
   }
 }
+
+/* Service card image as full link */
+.service-card__img-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+}
+.service-card__img-link:hover img {
+  transform: scale(1.05);
+}
