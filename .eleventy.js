@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
+  eleventyConfig.addFilter("currentYear", () => new Date().getFullYear().toString());
+
   return {
     dir: {
       input: "src",
