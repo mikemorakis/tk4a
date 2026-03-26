@@ -411,8 +411,12 @@
         if (!valid) {
           /* Block submission only if validation fails */
           e.preventDefault();
+        } else if (typeof gtag === 'function') {
+          /* Track conversion in Google Ads */
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17989471065/47aJCNiegpAcENmWhoJD'
+          });
         }
-        /* If valid, the form submits normally to FormSubmit.co */
       });
     });
   }
