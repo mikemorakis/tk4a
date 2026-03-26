@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17989471065"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17989471065');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/tkorthodontics.fav.png">
@@ -23,6 +15,7 @@
   {% endif %}
   <link rel="preload" href="/assets/fonts/ibm-plex-sans-greek.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  {% if isHome %}<link rel="preload" href="/tkorthodontics-sm.avif" as="image" type="image/avif">{% endif %}
   <style>
   @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 700;font-stretch:100%;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-greek.woff2') format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
   @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 700;font-stretch:100%;font-display:swap;src:url('/assets/fonts/ibm-plex-sans-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -62,6 +55,8 @@
   .reveal,.reveal--left,.reveal--right,.reveal--scale{opacity:0}
   .section{padding:var(--s-section) 0}.section--dark{background:var(--c-bg-dark);color:var(--c-text-light)}
   .section--alt{background:var(--c-bg-warm)}
+  .hero__bg{position:absolute;inset:0;background:radial-gradient(900px 500px at 20% 40%,rgba(62,205,165,0.035),transparent 60%),radial-gradient(1200px 600px at 80% -10%,rgba(62,205,165,0.04),transparent 60%),linear-gradient(160deg,#0f1418 0%,#12181d 50%,#0f1418 100%)}
+  .hero__orb{position:absolute;border-radius:50%;pointer-events:none;width:420px;height:420px;background:#3ECDA5;top:-120px;right:-80px;filter:blur(140px);opacity:0.06}
   .page-header{position:relative;background:var(--c-bg-dark);color:var(--c-text-light);padding:clamp(7rem,14vw,10rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
   @media(max-width:1024px){.hero__inner{grid-template-columns:1fr;padding:100px 0 0;gap:0}.hero__photo{margin-right:0;transform:none;max-width:280px;max-height:320px;aspect-ratio:3/4;margin:2rem auto 0}.nav__links{display:none}}
   @media(max-width:768px){.nav__toggle{display:flex}}
@@ -263,5 +258,11 @@
 </a>
 
 <script src="/assets/app.js" defer></script>
+<!-- Google tag (gtag.js) — deferred to reduce TBT -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','AW-17989471065');
+requestIdleCallback?requestIdleCallback(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=AW-17989471065';document.head.appendChild(s)}):setTimeout(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=AW-17989471065';document.head.appendChild(s)},2000);
+</script>
 </body>
 </html>

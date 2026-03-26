@@ -1925,11 +1925,11 @@ textarea.form-input {
   background: var(--c-surface);
   box-shadow: -10px 0 40px rgba(0,0,0,0.1);
   transform: translateX(100%);
-  transition: transform var(--t-base) var(--ease);
-  visibility: visible;
+  transition: transform var(--t-base) var(--ease), visibility 0s var(--t-base);
+  visibility: hidden;
 }
 .nav--mobile.nav--dark .nav__links { background: var(--c-bg-dark-alt); }
-.nav--mobile .nav__links.is-open { transform: translateX(0); }
+.nav--mobile .nav__links.is-open { transform: translateX(0); visibility: visible; transition: transform var(--t-base) var(--ease), visibility 0s 0s; }
 .nav--mobile .nav__toggle { display: flex; }
 .nav--mobile .nav__cta { margin-left: 0; }
 

@@ -141,34 +141,21 @@
 
     /* Responsive: switch to hamburger when links would wrap */
     function checkNavOverflow() {
-      /* On narrow viewports, always use mobile mode — skip measurement
-         to avoid flashing the desktop links visible during the class toggle */
       if (window.innerWidth <= 1024) {
         nav.classList.add('nav--mobile');
         return;
       }
-
-      nav.classList.remove('nav--mobile');
+      /* Read layout in a single batch — no style mutations before reads */
       const inner = nav.querySelector('.nav__inner');
       const linksEl = nav.querySelector('.nav__links');
       if (!inner || !linksEl) return;
-
-      // Force single-line measurement
-      linksEl.style.flexWrap = 'nowrap';
-      linksEl.style.overflow = 'hidden';
-      linksEl.style.whiteSpace = 'nowrap';
-
       const logoWidth = nav.querySelector('.nav__logo').offsetWidth;
       const linksWidth = linksEl.scrollWidth;
       const available = inner.offsetWidth - logoWidth - 40;
-
-      // Reset temp styles
-      linksEl.style.flexWrap = '';
-      linksEl.style.overflow = '';
-      linksEl.style.whiteSpace = '';
-
       if (linksWidth > available) {
         nav.classList.add('nav--mobile');
+      } else {
+        nav.classList.remove('nav--mobile');
       }
     }
     checkNavOverflow();
