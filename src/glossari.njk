@@ -1,0 +1,97 @@
+---
+layout: layouts/base.njk
+permalink: /glossari/index.html
+isHome: false
+title: "Γλωσσάρι Ορθοδοντικής — Όλοι οι Όροι σε ένα Μέρος | TK Orthodontics"
+description: "Γλωσσάρι ορθοδοντικών όρων: Invisalign, σιδεράκια, retainers, σύγκλειση, 3D αποτύπωμα και δεκάδες άλλοι όροι με απλές εξηγήσεις και κλινικές οδηγίες."
+ogTitle: "Γλωσσάρι Ορθοδοντικής — TK Orthodontics"
+ogDescription: "Όλοι οι ορθοδοντικοί όροι με απλές εξηγήσεις, ενδεικτικές τιμές και κλινικές οδηγίες από τον Dr. Τσιότρα."
+ogType: "website"
+ogImage: "/tkorthodontics-lg.jpg"
+ogImageAlt: "Γλωσσάρι Ορθοδοντικής — TK Orthodontics"
+canonical: "https://www.tkorthodontics.gr/glossari/"
+robots: "index, follow, max-snippet:-1, max-image-preview:large"
+---
+
+{# Emit DefinedTermSet JSON-LD inline #}
+<script type="application/ld+json">{{ glossary.terms | glossarySetJsonLd | dump | safe }}</script>
+
+<section class="page-header">
+  <div class="page-header__orb"></div>
+  <div class="container">
+    <div class="page-header__content">
+      <span class="section-label">{{ site.nameRegistered }}</span>
+      <h1 class="page-header__title">Γλωσσάρι Ορθοδοντικής</h1>
+      <p class="page-header__desc">Ορθοδοντικοί όροι με απλές εξηγήσεις, ενδεικτικές τιμές και πρακτικές οδηγίες. Από Invisalign και σιδεράκια μέχρι retainers και 3D ψηφιακό αποτύπωμα.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <form class="glossari-search" role="search" onsubmit="return false;" style="max-width:520px; margin-bottom:3rem;">
+      <label for="glossari-q" class="visually-hidden">Αναζήτηση όρου</label>
+      <input
+        type="search"
+        id="glossari-q"
+        placeholder="Αναζήτηση όρου..."
+        autocomplete="off"
+        aria-label="Αναζήτηση όρου"
+        style="width:100%; padding:0.85rem 1.1rem; background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--radius); font-size:1rem; color:var(--c-text); font-family:var(--f-body);"
+      />
+    </form>
+
+    {% for group in glossary.terms | groupByCategory(glossary.categories) %}
+    <section class="glossari-cat-section" style="margin-bottom: 4rem;">
+      <header style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--c-border);">
+        <h2 id="{{ group.category.slug }}" style="font-family:var(--f-heading); font-size:var(--fs-h2); margin-bottom:0.4rem;">{{ group.category.label }}</h2>
+        {% if group.category.description %}<p style="color:var(--c-text-muted); margin:0;">{{ group.category.description }}</p>{% endif %}
+      </header>
+      <div class="glossari-grid">
+        {% for t in group.items %}
+        <a
+          href="/glossari/{{ t.slug }}/"
+          class="glossari-card"
+          data-search-tokens="{{ t.term }} {{ (t.synonyms or []) | join(' ') }} {{ (t.searchVariants or []) | join(' ') }}"
+        >
+          <span class="glossari-card__cat">{{ group.category.label }}</span>
+          <h3 class="glossari-card__title">{{ t.term }}</h3>
+          <p class="glossari-card__excerpt">{{ t.oneLineAnswer or (t.definition | firstSentence) }}</p>
+          <span class="glossari-card__cta">Διαβάστε ορισμό →</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+
+  </div>
+</section>
+
+<script>
+  // Tiny on-page search — accent-stripped Greek tolerance
+  const stripAccents = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const input = document.getElementById('glossari-q');
+  const items = document.querySelectorAll('[data-search-tokens]');
+  if (input) {
+    input.addEventListener('input', () => {
+      const q = stripAccents(input.value.trim());
+      if (q.length < 2) { items.forEach((it) => { it.style.display = ''; }); return; }
+      items.forEach((it) => {
+        const hay = stripAccents(it.dataset.searchTokens || '');
+        it.style.display = hay.includes(q) ? '' : 'none';
+      });
+    });
+  }
+</script>
+
+<style>
+  .glossari-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .glossari-card { display: block; background: var(--c-surface); border: 1px solid var(--c-border); padding: 1.5rem; border-radius: var(--radius); text-decoration: none; color: var(--c-text); transition: border-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); }
+  .glossari-card:hover { border-color: var(--c-accent); transform: translateY(-2px); }
+  .glossari-card__cat { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.12em; color: var(--c-accent); display: inline-block; margin-bottom: 0.75rem; font-weight: 600; }
+  .glossari-card__title { font-family: var(--f-heading); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.3; }
+  .glossari-card__excerpt { color: var(--c-text-muted); font-size: 0.92rem; line-height: 1.55; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .glossari-card__cta { color: var(--c-accent); font-size: 0.88rem; font-weight: 600; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>

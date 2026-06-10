@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: glossary.terms
+  size: 1
+  alias: term
+  addAllPagesToCollections: true
+permalink: "/glossari/{{ term.slug }}/index.html"
+isHome: false
+eleventyComputed:
+  title: "{{ term.metaTitle }} | TK Orthodontics"
+  description: "{{ term.metaDescription }}"
+  ogTitle: "{{ term.metaTitle }}"
+  ogDescription: "{{ term.metaDescription }}"
+  ogType: "article"
+  ogImage: "{{ term.heroImage.src }}"
+  ogImageAlt: "{{ term.heroImage.alt }}"
+  articlePublishedAt: "{{ term.publishedAt }}"
+  articleModifiedAt: "{{ term.updatedAt }}"
+  articleSection: "{{ term.category }}"
+  robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  canonical: "{{ glossary.ctx.siteUrl }}/glossari/{{ term.slug }}/"
+---
+{% include "glossari/glossary-article.njk" %}
