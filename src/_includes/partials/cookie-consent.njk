@@ -16,9 +16,9 @@
       </p>
     </div>
     <div class="cookie-consent__actions">
-      <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie-action="open-settings">Ρυθμίσεις</button>
-      <button type="button" class="cookie-btn cookie-btn--secondary" data-cookie-action="reject-all">Απόρριψη όλων</button>
-      <button type="button" class="cookie-btn cookie-btn--primary" data-cookie-action="accept-all">Αποδοχή όλων</button>
+      <button type="button" class="btn btn--outline-light btn--sm cookie-consent__btn-text" data-cookie-action="open-settings">Ρυθμίσεις</button>
+      <button type="button" class="btn btn--outline-light btn--sm" data-cookie-action="reject-all">Απόρριψη όλων</button>
+      <button type="button" class="btn btn--primary btn--sm" data-cookie-action="accept-all">Αποδοχή όλων</button>
     </div>
     <div class="cookie-consent__footer">
       <span>Διαχείριση συναίνεσης από</span>
@@ -74,8 +74,8 @@
     </div>
 
     <footer class="cookie-settings__foot">
-      <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie-action="reject-all">Απόρριψη όλων</button>
-      <button type="button" class="cookie-btn cookie-btn--primary" data-cookie-action="save-settings">Αποθήκευση Ρυθμίσεων</button>
+      <button type="button" class="btn btn--secondary btn--sm" data-cookie-action="reject-all">Απόρριψη όλων</button>
+      <button type="button" class="btn btn--primary btn--sm" data-cookie-action="save-settings">Αποθήκευση Ρυθμίσεων</button>
     </footer>
 
     <div class="cookie-settings__brand">
@@ -211,23 +211,8 @@
   .cookie-consent__footer a { color: rgba(255,255,255,0.6); text-decoration: underline; }
   .cookie-consent__footer a:hover { color: var(--c-accent); }
 
-  .cookie-btn {
-    font-family: var(--f-heading);
-    font-size: 0.88rem;
-    font-weight: 600;
-    padding: 0.65rem 1.2rem;
-    border-radius: var(--radius-pill);
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
-    white-space: nowrap;
-  }
-  .cookie-btn--primary { background: var(--c-accent); color: #06221A; border-color: var(--c-accent); }
-  .cookie-btn--primary:hover { background: var(--c-accent-hover); }
-  .cookie-btn--secondary { background: transparent; color: var(--c-text-light); border-color: rgba(255,255,255,0.25); }
-  .cookie-btn--secondary:hover { border-color: rgba(255,255,255,0.6); }
-  .cookie-btn--ghost { background: transparent; color: rgba(255,255,255,0.65); border-color: transparent; padding-left: 0.5rem; padding-right: 0.5rem; }
-  .cookie-btn--ghost:hover { color: var(--c-text-light); }
+  .cookie-consent__btn-text { border-color: transparent !important; color: rgba(255,255,255,0.7); }
+  .cookie-consent__btn-text:hover { border-color: rgba(255,255,255,0.4) !important; color: var(--c-text-light); }
 
   .cookie-settings {
     position: fixed;
@@ -251,9 +236,6 @@
   .cookie-settings__body { padding: 1.5rem; display: grid; gap: 1.25rem; }
   .cookie-settings__intro { font-size: 0.92rem; line-height: 1.55; color: var(--c-text-muted); margin: 0 0 0.5rem; }
   .cookie-settings__foot { padding: 1rem 1.5rem; border-top: 1px solid var(--c-border); display: flex; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; }
-  .cookie-settings__foot .cookie-btn { color: var(--c-text); }
-  .cookie-settings__foot .cookie-btn--ghost:hover { background: var(--c-bg-alt); color: var(--c-text); }
-  .cookie-settings__foot .cookie-btn--primary { color: #06221A; }
   .cookie-settings__brand { padding: 1rem 1.5rem; font-size: var(--fs-xs); color: var(--c-text-muted); background: var(--c-bg-alt); border-top: 1px solid var(--c-border); border-radius: 0 0 var(--radius-lg) var(--radius-lg); display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
   .cookie-settings__brand a { color: var(--c-accent); font-weight: 600; text-decoration: none; }
   .cookie-settings__brand a:hover { text-decoration: underline; }
