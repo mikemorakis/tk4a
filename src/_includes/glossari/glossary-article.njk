@@ -269,7 +269,9 @@
 </script>
 
 <style>
-  .g-crumbs { padding: 1rem 0; background: var(--c-bg-alt); border-bottom: 1px solid var(--c-border); font-size: var(--fs-small); }
+  /* Clear the fixed nav (~70px) — tk4a convention is huge top padding on
+     the first visible section so content doesn't sit underneath the nav. */
+  .g-crumbs { padding: clamp(5.5rem, 10vw, 7rem) 0 1rem; background: transparent; font-size: var(--fs-small); }
   .g-crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
   .g-crumbs li { display: flex; align-items: center; gap: 0.4rem; }
   .g-crumbs a { color: var(--c-text-muted); }
@@ -278,7 +280,7 @@
   .g-crumbs__sep { color: var(--c-border); }
 
   .g-article { font-family: var(--f-body); color: var(--c-text); }
-  .g-hero { padding: clamp(3rem, 6vw, 5rem) 0 2rem; background: var(--c-bg); border-bottom: 1px solid var(--c-border); }
+  .g-hero { padding: 1rem 0 2rem; background: var(--c-bg); border-bottom: 1px solid var(--c-border); }
   .g-hero__eyebrow { font-family: var(--f-heading); color: var(--c-accent); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.14em; text-decoration: none; font-weight: 600; }
   .g-hero__eyebrow:hover { text-decoration: underline; }
   /* Headings tuned for body-text proportions in a glossary context.
