@@ -12,23 +12,36 @@
   /* ---- DOM Ready ---- */
   document.addEventListener('DOMContentLoaded', init);
 
+  /** Defer to idle so critical-path work doesn't block first paint. */
+  function whenIdle(fn) {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(fn, { timeout: 2000 });
+    } else {
+      setTimeout(fn, 200);
+    }
+  }
+
   function init() {
+    /* Critical: must run on first frame (page-transition, nav, link interception) */
     pageTransitionIn();
     initNav();
-    initScrollReveal();
-    initFAQ();
-    initBeforeAfter();
-    initMagneticButtons();
-    initCardTilt();
-    initParallax();
-    initCounters();
-    initBookingForm();
     initInternalLinks();
-    initSmoothScroll();
-    initReviewsCarousel();
-    initReviewDots();
-    initReviewCount();
-    // initStickyBarTrigger(); // replaced with phone bubble
+
+    /* Non-critical: deferred to idle so they don't extend TBT */
+    whenIdle(function () {
+      initScrollReveal();
+      initFAQ();
+      initBeforeAfter();
+      initMagneticButtons();
+      initCardTilt();
+      initParallax();
+      initCounters();
+      initBookingForm();
+      initSmoothScroll();
+      initReviewsCarousel();
+      initReviewDots();
+      initReviewCount();
+    });
   }
 
   /* ==============================
@@ -158,8 +171,22 @@
         nav.classList.remove('nav--mobile');
       }
     }
-    checkNavOverflow();
-    window.addEventListener('resize', checkNavOverflow);
+    /* Defer the layout read so it doesn't trigger a forced reflow on the
+       critical render path. The 1024px breakpoint is handled by CSS media
+       queries; this is only fine-tuning for wider breakpoints. */
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(checkNavOverflow, { timeout: 2000 });
+    } else {
+      setTimeout(checkNavOverflow, 200);
+    }
+    var resizeRaf = null;
+    window.addEventListener('resize', function () {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(function () {
+        resizeRaf = null;
+        checkNavOverflow();
+      });
+    });
   }
 
   /* ==============================
