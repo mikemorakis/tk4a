@@ -23,23 +23,23 @@
 {% if term.sources and term.sources.length > 0 %}{% set tocEntries = tocEntries.concat([{ id: 'piges', label: 'Πηγές' }]) %}{% endif %}
 {% set tocEntries = tocEntries.concat([{ id: 'faqs', label: 'Συχνές ερωτήσεις' }]) %}
 
-{# Breadcrumbs #}
-<nav class="g-crumbs" aria-label="Διαδρομή">
-  <div class="container">
-    <ol>
-      <li><a href="/">Αρχική</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
-      <li><a href="/glossari/">Γλωσσάρι</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
-      <li><a href="/glossari/{{ category.slug }}/">{{ category.label }}</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
-      <li><span aria-current="page">{{ term.term }}</span></li>
-    </ol>
-  </div>
-</nav>
-
 <article class="g-article">
 
-  {# Hero #}
-  <header class="g-hero">
+  {# Dark page-header — provides the dark band behind the fixed nav so the
+     nav's white text is readable. Contains breadcrumb + hero content. #}
+  <header class="page-header g-page-header">
+    <div class="page-header__orb"></div>
     <div class="container">
+
+      <nav class="g-crumbs" aria-label="Διαδρομή">
+        <ol>
+          <li><a href="/">Αρχική</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
+          <li><a href="/glossari/">Γλωσσάρι</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
+          <li><a href="/glossari/{{ category.slug }}/">{{ category.label }}</a><span class="g-crumbs__sep" aria-hidden="true">/</span></li>
+          <li><span aria-current="page">{{ term.term }}</span></li>
+        </ol>
+      </nav>
+
       <a class="g-hero__eyebrow" href="/glossari/{{ category.slug }}/">{{ category.label }}</a>
       <h1 class="g-hero__h1">{{ term.h1 }}</h1>
 
@@ -269,33 +269,34 @@
 </script>
 
 <style>
-  /* Clear the fixed nav (~70px) — tk4a convention is huge top padding on
-     the first visible section so content doesn't sit underneath the nav. */
-  .g-crumbs { padding: clamp(5.5rem, 10vw, 7rem) 0 1rem; background: transparent; font-size: var(--fs-small); }
+  .g-article { font-family: var(--f-body); color: var(--c-text); }
+
+  /* Dark page-header — provides the dark band behind the fixed nav so its
+     white text is readable. Matches tk4a's existing .page-header pattern. */
+  .g-page-header { padding-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+  .g-crumbs { font-size: var(--fs-small); margin-bottom: 1.5rem; }
   .g-crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
   .g-crumbs li { display: flex; align-items: center; gap: 0.4rem; }
-  .g-crumbs a { color: var(--c-text-muted); }
+  .g-crumbs a { color: rgba(255,255,255,0.55); }
   .g-crumbs a:hover { color: var(--c-accent); }
-  .g-crumbs span[aria-current] { color: var(--c-text); }
-  .g-crumbs__sep { color: var(--c-border); }
+  .g-crumbs span[aria-current] { color: var(--c-text-light); }
+  .g-crumbs__sep { color: rgba(255,255,255,0.2); }
 
-  .g-article { font-family: var(--f-body); color: var(--c-text); }
-  .g-hero { padding: 1rem 0 2rem; background: var(--c-bg); border-bottom: 1px solid var(--c-border); }
   .g-hero__eyebrow { font-family: var(--f-heading); color: var(--c-accent); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.14em; text-decoration: none; font-weight: 600; }
   .g-hero__eyebrow:hover { text-decoration: underline; }
-  /* Headings tuned for body-text proportions in a glossary context.
-     Tk4a's default --fs-h1 is up to 3.8rem which dwarfs the prose. */
-  .g-hero__h1 { font-family: var(--f-display); font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.2; margin: 0.6rem 0 1.5rem; max-width: 28ch; color: var(--c-text); }
+  .g-hero__h1 { font-family: var(--f-display); font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.2; margin: 0.6rem 0 1.5rem; max-width: 28ch; color: var(--c-text-light); }
 
-  .g-tldr { margin-top: 1.5rem; padding: 1.25rem 1.5rem; background: var(--c-surface); border: 1px solid var(--c-border); border-left: 3px solid var(--c-accent); border-radius: var(--radius); max-width: 72ch; }
+  /* TLDR card on dark bg — translucent surface + accent border */
+  .g-tldr { margin-top: 1.5rem; padding: 1.25rem 1.5rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid var(--c-accent); border-radius: var(--radius); max-width: 72ch; }
   .g-tldr__label { display: inline-block; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.14em; color: var(--c-accent); font-weight: 600; margin-bottom: 0.6rem; }
-  .g-tldr__text { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--c-text); }
+  .g-tldr__text { margin: 0; font-size: 1.05rem; line-height: 1.55; color: rgba(255,255,255,0.92); }
 
-  .g-byline { margin-top: 1.5rem; font-size: var(--fs-small); color: var(--c-text-muted); line-height: 1.6; }
+  .g-byline { margin-top: 1.5rem; font-size: var(--fs-small); color: rgba(255,255,255,0.55); line-height: 1.6; }
   .g-byline__by { margin-right: 0.25rem; }
-  .g-byline__author { color: var(--c-text); font-weight: 600; text-decoration: none; }
+  .g-byline__author { color: var(--c-text-light); font-weight: 600; text-decoration: none; }
   .g-byline__author:hover { color: var(--c-accent); }
-  .g-byline__sep { color: var(--c-border); margin: 0 0.4rem; }
+  .g-byline__sep { color: rgba(255,255,255,0.25); margin: 0 0.4rem; }
 
   .g-hero-image { margin: 2rem auto; max-width: 1100px; padding: 0 var(--s-container, 1rem); }
   .g-hero-image img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
