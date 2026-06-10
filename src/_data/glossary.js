@@ -199,6 +199,22 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/ba-case1-before-opt.webp",
+                "alt": "Πριν: στραβά δόντια πριν τη θεραπεία Invisalign",
+                "width": 800,
+                "height": 449,
+                "caption": "Πριν τη θεραπεία"
+          },
+          {
+                "src": "/ba-case1-after-opt.webp",
+                "alt": "Μετά: ευθυγραμμισμένα δόντια μετά από Invisalign",
+                "width": 800,
+                "height": 449,
+                "caption": "Μετά τη θεραπεία"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['aoratoi-narthikes-invisalign-clear-aligners', 'aorati-orthodontiki-enilikes-athina'],
@@ -264,6 +280,22 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/ba-case2-before-opt.webp",
+                "alt": "Πριν τη θεραπεία με μεταλλικά σιδεράκια",
+                "width": 800,
+                "height": 449,
+                "caption": "Πριν τη θεραπεία"
+          },
+          {
+                "src": "/ba-case2-after-opt.webp",
+                "alt": "Μετά τη θεραπεία με μεταλλικά σιδεράκια",
+                "width": 800,
+                "height": 449,
+                "caption": "Μετά τη θεραπεία"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['metallika-siderakia', 'keramika-vs-metallika-siderakia'],
@@ -339,6 +371,15 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/iatrio-2-opt.webp",
+                "alt": "Ορθοδοντικό ιατρείο TK Orthodontics — σύγχρονος εξοπλισμός",
+                "width": 800,
+                "height": 449,
+                "caption": "Σύγχρονος εξοπλισμός ιατρείου"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['keramika-siderakia', 'keramika-vs-metallika-siderakia', 'kostos-keramikon-siderakion-athina'],
@@ -404,6 +445,14 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/iatrio-5-opt.webp",
+                "alt": "Επιστροφή στο ιατρείο για τοποθέτηση συγκρατητήρων",
+                "width": 800,
+                "height": 449
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['advice-after-surgery', 'tips-for-new-patients'],
@@ -476,6 +525,22 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/iatrio-7-opt.webp",
+                "alt": "Ψηφιακή σάρωση δοντιών με iTero scanner",
+                "width": 800,
+                "height": 449,
+                "caption": "3D σάρωση χωρίς γύψινα καλούπια"
+          },
+          {
+                "src": "/iatrio-4-opt.webp",
+                "alt": "Παρουσίαση του 3D μοντέλου στην οθόνη",
+                "width": 800,
+                "height": 449,
+                "caption": "Άμεση παρουσίαση του 3D μοντέλου"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['psifiako-apotipoma-3d-scanning'],
@@ -534,6 +599,15 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/ba-case1-after-opt.webp",
+                "alt": "Επιτυχημένη ορθοδοντική θεραπεία σε ενήλικα ασθενή",
+                "width": 800,
+                "height": 449,
+                "caption": "Αποτέλεσμα σε ενήλικα"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['aorati-orthodontiki-enilikes-athina'],
@@ -593,11 +667,27 @@ const terms = [
       'https://www.wikidata.org/wiki/Q1227059',
     ],
     heroImage: {
-      src: '/orthodontics-mechanisms-opt.webp',
+      src: '/kinitoi.michanismoi-opt.webp',
       alt: 'Ορθοδοντική σύγκλειση — αξιολόγηση δαγκωσιάς στο ιατρείο TK Orthodontics',
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/ba-case2-before-opt.webp",
+                "alt": "Ανώμαλη σύγκλειση πριν την ορθοδοντική",
+                "width": 800,
+                "height": 449,
+                "caption": "Πριν: ανώμαλη σύγκλειση"
+          },
+          {
+                "src": "/ba-case2-after-opt.webp",
+                "alt": "Σωστή σύγκλειση μετά τη θεραπεία",
+                "width": 800,
+                "height": 449,
+                "caption": "Μετά: σωστή σύγκλειση"
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['orthodontiki-sugratisi', 'orthodontics-mechanisms'],
@@ -665,6 +755,14 @@ const terms = [
       width: 1200,
       height: 630,
     },
+    images: [
+          {
+                "src": "/iatrio-6-opt.webp",
+                "alt": "Καθαρισμός δοντιών με σιδεράκια στο TK Orthodontics",
+                "width": 800,
+                "height": 449
+          }
+    ],
 
     relatedServices: [],
     relatedArticles: ['advice-for-optimal-teeth-hygiene', 'tips-for-new-patients'],
