@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy && npx cleancss -o dist/assets/styles.css dist/assets/styles.css"
+    "build": "npx @11ty/eleventy && npx cleancss -o dist/assets/styles.css dist/assets/styles.css && node scripts/hash-rename.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
