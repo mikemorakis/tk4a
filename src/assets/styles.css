@@ -1620,9 +1620,6 @@ textarea.form-input {
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(0,0,0,0.3);
 }
-.page-header__img picture {
-  display: math;
-}
 .page-header__img img {
   width: 100%;
   height: auto;
