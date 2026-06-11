@@ -22,10 +22,8 @@
   }
 
   function init() {
-    /* Critical: must run on first frame (page-transition, nav, link interception) */
-    pageTransitionIn();
+    /* Critical: nav only (page transitions disabled by request) */
     initNav();
-    initInternalLinks();
 
     /* Non-critical: deferred to idle so they don't extend TBT */
     whenIdle(function () {
@@ -154,7 +152,7 @@
 
     /* Responsive: switch to hamburger when links would wrap */
     function checkNavOverflow() {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 900) {
         nav.classList.add('nav--mobile');
         return;
       }

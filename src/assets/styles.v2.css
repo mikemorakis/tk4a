@@ -106,19 +106,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--c-text); }
 
-/* --- Page Transitions --- */
-/* Visible by default — no JS-gated reveal (was killing LCP).
-   Outgoing page-transition still animates via .is-exiting. */
-.page-wrapper {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
-}
-.page-wrapper.is-loaded { opacity: 1; transform: none; }
-.page-wrapper.is-exiting {
-  opacity: 0;
-  transform: translateY(-12px);
-}
+/* --- Page Transitions (disabled) --- */
+.page-wrapper { opacity: 1; transform: none; }
 
 /* --- Grain Overlay --- */
 .grain {
@@ -397,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: 1.2rem;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
@@ -1908,7 +1897,7 @@ textarea.form-input {
 }
 
 /* Hide nav links on mobile BEFORE JS adds nav--mobile (prevents flash) */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .nav__links {
     position: fixed;
     top: 0; right: 0;
