@@ -1462,12 +1462,27 @@ textarea.form-input {
   margin-bottom: 1.2rem;
   font-size: var(--fs-body);
 }
-.pillar-content h3 {
+.pillar-content h2,
+.pillar-content h2.section-title,
+.sales-content h2,
+.sales-content h2.section-title {
   font-family: var(--f-heading);
-  font-size: 1.25rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: var(--c-text);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 1rem;
+  max-width: 100%;
+}
+.pillar-content h3,
+.sales-content h3 {
+  font-family: var(--f-heading);
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
   font-weight: 600;
   color: var(--c-text);
   margin: 2rem 0 0.8rem;
+  line-height: 1.35;
 }
 .pillar-content ul {
   padding-left: 1.5rem;
