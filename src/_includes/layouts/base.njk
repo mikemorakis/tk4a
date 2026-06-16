@@ -6,12 +6,13 @@
   <link rel="icon" type="image/png" href="/tkorthodontics.fav.png">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-  <link rel="canonical" href="{{ canonical or (site.url + page.url) }}">
+  {% set canonicalUrl = canonical or (site.url + (page.url | replace('.html', ''))) %}
+  <link rel="canonical" href="{{ canonicalUrl }}">
   {% if ogTitle %}
   <meta property="og:title" content="{{ ogTitle }}">
   <meta property="og:description" content="{{ ogDescription }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
-  <meta property="og:url" content="{{ canonical or (site.url + page.url) }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="el_GR">
   {% if ogImage %}
