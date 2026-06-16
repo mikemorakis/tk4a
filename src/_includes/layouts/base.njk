@@ -8,33 +8,27 @@
   <meta name="description" content="{{ description }}">
   {% set canonicalUrl = canonical or (site.url + (page.url | replace('.html', ''))) %}
   <link rel="canonical" href="{{ canonicalUrl }}">
-  {% if ogTitle %}
-  <meta property="og:title" content="{{ ogTitle }}">
-  <meta property="og:description" content="{{ ogDescription }}">
+  {% set ogTitleFinal = ogTitle or title %}
+  {% set ogDescFinal = ogDescription or description %}
+  {% set ogImageFinal = ogImage or '/tkorthodontics-lg.jpg' %}
+  {% set ogImageAbs = ogImageFinal if ogImageFinal[0] != '/' else (site.url + ogImageFinal) %}
+  <meta property="og:title" content="{{ ogTitleFinal }}">
+  <meta property="og:description" content="{{ ogDescFinal }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:url" content="{{ canonicalUrl }}">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="el_GR">
-  {% if ogImage %}
-  {% set ogImageAbs = ogImage if ogImage[0] == '/' else ogImage %}
-  {% if ogImage[0] == '/' %}{% set ogImageAbs = site.url + ogImage %}{% endif %}
   <meta property="og:image" content="{{ ogImageAbs }}">
   <meta property="og:image:width" content="{{ ogImageWidth or 1200 }}">
   <meta property="og:image:height" content="{{ ogImageHeight or 630 }}">
-  <meta property="og:image:alt" content="{{ ogImageAlt or ogTitle }}">
+  <meta property="og:image:alt" content="{{ ogImageAlt or ogTitleFinal }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ ogTitle }}">
-  <meta name="twitter:description" content="{{ ogDescription }}">
+  <meta name="twitter:title" content="{{ ogTitleFinal }}">
+  <meta name="twitter:description" content="{{ ogDescFinal }}">
   <meta name="twitter:image" content="{{ ogImageAbs }}">
-  {% else %}
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ ogTitle }}">
-  <meta name="twitter:description" content="{{ ogDescription }}">
-  {% endif %}
   {% if articlePublishedAt %}<meta property="article:published_time" content="{{ articlePublishedAt }}">{% endif %}
   {% if articleModifiedAt %}<meta property="article:modified_time" content="{{ articleModifiedAt }}">{% endif %}
   {% if articleSection %}<meta property="article:section" content="{{ articleSection }}">{% endif %}
-  {% endif %}
   {% if robots %}<meta name="robots" content="{{ robots }}">{% endif %}
   {% if hreflang %}{% for alt in hreflang %}
   <link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ alt.href }}">{% endfor %}
