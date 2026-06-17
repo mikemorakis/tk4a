@@ -50,7 +50,8 @@
         <a href="#" class="footer__link">{{ site.address.street }}</a>
         <a href="#" class="footer__link">{{ site.address.city }} {{ site.address.zip }}</a>
         <a href="tel:{{ site.phoneFull }}" class="footer__link">{{ site.phoneFormatted }}</a>
-        <a href="mailto:{{ site.email }}" class="footer__link">{{ site.email }}</a>
+        {% set emailParts = site.email | split('@') %}
+        <a href="#" class="footer__link" data-email-user="{{ emailParts[0] }}" data-email-domain="{{ emailParts[1] }}">{{ emailParts[0] }} [at] {{ emailParts[1] }}</a>
         <span class="footer__link" style="margin-top:0.8rem;font-size:var(--fs-xs);color:rgba(255,255,255,0.45);"><strong style="color:rgba(255,255,255,0.6);">Ωράριο:</strong> {{ site.hours }}</span>
       </div>
     </div>

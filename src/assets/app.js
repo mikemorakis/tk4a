@@ -24,6 +24,7 @@
   function init() {
     /* Critical: nav only (page transitions disabled by request) */
     initNav();
+    initEmail();
 
     /* Non-critical: deferred to idle so they don't extend TBT */
     whenIdle(function () {
@@ -86,6 +87,18 @@
         e.preventDefault();
         pageTransitionOut(href);
       }
+    });
+  }
+
+  /* ==============================
+     EMAIL — rebuild mailto: at runtime so CF email obfuscation
+     doesn't transform the link to /cdn-cgi/l/email-protection (404).
+     ============================== */
+  function initEmail() {
+    document.querySelectorAll('a[data-email-user][data-email-domain]').forEach(function (el) {
+      var addr = el.getAttribute('data-email-user') + '@' + el.getAttribute('data-email-domain');
+      el.href = 'mailto:' + addr;
+      el.textContent = addr;
     });
   }
 
