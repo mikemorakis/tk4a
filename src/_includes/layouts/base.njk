@@ -107,10 +107,10 @@
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Λεωφόρος Αμφιθέας 101",
-      "addressLocality": "Παλαιό Φάληρο",
+      "streetAddress": "{{ site.address.streetFull }}",
+      "addressLocality": "{{ site.address.city }}",
       "addressRegion": "Αθήνα",
-      "postalCode": "17564",
+      "postalCode": "{{ site.address.zip | replace(' ', '') }}",
       "addressCountry": "GR"
     },
     "geo": {
