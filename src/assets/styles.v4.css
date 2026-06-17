@@ -1578,6 +1578,44 @@ textarea.form-input {
 .footer__social svg { width: 16px; height: 16px; color: rgba(255,255,255,0.6); }
 .footer__social:hover svg { color: var(--c-accent); }
 
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  padding: 6.5rem 0 0;
+  background: linear-gradient(180deg, #0f1418 0%, #12181d 100%);
+}
+.breadcrumbs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  font-family: var(--f-heading);
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.55);
+}
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.breadcrumbs__link {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease);
+}
+.breadcrumbs__link:hover { color: var(--c-accent); }
+.breadcrumbs__current {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+.breadcrumbs__sep {
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
+}
+.breadcrumbs + .page-header { padding-top: 1.5rem; }
+
 /* --- Page Header (Inner Pages) --- */
 .page-header {
   padding: 10rem 0 4rem;
