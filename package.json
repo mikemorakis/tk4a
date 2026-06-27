@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy && npx cleancss -o dist/assets/styles.v4.css dist/assets/styles.v4.css"
+    "build": "npx @11ty/eleventy && npx cleancss -o dist/assets/styles.v5.css dist/assets/styles.v5.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

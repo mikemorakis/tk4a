@@ -1484,16 +1484,32 @@ textarea.form-input {
   margin: 2rem 0 0.8rem;
   line-height: 1.35;
 }
-.pillar-content ul {
+.pillar-content ul,
+.sales-content ul {
+  list-style: disc;
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.pillar-content li {
+.pillar-content ol,
+.sales-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.pillar-content li,
+.sales-content li {
   color: var(--c-text-muted);
   line-height: 1.8;
   margin-bottom: 0.5rem;
 }
-.pillar-content li strong {
+.pillar-content li::marker,
+.pillar-content ol li::marker,
+.sales-content li::marker,
+.sales-content ol li::marker {
+  color: var(--c-accent);
+}
+.pillar-content li strong,
+.sales-content li strong {
   color: var(--c-text);
 }
 
