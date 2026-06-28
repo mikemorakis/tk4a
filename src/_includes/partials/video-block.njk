@@ -1,0 +1,27 @@
+{#
+  Usage: {% set videoSrc, videoPoster, videoTitle, videoCaption, videoDescription %}
+         {% include "partials/video-block.njk" %}
+#}
+<figure class="video-block reveal" style="margin:2.5rem 0;">
+  <video controls preload="metadata" poster="{{ videoPoster }}" width="800" height="450" style="width:100%;max-width:800px;height:auto;border-radius:var(--radius-lg);box-shadow:0 16px 48px rgba(0,0,0,0.15);display:block;margin:0 auto;">
+    <source src="{{ videoSrc }}" type="{{ videoType or 'video/mp4' }}">
+    Το browser σας δεν υποστηρίζει video. <a href="{{ videoSrc }}" style="color:var(--c-accent);">Κατεβάστε το video</a>.
+  </video>
+  {% if videoCaption %}
+  <figcaption style="text-align:center;font-size:var(--fs-small);color:var(--c-text-muted);margin-top:0.75rem;font-style:italic;">{{ videoCaption }}</figcaption>
+  {% endif %}
+</figure>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ videoTitle }}",
+  "description": "{{ videoDescription }}",
+  "thumbnailUrl": "{{ site.url }}{{ videoPoster }}",
+  "uploadDate": "{{ videoUploadDate or '2026-06-27' }}",
+  "contentUrl": "{{ site.url }}{{ videoSrc }}",
+  "inLanguage": "el-GR",
+  "publisher": {"@type": "Organization", "name": "TK Orthodontics", "logo": {"@type": "ImageObject", "url": "{{ site.url }}/tkorthodontics-avatar.jpg"}},
+  "creator": {"@type": "Person", "name": "Dr. Κωνσταντίνος Τσιότρας", "url": "{{ site.url }}/orthodontikos-athina"}
+}
+</script>

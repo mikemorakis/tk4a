@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/*.png");
   eleventyConfig.addPassthroughCopy("src/**/*.webp");
   eleventyConfig.addPassthroughCopy("src/**/*.avif");
+  eleventyConfig.addPassthroughCopy("src/**/*.mp4");
+  eleventyConfig.addPassthroughCopy("src/**/*.mov");
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
