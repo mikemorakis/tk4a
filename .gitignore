@@ -3,3 +3,6 @@ New Text Document.txt
 node_modules/
 dist/
 tkortodontics_*.csv
+
+# Source videos (compressed copies live in src/videos/)
+videos/
