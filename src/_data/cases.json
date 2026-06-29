@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "case1",
+    "method": "Κεραμικά σιδεράκια",
+    "methodLink": "/keramika-siderakia",
+    "duration": "18 μήνες",
+    "problem": "Συνωστισμός άνω και κάτω τόξου, σύγκλειση",
+    "patientType": "",
+    "altBefore": "Ορθοδοντική θεραπεία με κεραμικά σιδεράκια πριν - TK Orthodontics",
+    "altAfter": "Ορθοδοντική θεραπεία με κεραμικά σιδεράκια μετά - TK Orthodontics",
+    "captionBefore": "Ασθενής πριν την έναρξη θεραπείας με κεραμικά σιδεράκια",
+    "captionAfter": "Ίδιος ασθενής μετά από 18 μήνες θεραπείας με κεραμικά σιδεράκια"
+  },
+  {
+    "slug": "case2",
+    "method": "Invisalign",
+    "methodLink": "/aoratoi-narthikes-invisalign-clear-aligners",
+    "duration": "14 μήνες",
+    "problem": "Αισθητική και σύγκλειση",
+    "patientType": "Ενήλικας ασθενής",
+    "altBefore": "Ορθοδοντική θεραπεία Invisalign πριν - TK Orthodontics",
+    "altAfter": "Ορθοδοντική θεραπεία Invisalign μετά - TK Orthodontics",
+    "captionBefore": "Ενήλικας ασθενής πριν την έναρξη θεραπείας Invisalign",
+    "captionAfter": "Ίδιος ασθενής μετά από 14 μήνες θεραπείας Invisalign"
+  }
+]

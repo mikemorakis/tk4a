@@ -37,26 +37,25 @@ breadcrumbs:
   </div>
 </section>
 
-<!-- ===== BEFORE / AFTER GALLERY ===== -->
+<!-- ===== BEFORE / AFTER GALLERY (data-driven from src/_data/cases.json) ===== -->
 <section class="section section--alt">
   <div class="container">
     <div class="ba-grid stagger">
-
-      <!-- Case 1: Ceramic braces -->
-      <div class="ba-case reveal" style="--i:0">
+      {% for case in cases %}
+      <div class="ba-case reveal" style="--i:{{ loop.index0 }}">
         <div class="ba-slider">
           <div class="ba-slider__before">
             <picture>
-              <source type="image/avif" srcset="/ba-case1-before-opt.avif">
-              <source type="image/webp" srcset="/ba-case1-before-opt.webp">
-              <img src="/ba-case1-before-opt.jpg" alt="Ορθοδοντική θεραπεία με κεραμικά σιδεράκια πριν - TK Orthodontics" width="800" height="545" loading="lazy">
+              <source type="image/avif" srcset="/ba-{{ case.slug }}-before-opt.avif">
+              <source type="image/webp" srcset="/ba-{{ case.slug }}-before-opt.webp">
+              <img src="/ba-{{ case.slug }}-before-opt.jpg" alt="{{ case.altBefore }}" width="800" height="545" loading="lazy">
             </picture>
           </div>
           <div class="ba-slider__after">
             <picture>
-              <source type="image/avif" srcset="/ba-case1-after-opt.avif">
-              <source type="image/webp" srcset="/ba-case1-after-opt.webp">
-              <img src="/ba-case1-after-opt.jpg" alt="Ορθοδοντική θεραπεία με κεραμικά σιδεράκια μετά - TK Orthodontics" width="800" height="545" loading="lazy">
+              <source type="image/avif" srcset="/ba-{{ case.slug }}-after-opt.avif">
+              <source type="image/webp" srcset="/ba-{{ case.slug }}-after-opt.webp">
+              <img src="/ba-{{ case.slug }}-after-opt.jpg" alt="{{ case.altAfter }}" width="800" height="545" loading="lazy">
             </picture>
           </div>
           <div class="ba-slider__line"></div>
@@ -66,38 +65,10 @@ breadcrumbs:
           <span class="ba-slider__label ba-slider__label--before">Πριν</span>
           <span class="ba-slider__label ba-slider__label--after">Μετά</span>
         </div>
-        <h2 class="ba-case__caption" style="font-size:var(--fs-large);font-weight:600;margin-top:1rem;">Περίπτωση 1 — <a href="/keramika-siderakia" style="color:var(--c-accent);">Κεραμικά σιδεράκια</a></h2>
-        <p style="color:var(--c-text-muted);font-size:var(--fs-small);">Διάρκεια θεραπείας: 18 μήνες. Διόρθωση: συνωστισμός άνω και κάτω τόξου, σύγκλειση.</p>
+        <h2 class="ba-case__caption" style="font-size:var(--fs-large);font-weight:600;margin-top:1rem;">Περίπτωση {{ loop.index }} — <a href="{{ case.methodLink }}" style="color:var(--c-accent);">{{ case.method }}</a></h2>
+        <p style="color:var(--c-text-muted);font-size:var(--fs-small);">{% if case.patientType %}{{ case.patientType }}. {% endif %}Διάρκεια θεραπείας: {{ case.duration }}. Διόρθωση: {{ case.problem }}.</p>
       </div>
-
-      <!-- Case 2: Invisalign -->
-      <div class="ba-case reveal" style="--i:1">
-        <div class="ba-slider">
-          <div class="ba-slider__before">
-            <picture>
-              <source type="image/avif" srcset="/ba-case2-before-opt.avif">
-              <source type="image/webp" srcset="/ba-case2-before-opt.webp">
-              <img src="/ba-case2-before-opt.jpg" alt="Ορθοδοντική θεραπεία Invisalign πριν - TK Orthodontics" width="800" height="545" loading="lazy">
-            </picture>
-          </div>
-          <div class="ba-slider__after">
-            <picture>
-              <source type="image/avif" srcset="/ba-case2-after-opt.avif">
-              <source type="image/webp" srcset="/ba-case2-after-opt.webp">
-              <img src="/ba-case2-after-opt.jpg" alt="Ορθοδοντική θεραπεία Invisalign μετά - TK Orthodontics" width="800" height="545" loading="lazy">
-            </picture>
-          </div>
-          <div class="ba-slider__line"></div>
-          <div class="ba-slider__handle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 3 12 9 6"/><polyline points="15 6 21 12 15 18"/></svg>
-          </div>
-          <span class="ba-slider__label ba-slider__label--before">Πριν</span>
-          <span class="ba-slider__label ba-slider__label--after">Μετά</span>
-        </div>
-        <h2 class="ba-case__caption" style="font-size:var(--fs-large);font-weight:600;margin-top:1rem;">Περίπτωση 2 — <a href="/aoratoi-narthikes-invisalign-clear-aligners" style="color:var(--c-accent);">Invisalign</a></h2>
-        <p style="color:var(--c-text-muted);font-size:var(--fs-small);">Ενήλικας ασθενής. Διάρκεια θεραπείας: 14 μήνες. Διόρθωση: αισθητική και σύγκλειση.</p>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -182,30 +153,10 @@ breadcrumbs:
   "url": "https://www.tkorthodontics.gr/apotelesmata",
   "inLanguage": "el-GR",
   "image": [
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.tkorthodontics.gr/ba-case1-before-opt.jpg",
-      "name": "Κεραμικά σιδεράκια — πριν τη θεραπεία",
-      "caption": "Ασθενής πριν την έναρξη θεραπείας με κεραμικά σιδεράκια"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.tkorthodontics.gr/ba-case1-after-opt.jpg",
-      "name": "Κεραμικά σιδεράκια — μετά τη θεραπεία",
-      "caption": "Ίδιος ασθενής μετά από 18 μήνες θεραπείας με κεραμικά σιδεράκια"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.tkorthodontics.gr/ba-case2-before-opt.jpg",
-      "name": "Invisalign — πριν τη θεραπεία",
-      "caption": "Ενήλικας ασθενής πριν την έναρξη θεραπείας Invisalign"
-    },
-    {
-      "@type": "ImageObject",
-      "contentUrl": "https://www.tkorthodontics.gr/ba-case2-after-opt.jpg",
-      "name": "Invisalign — μετά τη θεραπεία",
-      "caption": "Ίδιος ασθενής μετά από 14 μήνες θεραπείας Invisalign"
-    }
+    {%- for case in cases %}
+    {"@type":"ImageObject","contentUrl":"https://www.tkorthodontics.gr/ba-{{ case.slug }}-before-opt.jpg","name":"{{ case.method }} — πριν τη θεραπεία","caption":"{{ case.captionBefore }}"},
+    {"@type":"ImageObject","contentUrl":"https://www.tkorthodontics.gr/ba-{{ case.slug }}-after-opt.jpg","name":"{{ case.method }} — μετά τη θεραπεία","caption":"{{ case.captionAfter }}"}{% if not loop.last %},{% endif %}
+    {%- endfor %}
   ]
 }
 </script>
