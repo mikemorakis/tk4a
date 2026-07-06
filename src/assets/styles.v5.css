@@ -2460,6 +2460,9 @@ textarea.form-input {
 }
 
 /* --- Mid-Page CTA Strip --- */
+.mid-cta {
+  background: var(--c-accent);
+}
 .mid-cta__inner {
   display: flex;
   align-items: center;
@@ -2467,16 +2470,16 @@ textarea.form-input {
   gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem 2.5rem;
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .mid-cta__text {
   font-family: var(--f-heading);
   font-size: var(--fs-h3);
   font-weight: 600;
-  color: var(--c-text);
+  color: #fff;
   margin: 0;
 }
 .mid-cta__actions {
@@ -2492,11 +2495,22 @@ textarea.form-input {
   font-family: var(--f-heading);
   font-size: var(--fs-small);
   font-weight: 600;
-  color: var(--c-text-muted);
+  color: rgba(255,255,255,0.9);
   transition: color var(--t-fast) var(--ease);
 }
-.mid-cta__phone:hover { color: var(--c-accent); }
+.mid-cta__phone:hover { color: #fff; }
 .mid-cta__phone svg { flex-shrink: 0; }
+
+/* Green section — swap primary button to white variant so it doesn't blend */
+.mid-cta .btn--primary {
+  background: #fff;
+  color: var(--c-bg-dark);
+}
+.mid-cta .btn--primary:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  opacity: 1;
+}
 
 @media (max-width: 768px) {
   .mid-cta__inner {
