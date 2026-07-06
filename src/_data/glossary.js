@@ -1410,9 +1410,9 @@ const terms = [
     term: 'Λεύκανση Δοντιών',
     domain: 'orthodontics',
     category: 'therapeies',
-    searchVariants: ['λευκανση', 'λευκανση δοντιων', 'leykansi', 'opalescence', 'whitening', 'λευκανση στο σπιτι', 'μασελακια λευκανσης'],
-    synonyms: ['Επαγγελματική Λεύκανση', 'Take-Home Whitening', 'Opalescence Whitening'],
-    keywords: ['λεύκανση δοντιών', 'opalescence', 'μασελάκια λεύκανσης', 'λεύκανση στο σπίτι', 'επαγγελματική λεύκανση', 'carbamide peroxide'],
+    searchVariants: ['λευκανση', 'λευκανση δοντιων', 'λεφκανση', 'λευκανση δωντιων', 'leykansi', 'lefkansi', 'opalescence', 'opalescence pf', 'opalescence go', 'opalescence boost', 'opalescense', 'ophalescence', 'whitening', 'teeth whitening', 'bleaching', 'λευκανση στο σπιτι', 'λευκανση με μασελακια', 'μασελακια λευκανσης', 'ναρθηκες λευκανσης', 'γελ λευκανσης', 'υπεροξειδιο', 'υπεροξειδιο υδρογονου', 'υπεροξειδιο καρβαμιδιου', 'carbamide peroxide', 'hydrogen peroxide', 'λευκανση δοντιων αθηνα', 'λευκανση δοντιων παλαιο φαληρο', 'λευκανση χωρις λαμπα', 'λευκανση χωρις λειζερ', 'λευκανση χωρις laser', 'zoom whitening', 'philips zoom', 'επαγγελματικη λευκανση', 'λευκανση οδοντιατρου', 'κιτρινα δοντια', 'λευκα δοντια', 'πως να λευκανω τα δοντια μου'],
+    synonyms: ['Επαγγελματική Λεύκανση Δοντιών', 'Take-Home Whitening', 'Opalescence Whitening', 'Λεύκανση με Μασελάκια', 'At-Home Bleaching', 'Λεύκανση με Νάρθηκες', 'Custom Tray Whitening', 'Λεύκανση Χωρίς Λάμπα'],
+    keywords: ['λεύκανση δοντιών', 'λεύκανση δοντιών Αθήνα', 'Opalescence', 'Opalescence PF', 'Opalescence Boost', 'Opalescence Go', 'Ultradent', 'μασελάκια λεύκανσης', 'νάρθηκες λεύκανσης', 'λεύκανση στο σπίτι', 'επαγγελματική λεύκανση', 'carbamide peroxide', 'υπεροξείδιο του καρβαμιδίου', 'hydrogen peroxide', 'υπεροξείδιο του υδρογόνου', 'PF formula', 'potassium nitrate', 'νιτρικό κάλιο', 'Vita shade', 'κλίμακα Vita', 'λεύκανση χωρίς λάμπα', 'take-home whitening', 'teeth whitening', 'bleaching δοντιών', 'αισθητική οδοντιατρική', 'κίτρινα δόντια', 'λευκά δόντια', 'χρωστικές δοντιών'],
 
     h1: 'Τι είναι η Επαγγελματική Λεύκανση Δοντιών;',
     metaTitle: 'Λεύκανση Δοντιών — Τι είναι, πώς λειτουργεί, διάρκεια',
@@ -1464,7 +1464,175 @@ const terms = [
 
     relatedServices: ['/leykansi-dontion-athina'],
     relatedArticles: ['leykansi-dontion-athina', 'leykansi-meta-orthodontiki', 'leykansi-vs-strips-odontokremes', 'eyaisthisia-meta-leykansi'],
-    relatedTerms: ['3d-psifiako-apotipoma', 'sygkratitires', 'invisalign'],
+    relatedTerms: ['opalescence', 'carbamide-peroxide', 'masalakia-leykansis', '3d-psifiako-apotipoma', 'sygkratitires', 'invisalign'],
+
+    inLanguage: 'el-GR',
+    publishedAt: '2026-06-29',
+    updatedAt: '2026-06-29',
+  },
+
+  {
+    slug: 'opalescence',
+    term: 'Opalescence',
+    domain: 'orthodontics',
+    category: 'therapeies',
+    searchVariants: ['opalescence', 'opalescence pf', 'opalescence boost', 'opalescence go', 'opalescense', 'opallescence', 'ophalescence', 'οπαλεσενσε', 'οπαλεσενς', 'ultradent opalescence', 'opalescence 10', 'opalescence 15', 'opalescence 20', 'opalescence 35'],
+    synonyms: ['Opalescence PF', 'Opalescence Whitening System', 'Ultradent Opalescence'],
+    keywords: ['Opalescence', 'Opalescence PF', 'Opalescence Boost', 'Opalescence Go', 'Ultradent', 'take-home whitening', 'μασελάκια λεύκανσης', 'επαγγελματική λεύκανση', 'carbamide peroxide gel', '10% CP', '15% CP', '20% CP', '35% CP', 'PF formula', 'potassium nitrate fluoride'],
+
+    h1: 'Τι είναι το Opalescence;',
+    metaTitle: 'Opalescence — Το Παγκόσμιο Standard Επαγγελματικής Λεύκανσης',
+    metaDescription: 'Opalescence: το πιο διαδεδομένο επαγγελματικό σύστημα λεύκανσης δοντιών από Ultradent. Πώς λειτουργεί, συγκεντρώσεις 10-35% CP, φόρμουλα PF κατά της ευαισθησίας.',
+    oneLineAnswer: 'Επαγγελματικό σύστημα λεύκανσης δοντιών από την Ultradent, με γέλη υπεροξειδίου του καρβαμιδίου (carbamide peroxide) σε 4 συγκεντρώσεις — 10%, 15%, 20% και 35% — για χρήση σε εξατομικευμένα μασελάκια στο σπίτι.',
+
+    definition: 'Το Opalescence είναι μια σειρά επαγγελματικών προϊόντων λεύκανσης δοντιών της Ultradent Products (Utah, ΗΠΑ) — από τις πιο διαδεδομένες οδοντιατρικές εταιρείες παγκοσμίως. Κυκλοφορεί σε γέλη carbamide peroxide 10%, 15%, 20% και 35% συγκεντρώσεων, καθώς και σε προϊόντα in-office (Opalescence Boost 40% υπεροξείδιο του υδρογόνου). Η μοναδικότητα του Opalescence: η φόρμουλα PF περιλαμβάνει νιτρικό κάλιο (Potassium nitrate) για μείωση ευαισθησίας και φθόριο (Fluoride) για ενίσχυση της αδαμαντίνης. Επιπλέον, η παχύρρευστη υφή του gel και η περιεκτικότητα 20% σε νερό εξασφαλίζουν ομοιόμορφη επαφή και αποτροπή αφυδάτωσης των δοντιών κατά τη διαδικασία.',
+    whereUsed: 'Χρησιμοποιείται σε επαγγελματικά ιατρεία για take-home whitening (μασελάκια στο σπίτι) και σε in-office συνεδρίες. Οι χαμηλότερες συγκεντρώσεις (10-15% CP) χρησιμοποιούνται σε ασθενείς με ευαισθησία, οι υψηλότερες (20-35% CP) όταν επιθυμείται ταχύτερο αποτέλεσμα.',
+    advantages: [
+      'Φόρμουλα PF (νιτρικό κάλιο + φθόριο) — μείωση ευαισθησίας κατά 40-60%',
+      'Παχύρρευστη σύσταση — παραμένει σε επαφή με τα δόντια χωρίς διαρροή',
+      '20% νερό — αποτροπή αφυδάτωσης δοντιών κατά τη διαδικασία',
+      '4 συγκεντρώσεις — εξατομίκευση ανάλογα με προφίλ ασθενή',
+      '30+ χρόνια κλινικής εμπειρίας παγκοσμίως',
+      'Καλαμποκί, μέντα, φρούτο πάθους — πολλαπλά γεύματα',
+    ],
+    mistakes: [
+      'Χρήση χωρίς προηγούμενη οδοντιατρική αξιολόγηση — δεν εντοπίζονται σφραγίσματα/θήκες που δεν λευκαίνονται',
+      'Παράλειψη σχολαστικού καθαρισμού δοντιών πριν τη χρήση — μειώνει την αποτελεσματικότητα',
+      'Χρήση 35% CP σε ευαίσθητους ασθενείς χωρίς προετοιμασία με desensitizing πρωτόκολλο',
+      'Χρήση σε παιδιά κάτω των 14 ετών — η αδαμαντίνη δεν έχει ωριμάσει',
+    ],
+    whenItMakesSense: 'Ιδανικό για ασθενείς που θέλουν επαγγελματικό αποτέλεσμα χωρίς πολλαπλές συνεδρίες στο ιατρείο. Οι χαμηλές συγκεντρώσεις (10-15% CP) είναι κατάλληλες για ήπια-μέτρια χρώματα και ευαίσθητους ασθενείς. Οι υψηλότερες (20-35% CP) για έντονες χρωστικές (καπνιστές, καφέ, κρασί) όταν χρειάζεται πιο ταχύ αποτέλεσμα.',
+
+    sources: [
+      { title: 'Opalescence PF Product Information', type: 'standard', issuer: 'Ultradent Products Inc.', year: 2024, url: 'https://www.ultradent.com/products/categories/whitening' },
+      { title: 'Carbamide Peroxide 10% vs 15% — Clinical Comparison', type: 'study', issuer: 'Journal of the American Dental Association', year: 2021 },
+    ],
+    faqs: [
+      { q: 'Ποια η διαφορά Opalescence PF και Opalescence Boost;', a: 'Το Opalescence PF είναι για χρήση στο σπίτι με μασελάκια (carbamide peroxide 10-35%). Το Opalescence Boost είναι in-office προϊόν με 40% υπεροξείδιο του υδρογόνου που ενεργοποιείται χημικά — χωρίς λάμπα.' },
+      { q: 'Πόσο διαρκεί η θεραπεία με Opalescence;', a: '10% CP: 2-4 εβδομάδες (νυχτερινή χρήση). 15% CP: 2-3 εβδομάδες. 20% CP: 1-2 εβδομάδες. 35% CP: 1 εβδομάδα (30 λεπτά ημερησίως).' },
+      { q: 'Το Opalescence είναι ασφαλές για την αδαμαντίνη;', a: 'Ναι. Η φόρμουλα περιλαμβάνει φθόριο που ενισχύει την αδαμαντίνη. Επί 30+ χρόνια κλινικής χρήσης παγκοσμίως, δεν έχει τεκμηριωθεί βλάβη στην αδαμαντίνη σε σωστή χρήση.' },
+      { q: 'Χρειάζεται λάμπα ή λέιζερ για το Opalescence;', a: 'Όχι. Το Opalescence Boost (in-office) ενεργοποιείται χημικά, όχι με φως. Το Opalescence PF (στο σπίτι) απαιτεί μόνο χρόνο επαφής με τα δόντια.' },
+    ],
+
+    author: 'dr-tsiotras',
+    reviewedBy: {
+      name: 'Dr. Κωνσταντίνος Τσιότρας',
+      credentials: 'Ορθοδοντικός, εξειδικευμένος στην αισθητική οδοντιατρική',
+      reviewedAt: '2026-06-29',
+    },
+    sameAs: [
+      'https://www.ultradent.com/products/categories/whitening',
+      'https://en.wikipedia.org/wiki/Tooth_whitening',
+    ],
+
+    relatedServices: ['/leykansi-dontion-athina'],
+    relatedArticles: ['leykansi-dontion-athina', 'leykansi-meta-orthodontiki', 'leykansi-vs-strips-odontokremes', 'eyaisthisia-meta-leykansi'],
+    relatedTerms: ['leykansi-dontion', 'carbamide-peroxide', 'masalakia-leykansis'],
+
+    inLanguage: 'el-GR',
+    publishedAt: '2026-06-29',
+    updatedAt: '2026-06-29',
+  },
+
+  {
+    slug: 'carbamide-peroxide',
+    term: 'Υπεροξείδιο του Καρβαμιδίου',
+    domain: 'orthodontics',
+    category: 'therapeies',
+    searchVariants: ['carbamide peroxide', 'υπεροξειδιο καρβαμιδιου', 'υπεροξειδιο του καρβαμιδιου', 'καρβαμιδιο', 'urea peroxide', 'CP', '10% CP', '15% CP', '35% CP', 'γελ λευκανσης', 'δραστικη λευκανσης'],
+    synonyms: ['Carbamide Peroxide', 'Urea Hydrogen Peroxide', 'Υπεροξείδιο Ουρίας'],
+    keywords: ['carbamide peroxide', 'υπεροξείδιο του καρβαμιδίου', 'λευκαντική γέλη', 'Opalescence', '10% CP', '15% CP', '20% CP', '35% CP', 'take-home whitening', 'δραστική ουσία λεύκανσης'],
+
+    h1: 'Τι είναι το Υπεροξείδιο του Καρβαμιδίου (Carbamide Peroxide);',
+    metaTitle: 'Υπεροξείδιο του Καρβαμιδίου — Πώς Λευκαίνει τα Δόντια',
+    metaDescription: 'Carbamide peroxide: η δραστική ουσία σε επαγγελματική λεύκανση δοντιών. Πώς λειτουργεί, ποιες συγκεντρώσεις (10%, 15%, 20%, 35%), ασφάλεια και αποτέλεσμα.',
+    oneLineAnswer: 'Χημική ουσία που, όταν έρθει σε επαφή με το σμάλτο, διασπάται σε υπεροξείδιο του υδρογόνου και ουρία — το πρώτο λευκαίνει τα δόντια οξειδώνοντας τις χρωστικές τους.',
+
+    definition: 'Το υπεροξείδιο του καρβαμιδίου (carbamide peroxide, CH₄N₂O·H₂O₂) είναι μια σταθερή χημική ένωση που, όταν έρθει σε επαφή με το σμάλτο των δοντιών, διασπάται σταδιακά σε υπεροξείδιο του υδρογόνου (H₂O₂) και ουρία (CH₄N₂O). Το υπεροξείδιο του υδρογόνου είναι η δραστική ουσία — διεισδύει στο σμάλτο και την οδοντίνη, οξειδώνει τα μόρια χρωστικών και τα διασπά σε μικρότερα, λιγότερο έγχρωμα κομμάτια. Η αργή απελευθέρωση από το carbamide peroxide σημαίνει μακρύτερο χρόνο δράσης με μικρότερη ευαισθησία — γι\'αυτό είναι η προτιμώμενη μορφή για take-home whitening.',
+    whereUsed: 'Στα επαγγελματικά προϊόντα λεύκανσης δοντιών (Opalescence, Nite White, Day White) σε συγκεντρώσεις 10%, 15%, 20% και 35%. Στα OTC strips και οδοντόκρεμες χρησιμοποιείται συνήθως υπεροξείδιο του υδρογόνου απευθείας, σε χαμηλότερες συγκεντρώσεις.',
+    advantages: [
+      'Αργή απελευθέρωση — μικρότερη ευαισθησία σε σχέση με άμεσο υπεροξείδιο του υδρογόνου',
+      'Σταθερό σε αποθήκευση — μεγάλη διάρκεια ζωής προϊόντος',
+      'Ευρύ φάσμα συγκεντρώσεων — εξατομίκευση ανά ασθενή',
+      'Παγκοσμίως μελετημένο — 30+ χρόνια κλινικών δεδομένων',
+    ],
+    mistakes: [
+      'Χρήση υψηλής συγκέντρωσης σε ευαίσθητους ασθενείς χωρίς προετοιμασία',
+      'Παρατεταμένη χρήση πέρα από τις οδηγίες του γιατρού — ερεθισμός ούλων',
+      'Χρήση OTC προϊόντων χαμηλής συγκέντρωσης με προσδοκία επαγγελματικού αποτελέσματος',
+    ],
+    whenItMakesSense: 'Το carbamide peroxide είναι η προτιμώμενη μορφή για take-home whitening λόγω της αργής απελευθέρωσης του υπεροξειδίου. Για γρήγορη in-office θεραπεία προτιμάται το υπεροξείδιο του υδρογόνου σε υψηλότερες συγκεντρώσεις.',
+
+    sources: [
+      { title: 'Tooth Whitening Mechanisms — Chemistry Review', type: 'study', issuer: 'Journal of Dental Research', year: 2020 },
+      { title: 'Carbamide Peroxide Safety Profile', type: 'study', issuer: 'ADA Council on Scientific Affairs', year: 2019 },
+    ],
+    faqs: [
+      { q: 'Ποια η διαφορά carbamide peroxide και hydrogen peroxide;', a: 'Το carbamide peroxide διασπάται σε υπεροξείδιο του υδρογόνου + ουρία με αργό ρυθμό — μεγαλύτερος χρόνος δράσης, λιγότερη ευαισθησία. Το hydrogen peroxide δρα άμεσα — γρηγορότερα αλλά με μεγαλύτερη ευαισθησία.' },
+      { q: 'Ποια συγκέντρωση carbamide peroxide πρέπει να επιλέξω;', a: '10-15% CP για ευαίσθητους ασθενείς και μακρά χρήση. 20% CP για μεσαία ταχύτητα. 35% CP για γρήγορο αποτέλεσμα σε ανθεκτικές χρωστικές.' },
+      { q: 'Είναι το carbamide peroxide ασφαλές;', a: 'Ναι, σε επαγγελματική χρήση. Έχει εγκριθεί από FDA και ADA. Σε σωστές συγκεντρώσεις και διάρκεια χρήσης, δεν προκαλεί μόνιμη βλάβη σε αδαμαντίνη ή οδοντίνη.' },
+    ],
+
+    author: 'dr-tsiotras',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Carbamide_peroxide',
+    ],
+
+    relatedServices: ['/leykansi-dontion-athina'],
+    relatedArticles: ['leykansi-dontion-athina', 'leykansi-vs-strips-odontokremes'],
+    relatedTerms: ['leykansi-dontion', 'opalescence', 'masalakia-leykansis'],
+
+    inLanguage: 'el-GR',
+    publishedAt: '2026-06-29',
+    updatedAt: '2026-06-29',
+  },
+
+  {
+    slug: 'masalakia-leykansis',
+    term: 'Μασελάκια Λεύκανσης',
+    domain: 'orthodontics',
+    category: 'syskeves',
+    searchVariants: ['μασελακια λευκανσης', 'ναρθηκες λευκανσης', 'μασελακια για λευκανση', 'whitening trays', 'bleaching trays', 'λευκανση με μασελακια', 'ναρθηκες δοντιων για λευκανση', 'εξατομικευμενα μασελακια', 'custom trays'],
+    synonyms: ['Νάρθηκες Λεύκανσης', 'Whitening Trays', 'Bleaching Trays', 'Custom Trays', 'Εξατομικευμένα Μασελάκια'],
+    keywords: ['μασελάκια λεύκανσης', 'νάρθηκες λεύκανσης', 'whitening trays', 'εξατομικευμένα μασελάκια', 'ψηφιακό αποτύπωμα', 'Opalescence trays', 'take-home whitening', 'λεύκανση στο σπίτι'],
+
+    h1: 'Τι είναι τα Μασελάκια Λεύκανσης;',
+    metaTitle: 'Μασελάκια Λεύκανσης — Εξατομικευμένοι Νάρθηκες',
+    metaDescription: 'Μασελάκια λεύκανσης: εξατομικευμένοι διαφανείς νάρθηκες που φοριούνται στο σπίτι με γέλη Opalescence. Πώς κατασκευάζονται, διαφορά έναντι one-size-fits-all.',
+    oneLineAnswer: 'Εξατομικευμένοι λεπτοί διαφανείς νάρθηκες κατασκευασμένοι από ψηφιακό αποτύπωμα 3D του στόματός σας, που κρατούν τη γέλη λεύκανσης σε ομοιόμορφη επαφή με όλα τα δόντια.',
+
+    definition: 'Τα μασελάκια λεύκανσης είναι εξατομικευμένοι νάρθηκες από βιοσυμβατό διαφανές πλαστικό (συνήθως EVA) που κατασκευάζονται από ψηφιακό αποτύπωμα 3D του στόματος του ασθενή. Έχουν μικρά διαμερίσματα στην εσωτερική τους επιφάνεια όπου τοποθετείται η γέλη λεύκανσης (Opalescence PF ή ισοδύναμο). Ο ασθενής τα φοράει καθημερινά σύμφωνα με το πρωτόκολλο που έχει καθορίσει ο οδοντίατρος — από 30 λεπτά (35% CP) έως 8-10 ώρες όλη τη νύχτα (10% CP). Η εξατομικευμένη εφαρμογή εξασφαλίζει ότι η γέλη έρχεται σε ομοιόμορφη επαφή με όλες τις επιφάνειες των δοντιών και δεν διαφεύγει στα ούλα.',
+    whereUsed: 'Στην take-home whitening — τη πιο διαδεδομένη μορφή επαγγελματικής λεύκανσης. Χρησιμοποιούνται και ως συγκρατητήρες μετά την ορθοδοντική (Essix retainers) — συχνά τα ίδια μασελάκια μπορούν να εξυπηρετούν και τις δύο λειτουργίες σε διαφορετικές ώρες της ημέρας.',
+    advantages: [
+      'Ομοιόμορφη επαφή γέλης με όλα τα δόντια — ομοιόμορφο αποτέλεσμα',
+      'Δεν διαφεύγει η γέλη στα ούλα — μηδενικός ερεθισμός',
+      'Επαναχρησιμοποιήσιμα για 3-5 χρόνια',
+      'Μπορούν να χρησιμοποιηθούν ως συγκρατητήρες μετά την ορθοδοντική (dual purpose)',
+      'Άνετα, δεν επηρεάζουν ομιλία μετά την πρώτη μέρα προσαρμογής',
+    ],
+    mistakes: [
+      'Χρήση OTC "boil-and-bite" μασελακιών αντί εξατομικευμένων — κακή εφαρμογή, γέλη διαφεύγει',
+      'Καθαρισμός με ζεστό νερό — παραμορφώνει το πλαστικό',
+      'Φύλαξη σε ζεστό αυτοκίνητο — παραμόρφωση',
+      'Χρήση οδοντόκρεμας για καθαρισμό — προκαλεί μικρές γρατζουνιές που συγκρατούν βακτήρια',
+    ],
+    whenItMakesSense: 'Για κάθε take-home whitening — τα εξατομικευμένα μασελάκια είναι απαραίτητα. Οι one-size-fits-all μάσκες που πωλούνται online δεν εφαρμόζουν σωστά και δίνουν ανομοιόμορφο αποτέλεσμα με ερεθισμό ούλων.',
+
+    sources: [
+      { title: 'Custom vs Prefabricated Whitening Trays — Clinical Comparison', type: 'study', issuer: 'Journal of Esthetic Dentistry', year: 2020 },
+    ],
+    faqs: [
+      { q: 'Διαρκούν πολύ τα μασελάκια λεύκανσης;', a: '3-5 χρόνια με σωστή φροντίδα. Παρόμοια με τους Essex retainers.' },
+      { q: 'Μπορώ να χρησιμοποιήσω τα ίδια μασελάκια για συγκράτηση και λεύκανση;', a: 'Ναι. Οι Vivera/Essex retainers λειτουργούν εξαιρετικά ως μασελάκια λεύκανσης — dual purpose (λεύκανση απόγευμα, συγκράτηση νύχτα).' },
+      { q: 'Πώς καθαρίζονται;', a: 'Με μαλακή οδοντόβουρτσα, κρύο νερό, χωρίς οδοντόκρεμα. Εβδομαδιαία μούλιασμα σε διάλυμα καθαρισμού (Retainer Brite ή ισοδύναμο).' },
+    ],
+
+    author: 'dr-tsiotras',
+    sameAs: [],
+
+    relatedServices: ['/leykansi-dontion-athina', '/diafaneis-narthikes-sigkratisis'],
+    relatedArticles: ['leykansi-dontion-athina', 'leykansi-meta-orthodontiki', 'diafaneis-narthikes-sigkratisis'],
+    relatedTerms: ['leykansi-dontion', 'opalescence', 'sygkratitires'],
 
     inLanguage: 'el-GR',
     publishedAt: '2026-06-29',
