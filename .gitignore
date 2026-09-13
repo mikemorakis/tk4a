@@ -6,3 +6,4 @@ tkortodontics_*.csv
 
 # Source videos (compressed copies live in src/videos/)
 videos/
+_to_delete/

@@ -95,7 +95,7 @@
     "@type": ["Dentist", "Orthodontist"],
     "name": "TK Orthodontics - Κωνσταντίνος Τσιότρας",
     "image": "https://www.tkorthodontics.gr/images/logo.png",
-    "@id": "https://www.tkorthodontics.gr",
+    "@id": "https://www.tkorthodontics.gr/#orthodontist",
     "url": "https://www.tkorthodontics.gr",
     "telephone": "+302109408725",
     "priceRange": "$",
@@ -265,7 +265,11 @@
   </script>
   {% endif %}
   {% if jsonLd %}{% for schema in jsonLd %}
-  <script type="application/ld+json">{{ schema | dump | safe }}</script>{% endfor %}
+  {# Τα jsonLd του frontmatter γράφονται ως block scalars, δηλαδή είναι strings που
+     ΠΕΡΙΕΧΟΥΝ JSON. Το `dump` τα ξανακωδικοποιούσε, κι έβγαινε <script> με ένα JSON
+     string μέσα αντί για αντικείμενο, που η Google το αγνοεί. Τα strings βγαίνουν πλέον
+     ως έχουν, τα αντικείμενα συνεχίζουν με dump. #}
+  <script type="application/ld+json">{% if schema is string %}{{ schema | safe }}{% else %}{{ schema | dump | safe }}{% endif %}</script>{% endfor %}
   {% endif %}
 </head>
 <body{% if not isHome %} class="has-sticky-bar"{% endif %}>
